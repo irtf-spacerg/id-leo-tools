@@ -9,8 +9,8 @@ number:
 date:
 consensus: true
 v: 3
-area: AREA
-workgroup: WG Working Group
+# area: AREA
+# workgroup: WG Working Group
 keyword:
  - simulators
  - emulators
@@ -19,19 +19,19 @@ keyword:
  - datasets and data generation tools
  - browser plugins
 venue:
-  group: WG
-  type: Working Group
-  mail: space@irtf.org
-  arch: https://example.com/WG
-  github: irtf-spacerg/id-leo-tools
-  latest: https://example.com/LATEST
+#  group: WG
+#  type: Working Group
+#  mail: space@irtf.org
+#  arch: https://example.com/WG
+  github: "irtf-spacerg/id-leo-tools"
+  latest: "https://irtf-spacerg.github.io/id-leo-tools/draft-sastry-spacerg-space-research-infra-typology.html"
 
 author:
  -
     fullname: Nishanth Sastry
     organization: University of Surrey
     email: n.sastry@surrey.ac.uk
-    
+
 normative:
 
 informative:
