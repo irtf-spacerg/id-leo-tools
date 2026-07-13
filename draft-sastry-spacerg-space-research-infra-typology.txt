@@ -1,0 +1,204 @@
+
+
+
+
+WG Working Group                                               N. Sastry
+Internet-Draft                                      University of Surrey
+Intended status: Informational                              13 July 2026
+Expires: 14 January 2027
+
+
+              A typology of Space Research Infrastructures
+       draft-sastry-spacerg-space-research-infra-typology-latest
+
+Abstract
+
+   Space networking research increasingly relies on a heterogeneous
+   ecosystem of software, datasets, experimental platforms, reference
+   implementations, and operational research assets.  These resources
+   have historically been developed independently by different research
+   groups, agencies, and projects, making discovery, comparison,
+   interoperability, and reuse difficult.  Existing registries typically
+   catalogue tools individually but provide limited guidance on their
+   functional role within the research lifecycle.
+
+   This document proposes a typology for research infrastructures
+   relevant to the Space Research Group (SPACERG).  Rather than
+   classifying resources according to implementation technology or
+   project origin, the proposed taxonomy groups resources according to
+   their research function.  The typology provides a common vocabulary
+   for describing software and non-software research assets, supports
+   the organization of community registries, and facilitates
+   interoperability, reproducibility, and long-term maintenance of
+   research infrastructures.  The classification is intended to evolve
+   as new classes of research resources emerge.
+
+About This Document
+
+   This note is to be removed before publishing as an RFC.
+
+   The latest revision of this draft can be found at
+   https://example.com/LATEST.  Status information for this document may
+   be found at https://datatracker.ietf.org/doc/draft-sastry-spacerg-
+   space-research-infra-typology/.
+
+   Discussion of this document takes place on the WG Working Group
+   mailing list (mailto:space@irtf.org), which is archived at
+   https://example.com/WG.  Subscribe at
+   https://www.ietf.org/mailman/listinfo/space/.
+
+   Source for this draft and an issue tracker can be found at
+   https://github.com/irtf-spacerg/id-leo-tools.
+
+Status of This Memo
+
+   This Internet-Draft is submitted in full conformance with the
+   provisions of BCP 78 and BCP 79.
+
+   Internet-Drafts are working documents of the Internet Engineering
+   Task Force (IETF).  Note that other groups may also distribute
+   working documents as Internet-Drafts.  The list of current Internet-
+   Drafts is at https://datatracker.ietf.org/drafts/current/.
+
+   Internet-Drafts are draft documents valid for a maximum of six months
+   and may be updated, replaced, or obsoleted by other documents at any
+   time.  It is inappropriate to use Internet-Drafts as reference
+   material or to cite them other than as "work in progress."
+
+   This Internet-Draft will expire on 14 January 2027.
+
+Copyright Notice
+
+   Copyright (c) 2026 IETF Trust and the persons identified as the
+   document authors.  All rights reserved.
+
+   This document is subject to BCP 78 and the IETF Trust's Legal
+   Provisions Relating to IETF Documents (https://trustee.ietf.org/
+   license-info) in effect on the date of publication of this document.
+   Please review these documents carefully, as they describe your rights
+   and restrictions with respect to this document.  Code Components
+   extracted from this document must include Revised BSD License text as
+   described in Section 4.e of the Trust Legal Provisions and are
+   provided without warranty as described in the Revised BSD License.
+
+Table of Contents
+
+   1.  Introduction
+   2.  Conventions and Definitions
+   3.  Security Considerations
+   4.  IANA Considerations
+   5.  Normative References
+   Acknowledgments
+   Author's Address
+
+1.  Introduction
+
+   Research in space networking depends upon a broad collection of
+   complementary research infrastructures.  These include simulation
+   environments, network emulators, protocol implementations, datasets,
+   browser-based experimentation environments, visualization tools,
+   experimental testbeds, satellite constellations, and software
+   supporting data collection and analysis.  While many of these
+   resources have become widely adopted within individual research
+   communities, they are often documented independently, use
+   inconsistent terminology, and overlap in functionality.
+
+   As the Space Research Group (SPACERG) develops a shared registry of
+   research infrastructures, it has become apparent that simply
+   maintaining a list of available tools is insufficient.  Users require
+   a consistent method of understanding _what role_ a resource plays
+   within the research ecosystem, how it complements other resources,
+   and where it fits within an experimental workflow.  A common typology
+   also improves discoverability, assists researchers in selecting
+   appropriate infrastructures, and enables more consistent metadata
+   across independently maintained registries.
+
+   The typology described in this document was developed through an
+   analysis of approximately 130 research resources collected from the
+   community.  Rather than deriving categories from software
+   architecture or implementation language, the classification emerged
+   from the primary research purpose served by each resource.  This
+   functional approach accommodates both software and non-software
+   research assets and remains applicable as new technologies are
+   introduced.
+
+   The initial categories identified include:
+
+   *  *Browser plugins*, providing browser-integrated experimentation or
+      protocol support.
+
+   *  *Data resources*, including curated datasets and data collection
+      scripts or methodologies.
+
+   *  *Emulators*, which reproduce the behaviour of target systems while
+      executing real protocol implementations.
+
+   *  *Simulators*, which model network behaviour using abstract
+      representations to support scalable experimentation.
+
+   *  *Reference implementations*, providing authoritative
+      implementations of protocols, architectures, or research
+      frameworks intended for validation and interoperability.
+
+   *  *Research satellites and constellations*, representing operational
+      or experimental space assets that provide real-world
+      experimentation opportunities.
+
+   *  *Testbeds*, offering physical, virtual, or hybrid environments for
+      integrated experimental evaluation.
+
+   *  *Visualization tools*, supporting analysis, interpretation, and
+      presentation of experimental results.
+
+   Although these categories provide broad coverage of the current
+   SPACERG registry, they are not intended to be exhaustive.  New
+   categories may emerge as the community develops additional research
+   infrastructures, including digital twins, AI-assisted experimentation
+   platforms, orchestration frameworks, benchmark suites, workflow
+   management systems, and cloud-based experimentation environments.
+
+   The purpose of this document is therefore not to prescribe a fixed
+   ontology, but rather to establish a common vocabulary that enables
+   researchers to consistently classify and discover research
+   infrastructures relevant to space networking.  The taxonomy is
+   intended to support the SPACERG registry, facilitate interoperability
+   with other research infrastructure catalogues, and provide a
+   foundation for future standardization efforts within the IRTF and
+   IETF research communities.
+
+2.  Conventions and Definitions
+
+   The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
+   "SHOULD", "SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED", "MAY", and
+   "OPTIONAL" in this document are to be interpreted as described in
+   BCP 14 [RFC2119] [RFC8174] when, and only when, they appear in all
+   capitals, as shown here.
+
+3.  Security Considerations
+
+   TODO Security
+
+4.  IANA Considerations
+
+   This document has no IANA actions.
+
+5.  Normative References
+
+   [RFC2119]  Bradner, S., "Key words for use in RFCs to Indicate
+              Requirement Levels", BCP 14, RFC 2119,
+              DOI 10.17487/RFC2119, March 1997,
+              <https://www.rfc-editor.org/rfc/rfc2119>.
+
+   [RFC8174]  Leiba, B., "Ambiguity of Uppercase vs Lowercase in RFC
+              2119 Key Words", BCP 14, RFC 8174, DOI 10.17487/RFC8174,
+              May 2017, <https://www.rfc-editor.org/rfc/rfc8174>.
+
+Acknowledgments
+
+   TODO acknowledge.
+
+Author's Address
+
+   Nishanth Sastry
+   University of Surrey
+   Email: n.sastry@surrey.ac.uk
