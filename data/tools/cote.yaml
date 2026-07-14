@@ -1,0 +1,25 @@
+name: cote
+class: Simulator
+subtype: Compute/energy/comms system simulator
+domains:
+- Orbital compute
+domain_detail: EO / orbital edge computing
+dynamics: TLE + SGP4-class; variable time-step
+layers: Orbit; power/energy; compute; ground contact windows
+real_stack: 'no'
+real_stack_detail: 'No'
+scale: Constellation-scale (nanosat EO)
+inputs: TLE + fixed-width config files
+outputs: Logs/CSV traces
+language: C++17
+license: MIT
+maintenance: inactive
+maintenance_detail: No (dormant since 2022-11; 31 stars)
+last_activity: 2022-11
+url: https://github.com/cmuabstract/cote
+publication: ASPLOS 2020 (Orbital Edge Computing)
+contact: CMU Abstract lab (Denby; Lucia)
+notes: Strong compute/energy modeling; weak networking layers
+source: dagstuhl
+added: 2026-07
+verified: 2026-07

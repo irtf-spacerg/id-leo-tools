@@ -1,0 +1,25 @@
+name: ESA PhiSat-2
+class: In-orbit platform
+subtype: 6U CubeSat running uploadable AI apps (NMF)
+domains:
+- Orbital compute
+domain_detail: Onboard AI / in-orbit computing
+dynamics: N/A
+layers: Multispectral imager + AI accelerator; app management via open-source NanoSat MO Framework
+real_stack: 'yes'
+real_stack_detail: 'Yes'
+scale: 1 CubeSat (launched 2024-08)
+inputs: Apps via ESA / NMF
+outputs: Experiment results
+language: Java (NMF open source)
+license: NMF open source; access via ESA
+maintenance: active
+maintenance_detail: Yes (routine ops since mid-2025)
+last_activity: '2026'
+url: https://www.esa.int/Applications/Observing_the_Earth/Phsat-2
+publication: ESA Phi-lab pages
+contact: ESA Phi-lab / Open Cosmos
+notes: realistic external path to software on orbit; CCSDS-MO app layer networking-relevant
+source: sweep
+added: 2026-07
+verified: 2026-07

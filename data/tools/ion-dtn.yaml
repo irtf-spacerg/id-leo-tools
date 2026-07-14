@@ -1,0 +1,25 @@
+name: ION-DTN
+class: Implementation
+subtype: NASA JPL reference BP/DTN stack
+domains:
+- Deep space / DTN
+domain_detail: Deep space DTN
+dynamics: Contact plans (ionrc format)
+layers: BPv6+BPv7; BPSec; LTP/TCPCL/STCP/UDP/BSSP CLAs; full CGR/SABR
+real_stack: 'yes'
+real_stack_detail: 'Yes'
+scale: Flight-proven (ISS); de facto standard
+inputs: Contact plans; config
+outputs: Real bundle traffic; logs
+language: C
+license: Caltech BSD-style
+maintenance: active
+maintenance_detail: Yes (4.2.0-b 2026-07; pushed 2026-07-07)
+last_activity: 2026-07
+url: https://github.com/nasa-jpl/ION-DTN
+publication: RFC 5050/9171; CCSDS SABR
+contact: NASA JPL
+notes: the most-used BP/CGR implementation; nearly every DTN paper benchmarks against it
+source: sweep
+added: 2026-07
+verified: 2026-07

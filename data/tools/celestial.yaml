@@ -1,0 +1,26 @@
+name: Celestial
+class: Emulator
+subtype: Firecracker microVM constellation emulation
+domains:
+- LEO
+- Orbital compute
+domain_detail: LEO edge computing
+dynamics: TOML shell descriptors + SGP4; bounding-box live subset
+layers: tc-netem links from geometry; full Linux stacks in microVMs; built-in DNS
+real_stack: 'yes'
+real_stack_detail: Yes (microVMs)
+scale: 66-sat Iridium class evaluated; Starlink shell-1 as motivating config
+inputs: TOML config; custom kernel/rootfs images
+outputs: App-level results; network state monitoring
+language: Python + Go
+license: GPL-3.0
+maintenance: low
+maintenance_detail: Low (last push 2025-01; 67 stars)
+last_activity: 2025-01
+url: https://github.com/OpenFogStack/celestial
+publication: ACM/IFIP Middleware 2022
+contact: TU Berlin (Pfandzelter; Bermbach)
+notes: Bounding-box suspension saves resources; WebRTC case study
+source: dagstuhl
+added: 2026-07
+verified: 2026-07

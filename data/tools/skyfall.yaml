@@ -1,0 +1,25 @@
+name: SKYFALL
+class: Implementation
+subtype: Bottleneck-ISL and link-flooding attack analysis
+domains:
+- LEO
+- Security
+domain_detail: LEO network security and resilience
+dynamics: Time-varying topology models
+layers: Bottleneck identification; link-flooding attack simulation; countermeasures
+real_stack: 'no'
+scale: Constellation-scale
+inputs: Topology and attack configs
+outputs: Analysis results
+language: Mixed
+license: MIT
+maintenance: low
+maintenance_detail: Last push 2024-10
+last_activity: 2024-10
+url: https://github.com/SpaceNetLab/SKYFALL
+publication: NDSS 2025
+contact: SpaceNetLab, Tsinghua University
+notes: Adversarial and resilience analysis; pairs with the attack models in StarPerf.
+source: sweep
+added: 2026-07
+verified: 2026-07

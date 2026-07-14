@@ -1,0 +1,53 @@
+name: Registry
+
+on:
+  pull_request:
+    paths:
+      - "data/**"
+      - "site/**"
+      - "scripts/**"
+      - "config.yaml"
+      - ".github/workflows/registry.yml"
+  push:
+    branches: [main]
+    paths:
+      - "data/**"
+      - "site/**"
+      - "scripts/**"
+      - "config.yaml"
+      - ".github/workflows/registry.yml"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pyyaml
+      - run: python scripts/build_site.py --check
+
+  deploy:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    needs: validate
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pyyaml
+      - run: python scripts/build_site.py
+      # The registry is published under /registry/ on the gh-pages branch,
+      # next to the draft artifacts that the i-d-template workflows manage.
+      - uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: ./public
+          destination_dir: registry
+          keep_files: false
+          commit_message: "Rebuild registry site"

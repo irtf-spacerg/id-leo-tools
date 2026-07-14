@@ -1,0 +1,26 @@
+name: RADIANT
+class: Testbed
+subtype: Amateur-radio DTN testbed (real RF, multiple BP stacks)
+domains:
+- Deep space / DTN
+- Ground segment
+domain_detail: Amateur radio DTN; LEO and cislunar payloads targeted
+dynamics: 'Real over-the-air disruption: terrestrial packet radio now; LEO passes and GEO transponder slots on the roadmap'
+layers: BPv7 over LTP in KISS framing; contact graph routing; implementation-agnostic abstraction over HDTN, ION, uD3TN and Hardy; callsign-derived endpoint IDs; no encryption (amateur radio rules)
+real_stack: 'yes'
+real_stack_detail: Real BP implementations over real RF links
+scale: Two terrestrial nodes (phase 1); multi-station network and CubeSat payload planned
+inputs: 9600-baud packet radio (FT-817 + TNC4 + Raspberry Pi)
+outputs: Bundle delivery and store-and-forward validation results
+language: Not yet published
+license: Not yet published
+maintenance: active
+maintenance_detail: Phase 1 operational 2026; recruiting collaborators
+last_activity: '2026'
+url: https://radiant.amsat-uk.org
+publication: AMSAT News Service bulletins (2026)
+contact: AMSAT-UK with AMSAT-DL and Goonhilly Earth Station
+notes: Runs several BPv7 implementations interchangeably under genuine link disruption, which makes it a practical interoperability harness. Source repository not yet public.
+source: community
+added: 2026-07
+verified: 2026-07

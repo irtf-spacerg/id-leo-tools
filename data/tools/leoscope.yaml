@@ -1,0 +1,25 @@
+name: LEOScope
+class: Testbed
+subtype: Global field testbed over commercial LEO
+domains:
+- LEO
+domain_detail: LEO broadband (Starlink)
+dynamics: N/A (real satellites)
+layers: Real end-to-end links; containerized experiment workloads; terminal telemetry
+real_stack: 'yes'
+real_stack_detail: Yes (real networks)
+scale: 10s of nodes; 5 continents
+inputs: Experiment specs (cron + Docker images) via portal/CLI
+outputs: Logs to Azure Blob; public dashboard; LEO link profiles
+language: Python
+license: MIT
+maintenance: active
+maintenance_detail: Yes (last push 2026-06)
+last_activity: 2026-06
+url: https://leoscope.surrey.ac.uk/
+publication: ACM SIGCOMM CCR 2025
+contact: Univ. of Surrey + Microsoft Research
+notes: '"PlanetLab for Starlink"; access on request with per-node tokens'
+source: dagstuhl
+added: 2026-07
+verified: 2026-07

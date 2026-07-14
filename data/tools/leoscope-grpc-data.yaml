@@ -1,0 +1,26 @@
+name: LEOScope gRPC data
+class: Dataset / data
+class_detail: Dataset
+subtype: Terminal telemetry + dashboard
+domains:
+- LEO
+domain_detail: LEO broadband
+dynamics: N/A
+layers: Starlink gRPC telemetry; latency/throughput time series
+real_stack: na
+real_stack_detail: N/A
+scale: Same footprint as LEOScope
+inputs: N/A
+outputs: Dashboard; link profiles; formats unclear
+language: JavaScript (dashboard)
+license: MIT (website repo); data license UNKNOWN
+maintenance: low
+maintenance_detail: Partially (testbed active; dashboard repo idle since 2024-04)
+last_activity: 2024-04
+url: https://leoscope.surrey.ac.uk/dashboard
+publication: ACM SIGCOMM CCR 2025
+contact: LEOScope team
+notes: Treat as data facet of LEOScope not standalone; bulk access model unclear
+source: dagstuhl
+added: 2026-07
+verified: 2026-07

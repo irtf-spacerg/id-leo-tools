@@ -1,0 +1,25 @@
+name: Unibo-BP / Unibo-CGR
+class: Implementation
+subtype: Research BPv7 stack + portable CGR/SABR module
+domains:
+- Deep space / DTN
+domain_detail: Space DTN research
+dynamics: ION-compatible contact plans
+layers: BPv7; own LTP (RFC 5326); TCPCLv3/UDP; Unibo-CGR plugs into ION/DTNME/Unibo-BP
+real_stack: 'yes'
+real_stack_detail: 'Yes'
+scale: Ground testbeds; GEO/deep-space emulation
+inputs: Contact plans; config
+outputs: Bundle traffic; stats
+language: C/C++
+license: GPL-3.0
+maintenance: active
+maintenance_detail: Yes (activity 2026-07)
+last_activity: 2026-07
+url: https://gitlab.com/unibo-dtn/unibo-bp
+publication: RFC 9171; Caini et al. 2023
+contact: Carlo Caini (Univ. Bologna)
+notes: only portable CGR/SABR reference designed for multiple BP stacks
+source: sweep
+added: 2026-07
+verified: 2026-07

@@ -1,0 +1,25 @@
+name: OpenSN
+class: Emulator
+subtype: Container-based constellation emulation (Go)
+domains:
+- LEO
+domain_detail: LEO broadband
+dynamics: Config via key-value store (propagator undocumented)
+layers: Dynamic virtual links; real routing daemons per container
+real_stack: 'yes'
+real_stack_detail: Yes (containers)
+scale: Mega-constellation scale claimed (5-10x faster build than StarryNet)
+inputs: KV-database config (formats unclear)
+outputs: Undocumented
+language: Go
+license: MIT (code); CC BY-SA 4.0 (site)
+maintenance: active
+maintenance_detail: Yes (last push 2026-05; 44 stars)
+last_activity: 2026-05
+url: https://opensn-library.github.io/
+publication: IEEE TPDS 36(8) 2025
+contact: Beihang Univ. (Lu; Wang; Zhang; Luo)
+notes: Positions itself against StarryNet/Mininet on speed; docs sparse
+source: dagstuhl
+added: 2026-07
+verified: 2026-07

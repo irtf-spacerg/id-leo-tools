@@ -1,0 +1,26 @@
+name: WetLinks
+class: Dataset / data
+class_detail: Dataset
+subtype: Starlink + synchronized weather observations
+domains:
+- LEO
+domain_detail: LEO broadband
+dynamics: N/A
+layers: iperf/ping/traceroute + co-located weather stations
+real_stack: na
+real_stack_detail: N/A
+scale: 2 sites (Enschede NL; Osnabrück DE); ~6 months
+inputs: N/A
+outputs: CSV + feature docs + notebooks
+language: Python notebooks
+license: CC BY-SA 4.0
+maintenance: inactive
+maintenance_detail: Frozen (campaign concluded)
+last_activity: 2025-08
+url: https://github.com/sys-uos/WetLinks
+publication: TMA 2024
+contact: sys-uos (Osnabrück; Laniewski)
+notes: Rare public weather-vs-Starlink dataset
+source: dagstuhl
+added: 2026-07
+verified: 2026-07

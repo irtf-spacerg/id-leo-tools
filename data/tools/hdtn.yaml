@@ -1,0 +1,25 @@
+name: HDTN
+class: Implementation
+subtype: High-rate multi-Gbps modular BP stack
+domains:
+- Deep space / DTN
+domain_detail: Near-Earth high-rate DTN
+dynamics: JSON contact plans; scheduler module
+layers: BPv6+v7; BPSec; LTP/TCPCLv3-v4/UDP/STCP; CGR-based routing
+real_stack: 'yes'
+real_stack_detail: 'Yes'
+scale: Multi-Gbps demonstrated
+inputs: JSON contact plans; config
+outputs: Bundle traffic; stats
+language: C++
+license: NASA NOSA 1.3
+maintenance: low
+maintenance_detail: Yes-ish (v2.0.0 2025-09)
+last_activity: 2025-09
+url: https://github.com/nasa/HDTN
+publication: RFC 9171; WiSEE/SmallSat papers
+contact: NASA Glenn
+notes: reference for throughput-bound DTN; orders of magnitude faster than ION
+source: sweep
+added: 2026-07
+verified: 2026-07

@@ -1,0 +1,26 @@
+name: SALT
+class: Testbed
+subtype: Rooftop satellite lab (real DVB + emulated links)
+domains:
+- GEO / DVB
+- LEO
+domain_detail: GEO/DVB satellite broadband
+dynamics: N/A (real links)
+layers: Transport behavior; congestion control; PMTUD; IP-over-DVB
+real_stack: 'yes'
+real_stack_detail: Yes (real terminals)
+scale: Single site; dishes 0.3-2.5 m
+inputs: N/A
+outputs: Results via papers/RFCs
+language: N/A
+license: N/A (internal loan only)
+maintenance: active
+maintenance_detail: Yes (publications through 2026)
+last_activity: '2026'
+url: https://abdn.elsevierpure.com/en/equipments/satellite-applications-laboratory-testbed-salt/
+publication: Computer Networks 2025 (10.1016/j.comnet.2025.111950)
+contact: G. Fairhurst (Aberdeen)
+notes: Long IETF lineage (TSVWG; DVB/IP RFCs)
+source: dagstuhl
+added: 2026-07
+verified: 2026-07

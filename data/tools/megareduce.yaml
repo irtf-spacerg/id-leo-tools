@@ -1,0 +1,24 @@
+name: MegaReduce
+class: Implementation
+subtype: Constellation sizing under survivability constraints
+domains:
+- LEO
+domain_detail: Constellation dimensioning
+dynamics: Constellation models
+layers: Optimization of constellation size against performance and survivability constraints
+real_stack: 'no'
+scale: Mega-constellation design space
+inputs: Constraints and configs
+outputs: Optimized designs
+language: Mixed
+license: Not stated
+maintenance: low
+maintenance_detail: Last push 2025-05
+last_activity: 2025-05
+url: https://github.com/SpaceNetLab/MegaReduce
+publication: IEEE INFOCOM 2024
+contact: SpaceNetLab, Tsinghua University
+notes: Cost-driven constellation sizing; complements Hypatia-class simulators.
+source: sweep
+added: 2026-07
+verified: 2026-07

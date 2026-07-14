@@ -1,0 +1,25 @@
+name: IPN-V
+class: Visualizer
+subtype: Unity 3D interplanetary network visualization
+domains:
+- Deep space / DTN
+domain_detail: Deep space DTN
+dynamics: JSON scenarios from IPN-g (ESA GODOT) or IPN-d (built-in designer)
+layers: Topology; contacts; occlusions; bundle flows (visual only)
+real_stack: 'no'
+real_stack_detail: 'No'
+scale: Solar-system scenarios (Earth-Mars)
+inputs: JSON scenario folders
+outputs: Interactive 3D; ION/HDTN contact plan export
+language: C# (Unity)
+license: None in repo (UNKNOWN)
+maintenance: active
+maintenance_detail: Yes (last activity 2026-07)
+last_activity: 2026-07
+url: https://gitlab.inria.fr/jfraire/ipn-v
+publication: IEEE SMC-IT 2024
+contact: Inria + ESA/ESOC (Fraire; Flentge)
+notes: IPN-g restricted to ESA member-state citizens; demo at ipnv.net on request
+source: dagstuhl
+added: 2026-07
+verified: 2026-07

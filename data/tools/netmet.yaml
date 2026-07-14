@@ -1,0 +1,26 @@
+name: NetMet
+class: Measurement
+class_detail: Measurement tool
+subtype: Browser plugin (per-network QoE)
+domains:
+- LEO
+domain_detail: Generic (used for Starlink studies)
+dynamics: N/A
+layers: Goodput; bufferbloat; web QoE; DASH video QoE
+real_stack: na
+real_stack_detail: N/A
+scale: Any volunteer browser
+inputs: In-browser tests (M-Lab; Akamai DASH)
+outputs: Per-network results in extension UI
+language: JavaScript
+license: None (UNKNOWN)
+maintenance: low
+maintenance_detail: Borderline (v2.0 2024-07; last push 2025-02)
+last_activity: 2025-02
+url: https://github.com/boserohan/netmet
+publication: None found
+contact: Rohan Bose (TUM)
+notes: Not satellite-specific; auto-classifies per network; no public dataset
+source: dagstuhl
+added: 2026-07
+verified: 2026-07

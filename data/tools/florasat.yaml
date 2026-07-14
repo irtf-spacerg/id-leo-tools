@@ -1,0 +1,25 @@
+name: FLoRaSat
+class: Simulator
+subtype: Packet-level discrete-event (OMNeT++)
+domains:
+- IoT
+domain_detail: IoT direct-to-satellite (LoRa)
+dynamics: Keplerian params; Walker Star/Delta; SGP4 (leosatellites/OS3); TLE in development
+layers: Full LoRa PHY; LoRaWAN MAC (Class A/B/S; FSA); ISLs; routing (v2)
+real_stack: 'no'
+real_stack_detail: No (INET protocol models)
+scale: 16 sats + up to 1500 ground IoT nodes in samples
+inputs: OMNeT++ NED/INI configs
+outputs: OMNeT++ scalar/vector results
+language: C++ (OMNeT++)
+license: LGPL-3.0
+maintenance: active
+maintenance_detail: Yes (last activity 2026-06; ANR STEREO)
+last_activity: 2026-06
+url: https://gitlab.inria.fr/jfraire/florasat
+publication: WoWMoM 2022; IJSCN 2025 (FLoRaSat 2)
+contact: Juan A. Fraire (Inria)
+notes: Under active development; not a stable documented release
+source: dagstuhl
+added: 2026-07
+verified: 2026-07

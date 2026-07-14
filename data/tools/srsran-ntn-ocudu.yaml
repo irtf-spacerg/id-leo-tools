@@ -1,0 +1,25 @@
+name: srsRAN NTN / OCUDU
+class: Implementation
+subtype: O-RAN 5G CU/DU with Rel-17 NTN (GEO)
+domains:
+- NTN-5G
+domain_detail: NTN-5G
+dynamics: External channel emulator (bundled GNU Radio GEO delay flowgraph)
+layers: Full gNB PHY-RRC + O-RAN interfaces
+real_stack: 'yes'
+real_stack_detail: 'Yes'
+scale: GEO scenarios reproducible; LEO planned (OCUDU v2.x)
+inputs: Configs + GNU Radio emulator
+outputs: Real 5G traffic
+language: C++
+license: AGPLv3 (srsRAN); BSD-3 (OCUDU)
+maintenance: low
+maintenance_detail: Transition (srsRAN archived 2026-06; OCUDU v1.0 2026-03 active)
+last_activity: 2026-03
+url: https://docs.ocudu.org
+publication: srsRAN NTN tutorial docs
+contact: SRS / Linux Foundation
+notes: second major open NTN RAN; now under LF governance
+source: sweep
+added: 2026-07
+verified: 2026-07

@@ -1,0 +1,26 @@
+name: PEPsal
+class: Implementation
+subtype: TCP-splitting PEP (RFC 3135 style)
+domains:
+- GEO / DVB
+- Transport
+domain_detail: Transport (GEO)
+dynamics: None
+layers: IP/TCP connection splitting; TCP Hybla on satellite segment
+real_stack: 'yes'
+real_stack_detail: 'Yes'
+scale: Production-style proxy
+inputs: netfilter rules; config
+outputs: Real TCP traffic
+language: C
+license: GPL
+maintenance: active
+maintenance_detail: Yes (CNES/Viveris maintained; last push 2025-07)
+last_activity: 2025-07
+url: https://github.com/CNES/pepsal
+publication: IEEE 2006 (Caini et al.)
+contact: CNES / Viveris / Univ. Bologna
+notes: only free maintained reference of the classic satcom TCP PEP
+source: sweep
+added: 2026-07
+verified: 2026-07

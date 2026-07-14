@@ -1,0 +1,25 @@
+name: DtnSim
+class: Simulator
+subtype: Bundle-level discrete-event (OMNeT++)
+domains:
+- Deep space / DTN
+domain_detail: Deep space DTN
+dynamics: Contact plan files (mobility precomputed externally)
+layers: Contacts; DTN routing (real ION 3.5.0 CGR on support-ion branch); bundle traffic
+real_stack: partial
+real_stack_detail: Partially (ION CGR flight code inside simulator)
+scale: Typical DTN topologies (no published limits)
+inputs: Contact plans + INI configs
+outputs: OMNeT++ scalar/vector statistics
+language: C++ (OMNeT++)
+license: MIT
+maintenance: active
+maintenance_detail: Yes (last activity 2026-06; beta)
+last_activity: 2026-06
+url: https://gitlab.inria.fr/jfraire/dtnsim
+publication: IEEE SMC-IT 2017
+contact: Madoery; Fraire (LCD-UNC/Inria)
+notes: 'Distinguishing feature: runs real ION CGR code in simulation'
+source: dagstuhl
+added: 2026-07
+verified: 2026-07

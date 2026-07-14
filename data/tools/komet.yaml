@@ -1,0 +1,27 @@
+name: Komet
+class: Research platform
+class_detail: Platform
+subtype: Serverless LEO edge (FaaS + replicated data)
+domains:
+- LEO
+- Orbital compute
+domain_detail: LEO edge computing
+dynamics: Inherited from Celestial (SGP4 microVMs)
+layers: FaaS runtime (tinyFaaS) + data replication (FReD) + scheduler
+real_stack: 'yes'
+real_stack_detail: Yes (real code in microVMs)
+scale: Celestial-scale scenarios
+inputs: Celestial configs
+outputs: Experiment results
+language: Go/Python
+license: Open source (parts GPLv3)
+maintenance: low
+maintenance_detail: Marginal (artifact 2024-25)
+last_activity: '2025'
+url: https://github.com/3s-rg/komet
+publication: ACM SoCC 2024
+contact: TU Berlin 3S (Pfandzelter)
+notes: reference artifact for serverless LEO orchestration; companion to Celestial
+source: sweep
+added: 2026-07
+verified: 2026-07

@@ -1,0 +1,26 @@
+name: SatNOGS
+class: Testbed
+class_detail: Ground network
+subtype: Open volunteer SDR ground-station network + DB
+domains:
+- Ground segment
+domain_detail: Community ground segment
+dynamics: N/A (real passes)
+layers: Scheduled observations; demodulated data; telemetry DB for thousands of sats
+real_stack: 'yes'
+real_stack_detail: Yes (real RF)
+scale: Hundreds of stations online
+inputs: REST APIs; web scheduling
+outputs: Observations; waterfalls; telemetry exports
+language: Python (stack)
+license: Data CC BY-SA; open-source software
+maintenance: active
+maintenance_detail: 'Yes'
+last_activity: '2026'
+url: https://satnogs.org
+publication: SmallSat Conference paper
+contact: Libre Space Foundation
+notes: reference community ground segment; schedulable real LEO passes + years of open data
+source: sweep
+added: 2026-07
+verified: 2026-07

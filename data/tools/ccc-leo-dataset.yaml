@@ -1,0 +1,26 @@
+name: CCC-LEO Dataset
+class: Dataset / data
+class_detail: Dataset
+subtype: Continuous latency + dish diagnostics
+domains:
+- LEO
+domain_detail: LEO broadband
+dynamics: N/A
+layers: ICMP/IRTT latency; gRPC diagnostics
+real_stack: na
+real_stack_detail: N/A
+scale: 30+ dishes; 6 continents; ~20 TB since 2023
+inputs: N/A
+outputs: JSON; ping logs; CSV; Turnstile-gated HTTP download
+language: N/A
+license: CC BY-SA 4.0
+maintenance: active
+maintenance_detail: Yes (weekly portal + monthly Zenodo)
+last_activity: '2026'
+url: https://lens-starlink.jinwei.me/
+publication: ACM MMSys 2024 (LENS)
+contact: Jianping Pan (UVic)
+notes: CCC-LEO is the infrastructure; LENS is its published dataset
+source: dagstuhl
+added: 2026-07
+verified: 2026-07

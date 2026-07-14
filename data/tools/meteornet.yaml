@@ -1,0 +1,25 @@
+name: MeteorNet
+class: Emulator
+subtype: Mininet + ONOS SDN + Docker services
+domains:
+- LEO
+domain_detail: LEO broadband / MEC
+dynamics: TLE files + SGP4; contact tables for handover
+layers: SDN topology/routing (OpenFlow/ONOS); real container apps; telemetry
+real_stack: 'yes'
+real_stack_detail: Yes (Mininet + Docker)
+scale: Constellation-scale scripts; single-host Mininet bound
+inputs: TLEs; ground coordinates; scenario scripts
+outputs: Telemetry in MongoDB; sFlow-RT; plots
+language: Python
+license: None in repo (UNKNOWN)
+maintenance: active
+maintenance_detail: Yes (last activity 2026-06)
+last_activity: 2026-06
+url: https://gitlab.com/camilo.rojas/meteornet
+publication: IEEE ICC Wksp 2024; ASMS/SPSC 2025
+contact: Camilo Rojas (Univ. Genoa)
+notes: Includes RL task-orchestration scripts; heavy dependency stack
+source: dagstuhl
+added: 2026-07
+verified: 2026-07

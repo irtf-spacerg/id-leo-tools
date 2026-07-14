@@ -1,0 +1,25 @@
+name: Tartan Artibeus 1
+class: In-orbit platform
+subtype: Batteryless computational PocketQube (1p)
+domains:
+- Orbital compute
+domain_detail: Orbital edge computing
+dynamics: N/A
+layers: Supercapacitor EPS; intermittent computing; low-rate radio; ran cote onboard
+real_stack: na
+real_stack_detail: N/A
+scale: 1 PocketQube (launched 2022-01)
+inputs: N/A
+outputs: N/A
+language: Open-source HW/SW
+license: Open source
+maintenance: low
+maintenance_detail: Flown; current status unknown (likely decayed)
+last_activity: '2022'
+url: https://abstract.ece.cmu.edu/ta-1/
+publication: SmallSat 2022
+contact: CMU Abstract lab (Lucia)
+notes: World-first batteryless satellite; template for ultra-low-cost constellations
+source: dagstuhl
+added: 2026-07
+verified: 2026-07

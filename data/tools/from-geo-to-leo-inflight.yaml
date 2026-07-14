@@ -1,0 +1,24 @@
+name: From GEO to LEO in-flight dataset
+class: Dataset / data
+subtype: Starlink aviation connectivity measurements
+domains:
+- LEO
+domain_detail: Aeronautical mobility
+dynamics: n/a
+layers: In-flight Starlink versus GEO comparison
+real_stack: na
+scale: Flight campaigns
+inputs: n/a
+outputs: Dataset in repository
+language: n/a
+license: Not stated
+maintenance: active
+maintenance_detail: Published 2025
+last_activity: '2025'
+url: https://github.com/comnetsAD/From_GEO_to_LEO_IMC2025
+publication: ACM IMC 2025
+contact: NYUAD ComNets
+notes: Public in-flight Starlink measurement dataset.
+source: sweep
+added: 2026-07
+verified: 2026-07

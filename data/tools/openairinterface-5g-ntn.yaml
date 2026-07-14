@@ -1,0 +1,27 @@
+name: OpenAirInterface 5G NTN
+class: Implementation
+subtype: Real 3GPP Rel-17 gNB+UE stack with NTN
+domains:
+- LEO
+- NTN-5G
+- GEO / DVB
+domain_detail: NTN-5G (GEO/LEO)
+dynamics: Built-in delay/Doppler NTN models in RFsim; real SDR/satellite for OTA
+layers: Full 5G PHY-RRC + core interfaces; real IP user plane
+real_stack: 'yes'
+real_stack_detail: 'Yes'
+scale: Validated over live GEO transponders
+inputs: Config files (NTN GEO/LEO presets in-tree)
+outputs: Real 5G traffic; logs
+language: C
+license: OAI Public License v1.1
+maintenance: active
+maintenance_detail: Yes (weekly tags through 2025; Fraunhofer IIS contributions)
+last_activity: '2025'
+url: https://gitlab.eurecom.fr/oai/openairinterface5g
+publication: IEEE FNWF 2022; IEEE Access 2024
+contact: OSA/EURECOM; ESA 5G-GOA/5G-LEO
+notes: only full open stack validated over real GEO satellites
+source: sweep
+added: 2026-07
+verified: 2026-07

@@ -1,0 +1,26 @@
+name: Space-Track.org
+class: Dataset / data
+class_detail: Data service
+subtype: Authoritative USSF satellite catalog + GP data
+domains:
+- Orbits / astro
+domain_detail: Orbital elements
+dynamics: N/A (the source)
+layers: GP/GP_History elsets; conjunctions; decay; metadata for 47k+ objects
+real_stack: na
+real_stack_detail: N/A
+scale: Full catalog; multiple daily updates
+inputs: REST API (account required)
+outputs: OMM XML/KVN/JSON/CSV; legacy TLE
+language: N/A
+license: Free account; redistribution restricted
+maintenance: active
+maintenance_detail: 'Yes'
+last_activity: '2026'
+url: https://www.space-track.org
+publication: N/A (operational service)
+contact: US Space Command / 18 SDS
+notes: upstream ground truth behind CelesTrak
+source: sweep
+added: 2026-07
+verified: 2026-07

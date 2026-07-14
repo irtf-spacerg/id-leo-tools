@@ -1,0 +1,25 @@
+name: SpaceNet
+class: Emulator
+subtype: Two-phase Mininet (offline compute + real-time replay)
+domains:
+- LEO
+domain_detail: LEO broadband
+dynamics: Real TLEs (get_tles.sh) or synthetic shells; SGP4/skyfield
+layers: ISL/ground topology; configurable routing weights; real stacks in Mininet
+real_stack: 'yes'
+real_stack_detail: Yes (Mininet hosts)
+scale: Designed for thousands of sats; validated vs real Starlink data
+inputs: TLEs; YAML configs; GS coordinates
+outputs: Topology graphs; routing tables; ping/iperf; resource logs
+language: Python
+license: None (UNKNOWN)
+maintenance: low
+maintenance_detail: Low (last push 2025-09; docs incomplete)
+last_activity: 2025-09
+url: https://github.com/SpaceNetTestbed-public
+publication: IEEE Access 2026
+contact: Virginia Tech (Barbour; Kedrowitsch)
+notes: Hypatia-inspired; do not confuse with AIAA SpaceNet or SpaceNet EO dataset
+source: dagstuhl
+added: 2026-07
+verified: 2026-07

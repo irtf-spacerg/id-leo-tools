@@ -1,0 +1,24 @@
+name: TinyLEO
+class: Implementation
+subtype: Sparse constellation design toolkit
+domains:
+- LEO
+domain_detail: Constellation design and control plane
+dynamics: Demand-driven orbital synthesis with model-predictive orchestration
+layers: Network synthesizer plus orbital MPC orchestrator
+real_stack: 'no'
+scale: Mega-constellation design space (2-7.9x size reduction reported)
+inputs: Demand and scenario configs
+outputs: Constellation designs; documentation site
+language: Mixed
+license: Apache-2.0
+maintenance: active
+maintenance_detail: Active 2026
+last_activity: '2026'
+url: https://github.com/TinyLEO-toolkit/TinyLEO
+publication: ACM SIGCOMM 2025
+contact: TinyLEO toolkit team
+notes: Released as a community toolkit for demand-driven LEO network design.
+source: sweep
+added: 2026-07
+verified: 2026-07

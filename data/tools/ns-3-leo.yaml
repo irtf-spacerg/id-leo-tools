@@ -1,0 +1,25 @@
+name: ns-3-leo
+class: Simulator
+subtype: LEO constellation module for ns-3
+domains:
+- LEO
+domain_detail: LEO broadband
+dynamics: TLE import + Walker-style parameters
+layers: Mobility; propagation loss (ISL/GSL); ns-3 stack above
+real_stack: 'no'
+real_stack_detail: 'No'
+scale: Starlink/Telesat topologies
+inputs: TLE; constellation params
+outputs: ns-3 traces
+language: C++
+license: GPL-2.0
+maintenance: inactive
+maintenance_detail: No (last push 2023-11)
+last_activity: 2023-11
+url: https://github.com/dadada/ns-3-leo
+publication: IEEE Access 2022
+contact: Tim Schubert (TU Braunschweig)
+notes: one of two standard ns-3 LEO baselines alongside Hypatia
+source: sweep
+added: 2026-07
+verified: 2026-07

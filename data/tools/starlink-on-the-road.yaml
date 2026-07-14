@@ -1,0 +1,26 @@
+name: Starlink on the Road
+class: Dataset / data
+class_detail: Dataset
+subtype: First public in-motion Starlink dataset
+domains:
+- LEO
+domain_detail: LEO broadband
+dynamics: N/A
+layers: 17,479 throughput + 1,191 RTT + 519 power samples vs speed
+real_stack: na
+real_stack_detail: N/A
+scale: Osnabrück region campaign
+inputs: N/A
+outputs: CSV
+language: N/A
+license: CC BY-SA 4.0
+maintenance: inactive
+maintenance_detail: Frozen
+last_activity: 2024-05
+url: https://github.com/sys-uos/Starlink-on-the-Road
+publication: TMA 2024
+contact: sys-uos (Osnabrück)
+notes: GPS traces withheld for privacy
+source: dagstuhl
+added: 2026-07
+verified: 2026-07

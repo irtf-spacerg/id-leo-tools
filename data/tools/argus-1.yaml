@@ -1,0 +1,25 @@
+name: Argus-1
+class: In-orbit platform
+subtype: CubeSat (AI compute; vision-based navigation)
+domains:
+- Orbital compute
+domain_detail: Orbital edge computing
+dynamics: N/A
+layers: Onboard ML inference (Jetson Orin Nano 8GB); CubeSat radio; no ISL
+real_stack: na
+real_stack_detail: N/A
+scale: Single CubeSat (Argus-2 in development)
+inputs: N/A
+outputs: N/A
+language: Open-source HW/SW (cmu-argus-1/2)
+license: Open source
+maintenance: planned
+maintenance_detail: Not yet launched (slipped from fall 2025)
+last_activity: '2026'
+url: https://github.com/cmu-argus-1
+publication: ASPLOS 2020 lineage; ICRA 2025
+contact: B. Lucia / Z. Manchester (CMU)
+notes: 'Row overstates: single CubeSat not constellation; closed access but open design'
+source: dagstuhl
+added: 2026-07
+verified: 2026-07

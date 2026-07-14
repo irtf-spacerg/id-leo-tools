@@ -1,0 +1,25 @@
+name: StarryNet
+class: Emulator
+subtype: Container-based constellation emulation
+domains:
+- LEO
+domain_detail: LEO broadband (ISTN)
+dynamics: config.json (altitude/inclination/phases) + skyfield/sgp4
+layers: Positions/link distances; tc-shaped links; real routing (Bird OSPF); real apps
+real_stack: 'yes'
+real_stack_detail: Yes (Docker + Linux kernel)
+scale: 27 nodes in README walkthrough; larger multi-machine in NSDI paper
+inputs: config.json; ground station lat/long; Python API
+outputs: Routing tables; ping/iperf results; per-node position data
+language: Python
+license: MIT
+maintenance: active
+maintenance_detail: Yes (last push 2026-05; 139 stars)
+last_activity: 2026-05
+url: https://github.com/SpaceNetLab/StarryNet
+publication: USENIX NSDI 2023
+contact: SpaceNetLab, Tsinghua (Zeqi Lai)
+notes: OSPF only routing wired in by default; same lab as StarPerf
+source: dagstuhl
+added: 2026-07
+verified: 2026-07

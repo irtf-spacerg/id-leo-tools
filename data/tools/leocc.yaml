@@ -1,0 +1,25 @@
+name: LeoCC
+class: Implementation
+subtype: Congestion control for LEO dynamics
+domains:
+- LEO
+- Transport
+domain_detail: LEO satellite network transport
+dynamics: Keyed on connection-reconfiguration signals (handover-aware)
+layers: Transport congestion control algorithm plus emulation scripts
+real_stack: 'yes'
+scale: Emulation-scale evaluation
+inputs: Emulation configs
+outputs: CCA implementation and results
+language: Mixed
+license: MIT
+maintenance: active
+maintenance_detail: Pushed 2026-01
+last_activity: 2026-01
+url: https://github.com/SpaceNetLab/LeoCC
+publication: ACM SIGCOMM 2025
+contact: SpaceNetLab, Tsinghua University
+notes: Congestion control algorithm built for LEO handover dynamics with a public implementation.
+source: sweep
+added: 2026-07
+verified: 2026-07

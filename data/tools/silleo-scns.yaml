@@ -1,0 +1,25 @@
+name: SILLEO-SCNS
+class: Simulator
+subtype: Graph/snapshot-level + interactive 3D
+domains:
+- LEO
+domain_detail: LEO broadband
+dynamics: Parametric Walker-style; custom Kepler solver (no TLE)
+layers: Positions; ISL/GSL graph; shortest-path routing
+real_stack: 'no'
+real_stack_detail: 'No'
+scale: Hundreds to thousands (int16 cap ~32k)
+inputs: GUI parameters
+outputs: VTK interactive viz; numpy state (no trace formats)
+language: Python
+license: GPL-3.0
+maintenance: inactive
+maintenance_detail: No (abandoned 2020-11; 111 stars)
+last_activity: 2020-11
+url: https://github.com/Ben-Kempton/SILLEO-SCNS
+publication: MSc thesis + companion paper (2020)
+contact: B. Kempton (Christopher Newport Univ.)
+notes: Educational/lightweight; unmaintained
+source: dagstuhl
+added: 2026-07
+verified: 2026-07

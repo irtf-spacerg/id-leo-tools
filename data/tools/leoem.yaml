@@ -1,0 +1,25 @@
+name: LeoEM
+class: Emulator
+subtype: Path-level Mininet replay
+domains:
+- LEO
+domain_detail: LEO broadband
+dynamics: StarPerf-derived propagation; Starlink/Kuiper/Telesat shells
+layers: Precomputed paths; real-time delay/handover updates; real TCP/QUIC/apps
+real_stack: 'yes'
+real_stack_detail: Yes (Linux kernel in namespaces)
+scale: Shell-scale propagation offline; one end-to-end path live
+inputs: Constellation params; ground_stations.xlsx; precomputed paths
+outputs: Route files; standard tools (iperf; pcap)
+language: Python
+license: MIT
+maintenance: inactive
+maintenance_detail: No (last push 2023-06; 136 stars)
+last_activity: 2023-06
+url: https://github.com/XuyangCaoUCSD/LeoEM
+publication: IEEE INFOCOM 2023 (SaTCP)
+contact: UC San Diego (Xuyang Cao; Xinyu Zhang)
+notes: Single-path emulator not full constellation; SaTCP companion artifact
+source: dagstuhl
+added: 2026-07
+verified: 2026-07

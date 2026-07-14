@@ -38,3 +38,14 @@ Here are two ways to create a pull request ("PR"):
 
 Document authors/editors are often happy to accept contributions of text,
 and might be willing to help you through the process. Email them and ask.
+
+## Adding a tool to the registry
+
+Besides the draft, this repository holds the SPACERG tool registry: one YAML
+file per tool under `data/tools/`, from which the registry web page is built.
+
+To add a tool, open a pull request with a single new file under `data/tools/`,
+copied from `data/TEMPLATE.yaml`. The registry page also has a "Suggest a
+tool" form that composes the YAML for you and can open a prefilled issue if
+you prefer not to make a PR. Inclusion criteria and the field reference are
+in [data/README.md](data/README.md). CI validates every PR.

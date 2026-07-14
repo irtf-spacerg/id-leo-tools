@@ -1,0 +1,26 @@
+name: The Starlink Robot
+class: Dataset / data
+class_detail: Dataset
+subtype: Mobile robotic platform + multimodal dataset
+domains:
+- LEO
+domain_detail: Mobile Starlink
+dynamics: N/A
+layers: Link performance + fisheye sky camera + LiDAR + IMU/GPS synchronized
+real_stack: na
+real_stack_detail: N/A
+scale: ~7h / ~120 GB; London environments
+inputs: N/A
+outputs: ROS bags; CSV; HDF5
+language: Python/ROS
+license: Open (see repo)
+maintenance: active
+maintenance_detail: Yes (docs maintained 2026)
+last_activity: '2026'
+url: https://github.com/StarlinkRobot
+publication: EAIS 2026 (arXiv:2506.19781)
+contact: StarlinkRobot project
+notes: uniquely couples environment sensing with link measurements for causal mobility analysis
+source: sweep
+added: 2026-07
+verified: 2026-07

@@ -1,0 +1,9 @@
+# Site-wide settings used by scripts/build_site.py
+site_title: SPACERG Space Networking Tools Registry
+maintainer_email: space@irtf.org
+repo_url: https://github.com/irtf-spacerg/id-leo-tools
+pages_url: https://irtf-spacerg.github.io/id-leo-tools/registry/
+description: >-
+  A living registry of {n} tools, simulators, emulators, testbeds, in-orbit platforms,
+  datasets, and protocol implementations for space networking research,
+  maintained by the IRTF Space Research Group.

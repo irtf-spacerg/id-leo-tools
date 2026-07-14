@@ -1,0 +1,25 @@
+name: SaVi
+class: Visualizer
+subtype: Constellation orbit/coverage visualization
+domains:
+- LEO
+domain_detail: Generic constellations
+dynamics: Keplerian elements via Tcl scripts (Starlink/Iridium/GPS presets; no TLE ingestion)
+layers: Geometry/footprints/coverage only (no network stack)
+real_stack: 'no'
+real_stack_detail: 'No'
+scale: Full constellations (thousands)
+inputs: Tcl constellation scripts
+outputs: 2D coverage maps; coverage stats; Geomview 3D; snapshots
+language: C + Tcl/Tk
+license: BSD
+maintenance: active
+maintenance_detail: Yes (v1.6 2023; files updated 2026-03; single maintainer)
+last_activity: 2026-03
+url: https://savi.sourceforge.io/
+publication: arXiv:1204.3265 (2011; lineage to 1990s)
+contact: Lloyd Wood
+notes: ~30-year lineage; teaching and constellation design staple
+source: dagstuhl
+added: 2026-07
+verified: 2026-07

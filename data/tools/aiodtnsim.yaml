@@ -1,0 +1,25 @@
+name: aiodtnsim
+class: Simulator
+subtype: Minimal asyncio DTN forwarding/routing prototyping
+domains:
+- Deep space / DTN
+domain_detail: Space DTN
+dynamics: TVGs from dtn-tvg-util (TLE or synthetic)
+layers: Abstract bundles; pluggable CGR-family routing
+real_stack: 'no'
+real_stack_detail: 'No'
+scale: Ring Road / LEO scenarios
+inputs: TVG files
+outputs: Simulation results
+language: Python
+license: MIT
+maintenance: low
+maintenance_detail: Quiet-maintained (activity 2026-06)
+last_activity: 2026-06
+url: https://gitlab.com/d3tn/aiodtnsim
+publication: Walter PhD / D3TN papers
+contact: Felix Walter (D3TN)
+notes: simulation companion to uD3TN in published routing evaluations
+source: sweep
+added: 2026-07
+verified: 2026-07

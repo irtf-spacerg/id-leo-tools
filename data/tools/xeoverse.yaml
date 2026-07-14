@@ -1,0 +1,25 @@
+name: xeoverse
+class: Emulator
+subtype: Mininet real-time emulation
+domains:
+- LEO
+domain_detail: LEO broadband
+dynamics: Precomputed orbital dynamics (propagator undisclosed)
+layers: Dynamic ISL/GSL topology; routing; real TCP/QUIC end-to-end
+real_stack: 'yes'
+real_stack_detail: Yes (Mininet process-level)
+scale: ~4096 node Mininet bound; real-time 1s=1s
+inputs: Scenario configs (not public)
+outputs: Performance metrics (not public)
+language: Python
+license: Proprietary, non-commercial, code by registration
+maintenance: unknown
+maintenance_detail: Unknown (closed distribution)
+last_activity: Unknown
+url: https://netsys.surrey.ac.uk/softwares/xeoverse/
+publication: IFIP Networking 2024 (arXiv:2406.11366)
+contact: NetSys, Univ. of Surrey (Kassem; Sastry)
+notes: Claims 2.9x faster than Hypatia; 40x vs StarryNet; closed license limits reproducibility
+source: dagstuhl
+added: 2026-07
+verified: 2026-07

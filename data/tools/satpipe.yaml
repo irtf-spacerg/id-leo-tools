@@ -1,0 +1,25 @@
+name: SatPipe
+class: Implementation
+subtype: Deterministic TCP adaptation for LEO paths
+domains:
+- LEO
+- Transport
+domain_detail: LEO transport and video delivery
+dynamics: Handover-aware deterministic LEO path model
+layers: Transport adaptation plus DASH video demo
+real_stack: 'yes'
+scale: Path-level evaluation
+inputs: Configs
+outputs: Implementation and demo
+language: Mixed
+license: Not stated
+maintenance: low
+maintenance_detail: Last push 2025-01
+last_activity: 2025-01
+url: https://github.com/dzhao99/SatPipe
+publication: IEEE INFOCOM 2025
+contact: dzhao99 (Cisco Research collaboration)
+notes: Transport-layer artifact with a working video-streaming demonstration.
+source: sweep
+added: 2026-07
+verified: 2026-07

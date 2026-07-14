@@ -1,0 +1,26 @@
+name: NSDocker
+class: Emulator
+class_detail: Hybrid sim+emu
+subtype: ns-3 simulation + Docker real-stack nodes
+domains:
+- LEO
+domain_detail: LEO broadband
+dynamics: Constellation built in ns-3 (propagator UNKNOWN)
+layers: ns-3 CSMA links + topology; real transport/apps in containers
+real_stack: 'yes'
+real_stack_detail: Yes (Docker side)
+scale: 200 sats demonstrated; 88% memory saving vs pure Docker
+inputs: ns-3 scenario configs
+outputs: ns-3 traces + container measurements
+language: UNKNOWN
+license: UNKNOWN
+maintenance: inactive
+maintenance_detail: No public repo found
+last_activity: N/A
+url: https://dl.acm.org/doi/10.1145/3735358.3737767
+publication: APNet 2025
+contact: BUPT/RMIT (Ruan; Pan; et al.)
+notes: Artifact availability unclear; contact authors before listing repo
+source: dagstuhl
+added: 2026-07
+verified: 2026-07

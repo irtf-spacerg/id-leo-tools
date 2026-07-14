@@ -1,0 +1,27 @@
+name: QUIC Interop Runner - Satellite Edition
+class: Measurement
+class_detail: Benchmark framework
+subtype: QUIC implementations over GEO profiles
+domains:
+- GEO / DVB
+- Transport
+domain_detail: Transport (GEO)
+dynamics: netem GEO delay/loss profiles + real satellite links (Astra/Eutelsat)
+layers: Transport/application (QUIC/HTTP3 stacks in containers)
+real_stack: 'yes'
+real_stack_detail: 'Yes'
+scale: Many QUIC implementations compared
+inputs: Test case definitions
+outputs: Interop/performance matrices (public results site)
+language: Python
+license: MIT-derived
+maintenance: inactive
+maintenance_detail: No (thesis-era 2022; results site online)
+last_activity: '2022'
+url: https://gitlab.cs.fau.de/sedrubal/masterarbeit/quic-interop-runner
+publication: PAM 2022 (arXiv:2202.08228)
+contact: FAU Erlangen (Deutschmann)
+notes: reusable harness for QUIC-over-satellite comparisons
+source: sweep
+added: 2026-07
+verified: 2026-07

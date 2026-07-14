@@ -1,0 +1,26 @@
+name: starlink-grpc-tools
+class: Measurement
+class_detail: Measurement tool
+subtype: Dish telemetry extraction toolkit
+domains:
+- LEO
+domain_detail: Starlink terminal telemetry
+dynamics: N/A
+layers: Dish status/history/obstruction via local gRPC
+real_stack: na
+real_stack_detail: N/A
+scale: Single dish (the substrate under most dish-side datasets)
+inputs: Local gRPC polling
+outputs: CSV; SQLite; InfluxDB; Prometheus; MQTT; PNG
+language: Python
+license: Unlicense (public domain)
+maintenance: active
+maintenance_detail: Yes (v1.2.5 2026-03)
+last_activity: 2026-03
+url: https://github.com/sparky8512/starlink-grpc-tools
+publication: None (community; cited in many papers)
+contact: sparky8512 (community)
+notes: the common telemetry substrate under LENS/WetLinks-class datasets
+source: sweep
+added: 2026-07
+verified: 2026-07

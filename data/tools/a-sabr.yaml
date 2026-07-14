@@ -1,0 +1,25 @@
+name: A-SABR
+class: Library
+subtype: Adaptive modular Rust SABR/CGR library
+domains:
+- Deep space / DTN
+domain_detail: Space DTN routing
+dynamics: Contact plans (multiple parsers)
+layers: CGR/SABR + variants (SPSN; alt pathfinding; volume management)
+real_stack: 'no'
+real_stack_detail: No (embeddable in real stacks)
+scale: Benchmark-oriented
+inputs: Contact plans
+outputs: Route computations
+language: Rust
+license: MIT
+maintenance: active
+maintenance_detail: Yes (pushed 2026-07-07)
+last_activity: 2026-07
+url: https://github.com/DTN-MTP/A-SABR
+publication: HAL hal-05301072 (2025); CCSDS SABR
+contact: O. De Jonckere (LIRMM)
+notes: emerging modern SABR/CGR reference decoupled from any BP stack
+source: sweep
+added: 2026-07
+verified: 2026-07

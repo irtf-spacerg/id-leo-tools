@@ -1,0 +1,25 @@
+name: DIPT HTTP
+class: Implementation
+subtype: HTTP over space-profiled QUIC
+domains:
+- Deep space / DTN
+domain_detail: Deep space (IP/QUIC)
+dynamics: None (run over external delay environment)
+layers: Application HTTP over QUIC
+real_stack: 'yes'
+real_stack_detail: 'Yes'
+scale: Point-to-point
+inputs: Undocumented
+outputs: Undocumented
+language: Rust
+license: Apache-2.0
+maintenance: active
+maintenance_detail: Yes (young; last push 2025-10)
+last_activity: 2025-10
+url: https://github.com/deepspaceip/dipt-http
+publication: Supports TIPTOP drafts
+contact: Marc Blanchet (Viagenie)
+notes: Likely uses deepspace-quiche (Cloudflare quiche fork with no-op CC)
+source: dagstuhl
+added: 2026-07
+verified: 2026-07

@@ -1,0 +1,26 @@
+name: OpenNTN
+class: Simulator
+class_detail: Simulator module
+subtype: TR 38.811 NTN channels for Sionna
+domains:
+- NTN-5G
+domain_detail: NTN-5G/6G PHY
+dynamics: 3GPP statistical channel models (elevation-dependent)
+layers: PHY channel/antenna only
+real_stack: 'no'
+real_stack_detail: 'No'
+scale: Link-level
+inputs: Sionna/TensorFlow scripts
+outputs: Channel realizations
+language: Python
+license: MIT
+maintenance: active
+maintenance_detail: Yes (last push 2026-06)
+last_activity: 2026-06
+url: https://github.com/ant-uni-bremen/OpenNTN
+publication: arXiv 2025-09
+contact: Univ. Bremen ANT
+notes: main open path for AI/ML 6G NTN PHY research
+source: sweep
+added: 2026-07
+verified: 2026-07

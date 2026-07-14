@@ -1,0 +1,25 @@
+name: NetSatBench
+class: Emulator
+subtype: Distributed container emulation (VXLAN overlay)
+domains:
+- LEO
+domain_detail: LEO broadband
+dynamics: JSON scenario + precomputed epoch files (TLE/Walker handling in generators)
+layers: L2 VXLAN ISLs; L3 auto-addressing; pluggable routing (IS-IS; oracle; SRv6)
+real_stack: 'yes'
+real_stack_detail: Yes (containers + sat-agent per node)
+scale: 10-node tutorial; large-scale target
+inputs: JSON scenarios + epoch files; worker configs
+outputs: Traffic measurements; routing tables; logs
+language: Python
+license: BSD-2-Clause
+maintenance: active
+maintenance_detail: Yes (created 2025-11; last push 2026-06)
+last_activity: 2026-06
+url: https://github.com/mSvcBench/NetSatBench
+publication: arXiv:2604.27854 (2026 preprint)
+contact: Andrea Detti (Tor Vergata)
+notes: Very young; SRv6 handover case study
+source: dagstuhl
+added: 2026-07
+verified: 2026-07

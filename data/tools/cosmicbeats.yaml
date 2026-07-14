@@ -1,0 +1,25 @@
+name: CosmicBeats
+class: Simulator
+subtype: Discrete-time modular (node/model architecture)
+domains:
+- IoT
+domain_detail: IoT direct-to-satellite / EO
+dynamics: TLE (CelesTrak) + Skyfield
+layers: Orbits; LoRa-class PHY; MAC (CosMAC); compute and imaging models
+real_stack: 'no'
+real_stack_detail: No (abstract models)
+scale: 1,000 IoT devices + 150 LEO sats in examples
+inputs: JSON configs + TLE files
+outputs: Logs + analytics pipeline (CSV)
+language: Python
+license: MIT
+maintenance: inactive
+maintenance_detail: No (last push 2024-09; 58 stars)
+last_activity: 2024-09
+url: https://github.com/microsoft/CosmicBeats-Simulator
+publication: ACM MobiCom 2024 (CosMAC)
+contact: Microsoft Research
+notes: Application-agnostic; example parameters illustrative not validated
+source: dagstuhl
+added: 2026-07
+verified: 2026-07

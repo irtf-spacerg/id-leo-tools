@@ -1,0 +1,25 @@
+name: DIPT QUIC Workbench
+class: Simulator
+subtype: Deterministic in-memory network sim with real QUIC
+domains:
+- Deep space / DTN
+domain_detail: Deep space (IP/QUIC)
+dynamics: JSON topology + timed link events (hand-authored contact windows; no TLE)
+layers: IP store-and-forward with per-node buffers; real Quinn QUIC; HTTP-like app
+real_stack: 'no'
+real_stack_detail: Real QUIC stack over simulated network
+scale: Few-node scenarios (Earth-Moon/Mars/Voyager)
+inputs: JSON topology/events/traffic; QUIC transport params
+outputs: CLI stats; synthetic pcap with TLS keylog; qlog
+language: Rust
+license: Apache-2.0 / MIT
+maintenance: active
+maintenance_detail: Yes (last push 2026-06; 42 stars)
+last_activity: 2026-06
+url: https://github.com/deepspaceip/dipt-quic-workbench
+publication: IETF TIPTOP drafts (quic-profile; ip-architecture)
+contact: Marc Blanchet (Viagenie)
+notes: Hub of DIPT family; time-warped deterministic execution; scenarios in test-data/
+source: dagstuhl
+added: 2026-07
+verified: 2026-07

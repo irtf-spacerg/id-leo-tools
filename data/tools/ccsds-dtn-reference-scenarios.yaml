@@ -1,0 +1,24 @@
+name: CCSDS DTN Reference Scenarios
+class: Dataset / data
+subtype: Standardized DTN benchmark scenarios
+domains:
+- Deep space / DTN
+domain_detail: LEO, lunar and Mars communication scenarios
+dynamics: Curated visibility windows plus planned and actual contact plans (schedule deviation captured explicitly)
+layers: 'Scenario definition only: nodes, contacts, traffic, policy'
+real_stack: na
+scale: Three scenarios (low-earth-orbit, lunar-communication, mars-communication), v1.0 each
+inputs: n/a
+outputs: CSV (visibility, contacts) + JSON (nodes, traffic, policy) + AsciiDoc/PDF documentation; tool-neutral
+language: Data only
+license: CC BY 4.0 (CCSDS 2026)
+maintenance: active
+maintenance_detail: Created 2026-04, pushed 2026-07
+last_activity: 2026-07
+url: https://github.com/esa/ccsds-dtn-reference-scenarios
+publication: Companion to a CCSDS Yellow Book (SIS-DTN, 2026)
+contact: ESA on behalf of CCSDS
+notes: Agency-endorsed common benchmark set for DTN tools; intended as shared input to simulators (DtnSim, DSNS) and stacks (ION, HDTN) so results are comparable. The planned-versus-actual contact split supports schedule-uncertainty studies.
+source: community
+added: 2026-07
+verified: 2026-07

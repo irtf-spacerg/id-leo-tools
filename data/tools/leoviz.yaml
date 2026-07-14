@@ -1,0 +1,26 @@
+name: LEOViz
+class: Measurement
+class_detail: Measurement tool
+subtype: Serving-satellite identification + visualization
+domains:
+- LEO
+domain_detail: LEO broadband (Starlink/OneWeb)
+dynamics: TLE + dish telemetry correlation
+layers: Dish gRPC; obstruction maps; ICMP latency; satellite ID
+real_stack: na
+real_stack_detail: N/A
+scale: Per-dish tool
+inputs: Dish gRPC; GPS coords; TLEs; pings
+outputs: CSV; obstruction maps; MP4 visualizations; Grafana
+language: Python
+license: GPL-3.0
+maintenance: active
+maintenance_detail: Yes (last push 2026-01; 59 stars)
+last_activity: 2026-01
+url: https://github.com/clarkzjw/LEOViz
+publication: ACM LEO-NET 2024
+contact: Jinwei Zhao (UVic PanLab)
+notes: Companion software of CCC-LEO testbed
+source: dagstuhl
+added: 2026-07
+verified: 2026-07

@@ -1,0 +1,26 @@
+name: Starlink on the Autobahn
+class: Dataset / data
+class_detail: Dataset
+subtype: Mobile Starlink at highway speeds
+domains:
+- LEO
+domain_detail: LEO broadband
+dynamics: N/A
+layers: RTT; iperf3 throughput; loss vs vehicle speed
+real_stack: na
+real_stack_detail: N/A
+scale: Osnabrück-Bunde route + stationary baselines
+inputs: N/A
+outputs: CSV + notebooks + emulation scripts
+language: Python notebooks
+license: CC BY-SA 4.0
+maintenance: inactive
+maintenance_detail: Frozen
+last_activity: 2025-02
+url: https://github.com/sys-uos/Starlink-on-the-Autobahn
+publication: IEEE OJ-COMS 2025
+contact: sys-uos (Osnabrück)
+notes: Successor of Starlink on the Road with >100 km/h mobility
+source: dagstuhl
+added: 2026-07
+verified: 2026-07

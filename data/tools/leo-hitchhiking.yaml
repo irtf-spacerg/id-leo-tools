@@ -1,0 +1,26 @@
+name: LEO-HitchHiking
+class: Measurement
+class_detail: Measurement methodology
+subtype: Internet scanning via exposed services
+domains:
+- LEO
+domain_detail: LEO broadband (Starlink/OneWeb)
+dynamics: N/A
+layers: TTL-limited pings over satellite hop
+real_stack: na
+real_stack_detail: N/A
+scale: Global; running since 2023
+inputs: Censys API/BigQuery discovery
+outputs: Public Google BigQuery tables
+language: Python
+license: Apache-2.0
+maintenance: active
+maintenance_detail: Yes (cron collection ongoing; 33 stars)
+last_activity: 2025-03
+url: https://github.com/stanford-esrg/LEO_HitchHiking
+publication: ACM SIGMETRICS 2024
+contact: Stanford ESRG (Izhikevich)
+notes: Terminal-free global measurement; foundation of Roman-HitchHiking
+source: dagstuhl
+added: 2026-07
+verified: 2026-07

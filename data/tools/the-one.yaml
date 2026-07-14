@@ -1,0 +1,25 @@
+name: The ONE
+class: Simulator
+subtype: Classic opportunistic-DTN discrete-event simulator
+domains:
+- Deep space / DTN
+domain_detail: Terrestrial opportunistic DTN
+dynamics: Synthetic mobility models; imported traces
+layers: Abstract messages; Epidemic/PRoPHET/Spray-and-Wait/MaxProp routing
+real_stack: 'no'
+real_stack_detail: 'No'
+scale: City-scale opportunistic scenarios
+inputs: Mobility configs/traces
+outputs: Message-level reports
+language: Java
+license: GPL-3.0
+maintenance: inactive
+maintenance_detail: No (dormant; last push 2024-12)
+last_activity: 2024-12
+url: https://github.com/akeranen/the-one
+publication: SIMUTools 2009
+contact: Keranen/Ott (Aalto)
+notes: most-cited DTN simulator ever; the baseline space DTN simulators diverged from
+source: sweep
+added: 2026-07
+verified: 2026-07

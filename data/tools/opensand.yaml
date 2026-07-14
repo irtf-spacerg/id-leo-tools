@@ -1,0 +1,25 @@
+name: OpenSAND
+class: Emulator
+subtype: DVB-S2(X)/RCS2 GEO satcom emulation
+domains:
+- GEO / DVB
+domain_detail: GEO satcom access
+dynamics: None (static GEO; link/attenuation scenarios)
+layers: DVB-S2/RCS2 link/MAC; GSE; IP QoS; real apps via tun/tap
+real_stack: 'yes'
+real_stack_detail: Yes (real Linux stacks)
+scale: System-level (gateway/terminals)
+inputs: Emulation config; attenuation scenarios
+outputs: Real IP traffic; logs (companion OpenBACH)
+language: C++
+license: GPLv3/LGPLv3
+maintenance: active
+maintenance_detail: Yes (v8.2.0; last push 2025-12)
+last_activity: 2025-12
+url: https://github.com/CNES/opensand
+publication: Ka Conference 2017 (ex-Platine)
+contact: CNES / Thales / Viveris
+notes: canonical European satcom emulator; standard substrate for PEP/QUIC studies
+source: sweep
+added: 2026-07
+verified: 2026-07

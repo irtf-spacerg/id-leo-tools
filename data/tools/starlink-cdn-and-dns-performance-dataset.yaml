@@ -1,0 +1,26 @@
+name: Starlink CDN and DNS Performance Dataset
+class: Dataset / data
+class_detail: Dataset
+subtype: Global web-delivery performance over Starlink
+domains:
+- LEO
+domain_detail: LEO broadband
+dynamics: N/A
+layers: Speedtests; DNS; traceroutes; CDN reachability
+real_stack: na
+real_stack_detail: N/A
+scale: 145 countries; Nov 2023-Sep 2025; 225k AIM tests; 6.1M traceroutes; 10.8M DNS queries
+inputs: N/A
+outputs: Archives via mediaTUM (formats TBC; site unreachable during check)
+language: N/A
+license: UNKNOWN (verify on mediaTUM)
+maintenance: inactive
+maintenance_detail: Static snapshot
+last_activity: 2025-09 (campaign end)
+url: https://mediatum.ub.tum.de/1840504
+publication: ACM WWW 2026 (arXiv:2510.13710)
+contact: Nitinder Mohan (TU Delft)
+notes: 'Key finding: PoP proximity dominates Starlink web performance; license/size to verify'
+source: dagstuhl
+added: 2026-07
+verified: 2026-07

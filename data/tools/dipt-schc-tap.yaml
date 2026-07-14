@@ -1,0 +1,25 @@
+name: DIPT SCHC TAP
+class: Implementation
+subtype: SCHC header compression over Linux TAP
+domains:
+- Deep space / DTN
+domain_detail: Deep space / constrained links
+dynamics: None (TAP interface; any emulated link below)
+layers: Adaptation-layer compression below IP
+real_stack: 'yes'
+real_stack_detail: Yes (kernel TAP)
+scale: Single link pair
+inputs: Ethernet/IP frames via TAP
+outputs: SCHC-compressed frames
+language: Rust
+license: None yet (UNLICENSED)
+maintenance: low
+maintenance_detail: Early prototype (created 2025-11; no README)
+last_activity: 2025-11
+url: https://github.com/deepspaceip/dipt-schc-tap
+publication: None yet
+contact: Marc Blanchet (Viagenie)
+notes: Newest and least mature DIPT piece; no README/license/releases
+source: dagstuhl
+added: 2026-07
+verified: 2026-07

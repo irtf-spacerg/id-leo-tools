@@ -1,0 +1,25 @@
+name: TUD OGS
+class: Testbed
+subtype: Optical ground station + FSOC lab
+domains:
+- Optical
+domain_detail: Optical
+dynamics: N/A (real links)
+layers: Optical channel; turbulence; adaptive optics
+real_stack: na
+real_stack_detail: N/A
+scale: Single site (Delft)
+inputs: N/A
+outputs: Results via publications (no public API)
+language: N/A
+license: N/A
+maintenance: active
+maintenance_detail: Yes (ongoing research output)
+last_activity: '2026'
+url: https://www.tudelft.nl/lr/laser-satellite-communications
+publication: Group publications (no flagship testbed paper)
+contact: R. Saathof (TU Delft)
+notes: Optical-link counterpart to RF testbeds; access by collaboration
+source: dagstuhl
+added: 2026-07
+verified: 2026-07

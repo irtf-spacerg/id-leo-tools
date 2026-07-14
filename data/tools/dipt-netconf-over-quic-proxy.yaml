@@ -1,0 +1,25 @@
+name: DIPT NETCONF-over-QUIC proxy
+class: Implementation
+subtype: Management-plane proxy pair (NETCONF/QUIC)
+domains:
+- Deep space / DTN
+domain_detail: Deep space (network management)
+dynamics: None
+layers: NETCONF over QUIC; SSH leg to netopeer2 backend
+real_stack: 'yes'
+real_stack_detail: 'Yes'
+scale: Single management session
+inputs: NETCONF XML sessions
+outputs: NETCONF sessions
+language: Rust
+license: Apache-2.0 / MIT
+maintenance: inactive
+maintenance_detail: Dormant PoC (last push 2024-11)
+last_activity: 2024-11
+url: https://github.com/deepspaceip/dipt-netconf-over-quic-proxy
+publication: Complements TIPTOP drafts
+contact: Marc Blanchet (Viagenie)
+notes: Unauthenticated by design (testing only)
+source: dagstuhl
+added: 2026-07
+verified: 2026-07

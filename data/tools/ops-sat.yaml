@@ -1,0 +1,25 @@
+name: OPS-SAT
+class: In-orbit platform
+subtype: 3U CubeSat flying laboratory
+domains:
+- Other
+domain_detail: Software-defined operations
+dynamics: N/A
+layers: SEPP processor (ARM+FPGA Linux); S/X-band; SDR; optical receiver
+real_stack: 'yes'
+real_stack_detail: Yes (experimenter software onboard)
+scale: 1 satellite; >100 experimenter teams
+inputs: Experimenter software via ESA programme
+outputs: Experiment results
+language: Various
+license: Open experimenter programme
+maintenance: inactive
+maintenance_detail: Mission ended (reentry 2024-05); successor VOLT ~2026
+last_activity: 2024-05
+url: https://opssat.esa.int/
+publication: ESA mission pages; eoPortal
+contact: ESA ESOC (D. Evans)
+notes: Archetype of open in-orbit software lab; lineage continues via Space Lab + VOLT (optical/QKD)
+source: dagstuhl
+added: 2026-07
+verified: 2026-07

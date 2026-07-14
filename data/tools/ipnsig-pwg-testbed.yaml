@@ -1,0 +1,25 @@
+name: IPNSIG PWG testbed
+class: Testbed
+subtype: Volunteer global multi-implementation BP testbed
+domains:
+- Deep space / DTN
+domain_detail: Interplanetary DTN interop
+dynamics: Real Internet links + scheduled contact plans
+layers: ION/uD3TN/HDTN/DTNME/Unibo-BP interop; BPv6/v7
+real_stack: 'yes'
+real_stack_detail: 'Yes'
+scale: Global volunteer nodes (JPL; GRC; APL; universities)
+inputs: Join via IPNSIG PWG
+outputs: Interop reports
+language: N/A
+license: Open community
+maintenance: active
+maintenance_detail: Yes (PWG site maintained)
+last_activity: '2026'
+url: https://ipnsig-pwg.github.io/
+publication: RFC 9171 interop reports
+contact: IPNSIG Projects WG
+notes: the only open join-able multi-implementation BP testbed
+source: sweep
+added: 2026-07
+verified: 2026-07

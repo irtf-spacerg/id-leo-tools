@@ -1,0 +1,26 @@
+name: Tiansuan Constellation ({LEO})
+class: In-orbit platform
+subtype: Open research constellation (cloud-native satellites)
+domains:
+- NTN-5G
+- Orbital compute
+domain_detail: Satellite computing / 6G
+dynamics: N/A (real satellites)
+layers: Onboard containers/K8s-style orchestration; sat-ground links
+real_stack: 'yes'
+real_stack_detail: Yes (real satellites)
+scale: 'Phase 1: 6 sats; phase 2: 24; target 300'
+inputs: Experiment applications via Tiansuan Experiment Platform
+outputs: Experiment results/telemetry; open datasets
+language: Mixed (Python; C; Rust)
+license: Varies per repo
+maintenance: active
+maintenance_detail: Yes (GitHub activity through 2026-01)
+last_activity: 2026-01
+url: http://www.tiansuan.org.cn/
+publication: IEEE EDGE 2021 (arXiv:2112.14957)
+contact: BUPT, Prof. Shangguang Wang
+notes: Rename row from {LEO}; open call at little/zero cost; site TLS cert broken (use http)
+source: dagstuhl
+added: 2026-07
+verified: 2026-07

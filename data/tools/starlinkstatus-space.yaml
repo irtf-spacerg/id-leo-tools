@@ -1,0 +1,26 @@
+name: starlinkstatus.space
+class: Measurement
+class_detail: Measurement platform
+subtype: Crowdsourced community Starlink monitoring
+domains:
+- LEO
+domain_detail: LEO broadband
+dynamics: N/A
+layers: Latency every 15s + speedtests every 15min from volunteer dishes
+real_stack: na
+real_stack_detail: N/A
+scale: ~1.7M measurements; ~300 stations; ~29 countries
+inputs: Open client (RPi-class)
+outputs: Web dashboards; bulk data by arrangement
+language: Open-source client
+license: Open source
+maintenance: active
+maintenance_detail: 'Yes'
+last_activity: '2026'
+url: https://starlinkstatus.space
+publication: IEEE 2024 (10622394)
+contact: Manuel Lausmann (community)
+notes: rare independent crowdsourced effort already used in peer-reviewed work
+source: sweep
+added: 2026-07
+verified: 2026-07

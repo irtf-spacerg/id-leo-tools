@@ -1,0 +1,25 @@
+name: LEOCraft
+class: Simulator
+subtype: Flow-level (LP max-flow via Gurobi)
+domains:
+- LEO
+domain_detail: LEO broadband
+dynamics: Parametric shells (+Grid ISL); Keplerian
+layers: ISL topology; route categories; throughput/latency/coverage
+real_stack: 'no'
+real_stack_detail: 'No'
+scale: Multi-shell Starlink/Kuiper/Telesat scale
+inputs: Python constellation params; GS datasets; traffic matrices
+outputs: Throughput/stretch metrics; CSV; interactive 2D/3D HTML viz
+language: Python
+license: MIT
+maintenance: active
+maintenance_detail: Yes (last push 2025-07; young)
+last_activity: 2025-07
+url: https://suvambasak.github.io/LEOCraft/
+publication: USENIX ATC 2025
+contact: IIT Kanpur + MSR India (Basak; Bhattacherjee)
+notes: Fast what-if constellation design evaluation; needs Gurobi academic license
+source: dagstuhl
+added: 2026-07
+verified: 2026-07

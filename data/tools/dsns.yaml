@@ -1,0 +1,26 @@
+name: DSNS
+class: Simulator
+subtype: Discrete-event message/flow-level
+domains:
+- LEO
+- Deep space / DTN
+domain_detail: Deep space DTN + multi-constellation
+dynamics: Fixed points; Walker params; TLE + SGP4; manual links
+layers: Abstract PHY; store-and-forward routing with lookahead; detailed LTP; BP-style delivery
+real_stack: 'no'
+real_stack_detail: 'No'
+scale: 50,688 satellites; faster than real time on 1 core
+inputs: Python config scripts
+outputs: Logs (latency; hops; saturation); pyrender 3D viz
+language: 'Python (pip: dsns)'
+license: GPL-3.0
+maintenance: active
+maintenance_detail: Yes (created 2025-09; last push 2026-06)
+last_activity: 2026-06
+url: https://github.com/ssloxford/DSNS/
+publication: IEEE 3S 2025 (arXiv:2508.04317)
+contact: Oxford Systems Security Lab + armasuisse
+notes: Built for PKI-in-space studies; CGR mentioned but NOT implemented; no custody transfer
+source: dagstuhl
+added: 2026-07
+verified: 2026-07

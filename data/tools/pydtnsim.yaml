@@ -1,0 +1,25 @@
+name: pydtnsim
+class: Simulator
+subtype: Python DES for CGR variant evaluation
+domains:
+- Deep space / DTN
+domain_detail: Space DTN routing
+dynamics: Contact plans / contact graphs
+layers: Abstract bundles; CGR + anchoring variants
+real_stack: 'no'
+real_stack_detail: 'No'
+scale: Ring Road scale scenarios
+inputs: Contact plans (dtn-tvg-util compatible)
+outputs: Simulation results
+language: Python
+license: MIT
+maintenance: inactive
+maintenance_detail: No (last push 2022-12)
+last_activity: 2022-12
+url: https://github.com/ducktec/pydtnsim
+publication: TU Dresden CGR research
+contact: ducktec (TU Dresden lineage)
+notes: purpose-built open CGR-variant comparison simulator
+source: sweep
+added: 2026-07
+verified: 2026-07

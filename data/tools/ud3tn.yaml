@@ -1,0 +1,26 @@
+name: uD3TN
+class: Implementation
+subtype: Lean space-tested BP for POSIX + microcontrollers
+domains:
+- LEO
+- Deep space / DTN
+domain_detail: DTN (LEO + interplanetary)
+dynamics: External contacts via AAP/AAP2 (routing delegated to BDMs)
+layers: BPv6+v7; TCPCLv3/MTCP/SPP/BIBE CLAs; no built-in CGR (by design)
+real_stack: 'yes'
+real_stack_detail: 'Yes'
+scale: Flown on ESA OPS-SAT
+inputs: AAP2 API; config
+outputs: Bundle traffic
+language: C (+Python tooling)
+license: AGPL-3.0 (commercial available)
+maintenance: active
+maintenance_detail: Yes (activity 2026-07)
+last_activity: 2026-07
+url: https://gitlab.com/d3tn/ud3tn
+publication: RFC 9171; arXiv:2407.17166
+contact: D3TN GmbH (Felix Walter)
+notes: main European commercial-grade open BP stack; cross-agency interop demos
+source: sweep
+added: 2026-07
+verified: 2026-07

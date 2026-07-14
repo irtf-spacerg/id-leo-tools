@@ -1,0 +1,26 @@
+name: PolarLink
+class: In-orbit platform
+subtype: 8U CubeSat (Arctic LEO connectivity)
+domains:
+- LEO
+- Optical
+domain_detail: LEO interoperability / optical ISL
+dynamics: N/A
+layers: Optical + RF payloads; space-to-space links with commercial LEO
+real_stack: na
+real_stack_detail: N/A
+scale: 1 CubeSat planned
+inputs: N/A
+outputs: N/A
+language: N/A
+license: N/A
+maintenance: planned
+maintenance_detail: Planned (launch ~Oct/Nov 2027; DRDC contract 2025)
+last_activity: 2027 (planned)
+url: https://www.uvic.ca/ecs/news/cfar-spaceleo.php
+publication: UVic news; LEO-NET ecosystem
+contact: Jianping Pan (UVic CfAR)
+notes: DRDC SpaceLEO program; CAD 2.82M; payload details not yet public
+source: dagstuhl
+added: 2026-07
+verified: 2026-07

@@ -1,0 +1,26 @@
+name: SatPerf
+class: Measurement
+class_detail: Measurement tool
+subtype: Browser plugin (crowdsourced)
+domains:
+- LEO
+domain_detail: LEO broadband
+dynamics: N/A
+layers: User-perceived speed and page-load metrics
+real_stack: na
+real_stack_detail: N/A
+scale: Any volunteer browser
+inputs: In-browser tests
+outputs: Local browser storage; optional anonymized upload
+language: JavaScript
+license: Apache-2.0
+maintenance: inactive
+maintenance_detail: No (last push 2024-07; 0 stars)
+last_activity: 2024-07
+url: https://github.com/socsys/satperf/
+publication: None found
+contact: SOCSYS, Univ. of Surrey
+notes: Likely dormant; no public dataset identified
+source: dagstuhl
+added: 2026-07
+verified: 2026-07

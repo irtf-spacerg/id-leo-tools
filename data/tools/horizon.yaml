@@ -1,0 +1,24 @@
+name: Horizon
+class: Dataset / data
+subtype: Global Starlink performance analysis and prediction
+domains:
+- LEO
+domain_detail: Starlink measurement and ML prediction
+dynamics: n/a
+layers: Cloudflare AIM and M-Lab NDT7 pipeline; latency and throughput prediction models
+real_stack: na
+scale: Global (reported MAE 17.8 ms latency, 25.6 Mbps throughput)
+inputs: n/a
+outputs: Code and data pipeline
+language: Python
+license: Not stated
+maintenance: active
+maintenance_detail: Published 2026
+last_activity: '2026'
+url: https://github.com/SPEAR-Research-Lab/Horizon-Predicting-Starlink-Performance
+publication: ACM SIGMETRICS 2026
+contact: SPEAR lab, TU Delft (Shreedhar, Mohan)
+notes: Global-scale Starlink performance model with a released pipeline.
+source: sweep
+added: 2026-07
+verified: 2026-07

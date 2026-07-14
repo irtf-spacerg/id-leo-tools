@@ -1,0 +1,25 @@
+name: dtn7-rs
+class: Implementation
+subtype: Rust BPv7 daemon + library
+domains:
+- Deep space / DTN
+domain_detail: General DTN
+dynamics: Neighbor discovery; external routing hook
+layers: BPv7; MTCP/TCPCLv4/HTTP CLAs; epidemic/flooding/external routing
+real_stack: 'yes'
+real_stack_detail: 'Yes'
+scale: Terrestrial + lab space scenarios
+inputs: Config; REST/WebSocket API
+outputs: Bundle traffic
+language: Rust
+license: MIT/Apache-2.0
+maintenance: active
+maintenance_detail: Yes (pushed 2026-05)
+last_activity: 2026-05
+url: https://github.com/dtn7/dtn7-rs
+publication: RFC 9171
+contact: dtn7 org (Marburg)
+notes: most active independent BPv7 implementation; common in emulation testbeds
+source: sweep
+added: 2026-07
+verified: 2026-07

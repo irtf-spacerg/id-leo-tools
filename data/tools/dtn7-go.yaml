@@ -1,0 +1,25 @@
+name: dtn7-go
+class: Implementation
+subtype: Go BPv7 daemon (recently rewritten)
+domains:
+- Deep space / DTN
+domain_detail: General DTN
+dynamics: CLA discovery/config
+layers: BPv7; TCPCLv4/MTCP/QUIC(exp) CLAs; epidemic/spray routing
+real_stack: 'yes'
+real_stack_detail: 'Yes'
+scale: Research deployments
+inputs: Config
+outputs: Bundle traffic
+language: Go
+license: GPL-3.0
+maintenance: active
+maintenance_detail: Yes (pushed 2026-02)
+last_activity: 2026-02
+url: https://github.com/dtn7/dtn7-go
+publication: ADHOC-NOW 2019 (DTN7)
+contact: dtn7 org
+notes: companion BPv7 stack for multi-implementation interop
+source: sweep
+added: 2026-07
+verified: 2026-07

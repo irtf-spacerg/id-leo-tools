@@ -1,0 +1,27 @@
+name: Krios
+class: Research platform
+class_detail: Platform
+subtype: K8s orchestration for LEO compute (+ emulated testbed)
+domains:
+- LEO
+- Orbital compute
+domain_detail: LEO edge computing
+dynamics: Ground-side orbital position computation (details undocumented)
+layers: Orchestration/scheduling over emulated latencies; real K8s/Docker
+real_stack: 'yes'
+real_stack_detail: Yes (real K8s cluster)
+scale: ~6 physical nodes demonstrated
+inputs: YAML scenarios; IP mappings
+outputs: Scheduling/handoff latency logs
+language: Python
+license: GPL-3.0
+maintenance: low
+maintenance_detail: Low (last push 2026-04; 7 stars)
+last_activity: 2026-04
+url: https://github.com/GTkernel/krios
+publication: ACM SoCC 2024
+contact: Georgia Tech (GTkernel)
+notes: Compute orchestration not network simulation; simplified latency model
+source: dagstuhl
+added: 2026-07
+verified: 2026-07

@@ -1,0 +1,26 @@
+name: Stardust / stardust-go
+class: Simulator
+subtype: Scalable 3D-continuum (edge-cloud-space) simulator
+domains:
+- LEO
+- Orbital compute
+domain_detail: LEO edge + routing
+dynamics: Internal circular-shell constellation model
+layers: ISL topologies; dynamic routing; ground stations; orchestration plugins
+real_stack: 'no'
+real_stack_detail: 'No'
+scale: ~20k satellites on one machine
+inputs: Scenario configs; SimPlugins
+outputs: Simulation results
+language: C# (archived) / Go successor
+license: Apache-2.0
+maintenance: active
+maintenance_detail: Yes (successor active; original archived 2025-11)
+last_activity: '2026'
+url: https://github.com/polaris-slo-cloud/stardust
+publication: arXiv:2506.01513 (2025)
+contact: TU Wien (Nastic group)
+notes: currently the most scalable open OEC-oriented simulator
+source: sweep
+added: 2026-07
+verified: 2026-07

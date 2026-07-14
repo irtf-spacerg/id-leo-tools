@@ -1,0 +1,25 @@
+name: NTN_IAB_Sim
+class: Simulator
+subtype: Satellite IAB extension of 5G-air-simulator
+domains:
+- NTN-5G
+domain_detail: NTN-5G
+dynamics: Internal satellite node/link models
+layers: RAN system level (scheduling; IAB topologies)
+real_stack: 'no'
+real_stack_detail: 'No'
+scale: System-level scenarios
+inputs: Simulator configs
+outputs: Simulation results
+language: C++
+license: GPLv3
+maintenance: low
+maintenance_detail: Low (last push 2024-09)
+last_activity: 2024-09
+url: https://github.com/telematics-lab/NTN_IAB_Sim
+publication: SATIABLE project papers
+contact: Politecnico di Bari
+notes: rare open coverage of 3GPP Rel-18/19 satellite IAB
+source: sweep
+added: 2026-07
+verified: 2026-07

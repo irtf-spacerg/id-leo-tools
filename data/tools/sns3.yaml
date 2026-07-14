@@ -1,0 +1,26 @@
+name: SNS3
+class: Simulator
+subtype: DVB-S2/RCS2 GEO system-level (ns-3 module)
+domains:
+- GEO / DVB
+- LEO
+domain_detail: GEO broadband
+dynamics: Static GEO 72-beam reference; SGP4 constellation extensions
+layers: Per-packet SNIR PHY; DAMA/CRDSA MAC; ns-3 IP/transport above
+real_stack: 'no'
+real_stack_detail: 'No'
+scale: 72-beam multi-spot GEO system
+inputs: ns-3 scenario configs
+outputs: ns-3 traces/statistics
+language: C++
+license: GPL-3.0
+maintenance: active
+maintenance_detail: Yes (last push 2025-11; 215 stars; CNES fork)
+last_activity: 2025-11
+url: https://github.com/sns3/sns3-satellite
+publication: SIMUTools 2014
+contact: Magister Solutions / ESA / CNES
+notes: most complete open GEO satcom simulator; ESA lineage
+source: sweep
+added: 2026-07
+verified: 2026-07

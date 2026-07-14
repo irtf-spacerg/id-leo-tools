@@ -1,0 +1,25 @@
+name: PhantomLink
+class: Emulator
+subtype: Virtual end-to-end link (Rust; raw sockets)
+domains:
+- Orbits / astro
+domain_detail: Generic (satellite path dynamics)
+dynamics: N/A (CSV scenarios; can derive from orbit models)
+layers: Link/path only (delay; rate; reordering; route changes); real stack above
+real_stack: 'yes'
+real_stack_detail: Yes (network namespaces)
+scale: One end-to-end link
+inputs: CSV scenarios (time; RouteID; delay; rate)
+outputs: Live emulated link; measure via apps
+language: Rust
+license: Apache-2.0
+maintenance: active
+maintenance_detail: Yes (last push 2026-04)
+last_activity: 2026-04
+url: https://github.com/robinohs/phantomlink
+publication: ACM/IRTF ANRW 2025
+contact: Saarland Univ. (Ohs; Schmidt; Hermanns)
+notes: No tc/netem dependency; Debian package + Cargo crate
+source: dagstuhl
+added: 2026-07
+verified: 2026-07

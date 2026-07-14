@@ -1,0 +1,25 @@
+name: ebpf-trace-emu
+class: Emulator
+subtype: Trace-driven link emulation (eBPF)
+domains:
+- LEO
+domain_detail: LEO broadband (Starlink; method generic)
+dynamics: N/A (measured traces not orbits)
+layers: Link only (delay via EDT qdisc; loss via XDP); real stack above
+real_stack: 'yes'
+real_stack_detail: Yes (Linux kernel)
+scale: Single link; 10k+ trace entries at 10ms granularity
+inputs: Text trace files (irtt JSON converter included)
+outputs: Live emulated link; measure via irtt/iperf3
+language: Python + C
+license: None (UNKNOWN)
+maintenance: active
+maintenance_detail: Yes (last push 2026-06; 4 stars)
+last_activity: 2026-06
+url: https://github.com/yeliqseu/ebpf-trace-emu
+publication: IEEE Networking Letters 2024/25
+contact: Ye Li (Southeast Univ.)
+notes: Replays measured Starlink dynamics rather than modeled geometry
+source: dagstuhl
+added: 2026-07
+verified: 2026-07

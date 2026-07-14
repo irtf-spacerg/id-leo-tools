@@ -1,0 +1,508 @@
+<!-- Body fragment. scripts/build_site.py wraps it in a full HTML document,
+     injects the dataset at /*__DATA__*/ and fills __MAINTAINER_EMAIL__ / __REPO_URL__
+     from config.yaml. Do not add <html>/<head>/<body> tags here. -->
+<style>
+  :root {
+    --bg: #F6F7F9; --panel: #FFFFFF; --panel2: #EFF2F6;
+    --ink: #1C2432; --muted: #5A6478; --line: #E3E7EE;
+    --accent: #0E7490; --accent-soft: #E0F0F5; --accent-ink: #0B5C73;
+    --ok: #178A50; --ok-bg: #E4F4EC; --warn: #9A6B12; --warn-bg: #FAF0D7;
+    --bad: #B23A2E; --bad-bg: #F9E6E3; --plan: #5F51B8; --plan-bg: #ECE8FA;
+    --unk: #6B7280; --unk-bg: #ECEEF2;
+    --shadow: 0 1px 2px rgba(20,28,45,.06), 0 4px 14px rgba(20,28,45,.05);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0F131B; --panel: #161C27; --panel2: #1C2432;
+      --ink: #E6EBF4; --muted: #8B96AB; --line: #242D3D;
+      --accent: #22B8CF; --accent-soft: #123642; --accent-ink: #7FD9E8;
+      --ok: #31C97E; --ok-bg: #12301F; --warn: #E2B93B; --warn-bg: #332A10;
+      --bad: #E5715F; --bad-bg: #391A15; --plan: #9D8CFF; --plan-bg: #241F41;
+      --unk: #8B96AB; --unk-bg: #1F2634;
+      --shadow: 0 1px 2px rgba(0,0,0,.35), 0 4px 14px rgba(0,0,0,.25);
+    }
+  }
+  :root[data-theme="light"] {
+    --bg: #F6F7F9; --panel: #FFFFFF; --panel2: #EFF2F6;
+    --ink: #1C2432; --muted: #5A6478; --line: #E3E7EE;
+    --accent: #0E7490; --accent-soft: #E0F0F5; --accent-ink: #0B5C73;
+    --ok: #178A50; --ok-bg: #E4F4EC; --warn: #9A6B12; --warn-bg: #FAF0D7;
+    --bad: #B23A2E; --bad-bg: #F9E6E3; --plan: #5F51B8; --plan-bg: #ECE8FA;
+    --unk: #6B7280; --unk-bg: #ECEEF2;
+    --shadow: 0 1px 2px rgba(20,28,45,.06), 0 4px 14px rgba(20,28,45,.05);
+  }
+  :root[data-theme="dark"] {
+    --bg: #0F131B; --panel: #161C27; --panel2: #1C2432;
+    --ink: #E6EBF4; --muted: #8B96AB; --line: #242D3D;
+    --accent: #22B8CF; --accent-soft: #123642; --accent-ink: #7FD9E8;
+    --ok: #31C97E; --ok-bg: #12301F; --warn: #E2B93B; --warn-bg: #332A10;
+    --bad: #E5715F; --bad-bg: #391A15; --plan: #9D8CFF; --plan-bg: #241F41;
+    --unk: #8B96AB; --unk-bg: #1F2634;
+    --shadow: 0 1px 2px rgba(0,0,0,.35), 0 4px 14px rgba(0,0,0,.25);
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font: 14px/1.45 "Avenir Next", "Segoe UI", system-ui, -apple-system, sans-serif;
+  }
+  .mono { font-family: ui-monospace, "SF Mono", "Cascadia Code", Consolas, monospace; font-variant-numeric: tabular-nums; }
+  header { padding: 30px 28px 18px; position: relative; overflow: hidden; }
+  header .orbits {
+    position: absolute; right: -60px; top: 50%; transform: translateY(-50%);
+    pointer-events: none; user-select: none;
+  }
+  @media (max-width: 980px) { header .orbits { display: none; } }
+  .eyebrow {
+    font-family: ui-monospace, "SF Mono", Consolas, monospace;
+    font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--accent-ink);
+    position: relative;
+  }
+  .eyebrow a { color: inherit; text-decoration: none; }
+  .eyebrow a:hover { text-decoration: underline; }
+  h1 { margin: 6px 0 8px; font-size: 26px; font-weight: 650; letter-spacing: -.015em; text-wrap: balance; position: relative; }
+  h1 .haccent { color: var(--accent-ink); }
+  .sub { color: var(--muted); max-width: 78ch; margin: 0; position: relative; }
+  .hstats { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 16px; position: relative; }
+  .hstat {
+    border: 1px solid var(--line); background: var(--panel); border-radius: 8px;
+    padding: 5px 12px; font-size: 12.5px; color: var(--muted);
+  }
+  .hstat b { color: var(--ink); font-variant-numeric: tabular-nums; font-weight: 600; }
+  .controls {
+    position: sticky; top: 0; z-index: 5; background: var(--bg);
+    padding: 12px 28px 14px; border-bottom: 1px solid var(--line);
+    display: flex; flex-direction: column; gap: 10px;
+  }
+  .row1 { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+  #q {
+    flex: 1 1 260px; max-width: 420px; padding: 8px 12px;
+    border: 1px solid var(--line); border-radius: 7px;
+    background: var(--panel); color: var(--ink); font: inherit;
+  }
+  #q:focus { outline: 2px solid var(--accent); outline-offset: 1px; border-color: transparent; }
+  .count { color: var(--muted); font-size: 12.5px; }
+  .count b { color: var(--ink); }
+  #clear {
+    border: none; background: none; color: var(--accent-ink); cursor: pointer;
+    font: inherit; font-size: 12.5px; text-decoration: underline; padding: 2px 4px;
+  }
+  #suggest {
+    margin-left: auto; border: 1px solid var(--accent); background: var(--accent); color: #fff;
+    border-radius: 7px; padding: 7px 14px; font: inherit; font-size: 13px; cursor: pointer;
+  }
+  #suggest:hover { filter: brightness(1.08); }
+  .fgroups { display: flex; flex-wrap: wrap; gap: 14px 22px; }
+  .fgroup { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+  .flabel {
+    font-family: ui-monospace, "SF Mono", Consolas, monospace;
+    font-size: 10.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted);
+  }
+  .chip {
+    border: 1px solid var(--line); background: var(--panel); color: var(--ink);
+    border-radius: 999px; padding: 3px 11px; font-size: 12.5px; cursor: pointer;
+  }
+  .chip:hover { border-color: var(--accent); }
+  .chip.on { background: var(--accent); border-color: var(--accent); color: #fff; }
+  .chip:focus-visible, #clear:focus-visible, #suggest:focus-visible, tr.item:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+  main { padding: 14px 28px 40px; }
+  .tablewrap {
+    overflow-x: auto; background: var(--panel); border: 1px solid var(--line);
+    border-radius: 10px; box-shadow: var(--shadow);
+  }
+  table { border-collapse: collapse; width: 100%; min-width: 1080px; }
+  thead th {
+    text-align: left; font-family: ui-monospace, "SF Mono", Consolas, monospace;
+    font-size: 10.5px; letter-spacing: .1em; text-transform: uppercase; font-weight: 500;
+    color: var(--muted); padding: 10px 12px; border-bottom: 1px solid var(--line);
+    background: var(--panel2); position: sticky; top: 0; white-space: nowrap;
+  }
+  thead th.sortable { cursor: pointer; user-select: none; }
+  thead th.sortable:hover { color: var(--ink); }
+  thead th .arr { color: var(--accent-ink); }
+  tbody td { padding: 9px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  tr.item { cursor: pointer; }
+  tr.item:hover td { background: var(--panel2); }
+  tr.item:last-child td, tr.detail:last-child td { border-bottom: none; }
+  .tname { font-weight: 600; }
+  .torg { color: var(--muted); font-size: 12px; margin-top: 1px; }
+  .cchip {
+    display: inline-block; font-size: 11.5px; padding: 2px 9px; border-radius: 5px;
+    background: var(--accent-soft); color: var(--accent-ink); white-space: nowrap;
+  }
+  .dtag { color: var(--muted); font-size: 12px; white-space: nowrap; }
+  .pill {
+    display: inline-flex; align-items: center; gap: 6px; font-size: 12px;
+    padding: 2px 10px; border-radius: 999px; white-space: nowrap;
+  }
+  .pill::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: currentColor; }
+  .m-active { color: var(--ok); background: var(--ok-bg); }
+  .m-low { color: var(--warn); background: var(--warn-bg); }
+  .m-inactive { color: var(--bad); background: var(--bad-bg); }
+  .m-planned { color: var(--plan); background: var(--plan-bg); }
+  .m-unknown { color: var(--unk); background: var(--unk-bg); }
+  .real-yes { color: var(--ok); font-weight: 600; }
+  .real-no { color: var(--muted); }
+  .last { color: var(--muted); font-size: 12px; }
+  .sm { font-size: 12.5px; color: var(--muted); }
+  .srcdot {
+    display: inline-block; font-family: ui-monospace, Consolas, monospace; font-size: 10px;
+    letter-spacing: .08em; color: var(--muted); border: 1px solid var(--line);
+    border-radius: 4px; padding: 1px 5px; vertical-align: 1px;
+  }
+  tr.detail td { background: var(--panel2); padding: 14px 18px 16px; }
+  .dgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 10px 26px; max-width: 1200px; }
+  .dcell .dl {
+    font-family: ui-monospace, Consolas, monospace; font-size: 10px;
+    letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin-bottom: 2px;
+  }
+  .dcell .dv { font-size: 13px; overflow-wrap: anywhere; }
+  .dcell.wide { grid-column: 1 / -1; }
+  a { color: var(--accent-ink); }
+  footer { padding: 0 28px 34px; color: var(--muted); font-size: 12px; max-width: 90ch; }
+  /* --- suggest-a-tool panel --- */
+  #panel { padding: 14px 28px 4px; }
+  .card {
+    background: var(--panel); border: 1px solid var(--line); border-radius: 10px;
+    box-shadow: var(--shadow); padding: 20px 22px; max-width: 980px;
+  }
+  .card h2 { margin: 0 0 4px; font-size: 17px; font-weight: 600; }
+  .fgrid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 12px 18px; margin-top: 14px;
+  }
+  .fcell { display: flex; flex-direction: column; gap: 4px; }
+  .fcell.wide { grid-column: 1 / -1; }
+  .fcell label {
+    font-family: ui-monospace, Consolas, monospace; font-size: 10px;
+    letter-spacing: .12em; text-transform: uppercase; color: var(--muted);
+  }
+  .fcell label .req { color: var(--bad); }
+  .fcell input, .fcell select, .fcell textarea {
+    padding: 7px 10px; border: 1px solid var(--line); border-radius: 7px;
+    background: var(--bg); color: var(--ink); font: inherit; font-size: 13px;
+  }
+  .fcell input:focus, .fcell select:focus, .fcell textarea:focus {
+    outline: 2px solid var(--accent); outline-offset: 1px; border-color: transparent;
+  }
+  .fcell input.err, .fcell textarea.err { border-color: var(--bad); }
+  .fcell textarea { resize: vertical; min-height: 54px; }
+  .domchips { display: flex; flex-wrap: wrap; gap: 6px; }
+  .actions { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin-top: 16px; }
+  .btn {
+    border: 1px solid var(--line); background: var(--panel2); color: var(--ink);
+    border-radius: 7px; padding: 7px 14px; font: inherit; font-size: 13px; cursor: pointer;
+  }
+  .btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+  .btn:hover { border-color: var(--accent); }
+  #smsg { font-size: 12.5px; color: var(--ok); }
+  .hint { color: var(--muted); font-size: 12px; margin-top: 10px; }
+  @media (prefers-reduced-motion: no-preference) {
+    tr.item td { transition: background .12s ease; }
+  }
+</style>
+
+<header>
+  <svg class="orbits" width="420" height="240" viewBox="0 0 420 240" fill="none" aria-hidden="true">
+    <ellipse cx="230" cy="120" rx="180" ry="72" stroke="var(--accent)" stroke-width="1.5" opacity=".5" transform="rotate(-18 230 120)"/>
+    <ellipse cx="230" cy="120" rx="180" ry="72" stroke="var(--ok)" stroke-width="1" opacity=".3" transform="rotate(26 230 120)"/>
+    <ellipse cx="230" cy="120" rx="132" ry="50" stroke="var(--muted)" stroke-width="1" opacity=".22" transform="rotate(4 230 120)"/>
+    <circle cx="230" cy="120" r="24" fill="var(--panel2)" stroke="var(--muted)" stroke-width="1.2" opacity=".9"/>
+    <circle cx="371" cy="66" r="7" fill="var(--accent)" opacity=".85"/>
+    <circle cx="118" cy="196" r="5" fill="var(--ok)" opacity=".7"/>
+    <circle cx="330" cy="205" r="3.5" fill="var(--muted)" opacity=".6"/>
+    <circle cx="86" cy="58" r="2.5" fill="var(--muted)" opacity=".6"/>
+  </svg>
+  <div class="eyebrow"><a href="https://datatracker.ietf.org/rg/space/about/" target="_blank" rel="noopener">IETF / IRTF Space RG</a> &middot; Dagstuhl 26062 follow-up</div>
+  <h1>Space Networking <span class="haccent">Tools Registry</span></h1>
+  <p class="sub">A living registry of tools, simulators, emulators, testbeds, in-orbit platforms, datasets, and protocol implementations for space networking research. Click a row for the full record: dynamics model, layers, formats, license, contact. Data source: one YAML file per tool in the <a href="__REPO_URL__">GitHub repository</a>.</p>
+  <div class="hstats" id="hstats"></div>
+</header>
+
+<div class="controls">
+  <div class="row1">
+    <input id="q" type="search" placeholder="Search name, org, publication, notes&hellip;" aria-label="Search tools">
+    <span class="count"><b id="nShown">0</b> of <span id="nTotal">0</span> shown</span>
+    <button id="clear">Clear filters</button>
+    <button id="suggest" aria-expanded="false" aria-controls="panel">&#65291; Suggest a tool</button>
+  </div>
+  <div class="fgroups">
+    <div class="fgroup" id="f-cls"><span class="flabel">Class</span></div>
+    <div class="fgroup" id="f-dom"><span class="flabel">Domain</span></div>
+    <div class="fgroup" id="f-maint"><span class="flabel">Maintenance</span></div>
+    <div class="fgroup" id="f-real"><span class="flabel">Real stack</span></div>
+    <div class="fgroup" id="f-src"><span class="flabel">Source</span></div>
+  </div>
+</div>
+
+<section id="panel" hidden>
+  <div class="card">
+    <h2>Suggest a tool</h2>
+    <p class="sub">Fill in what you know; only the starred fields are required. The form composes a YAML record: open a pull request adding it as a file under <span class="mono">data/tools/</span>, or open a prefilled issue and a maintainer will turn it into a PR. See <a href="__REPO_URL__/blob/main/data/README.md">data/README.md</a> for the field reference.</p>
+    <div class="fgrid">
+      <div class="fcell"><label for="s-name">Tool name <span class="req">*</span></label><input id="s-name" type="text"></div>
+      <div class="fcell"><label for="s-url">URL (repo or website) <span class="req">*</span></label><input id="s-url" type="url" placeholder="https://&hellip;"></div>
+      <div class="fcell"><label for="s-class">Class</label><select id="s-class"></select></div>
+      <div class="fcell"><label for="s-maint">Maintenance</label><select id="s-maint">
+        <option value="active">active</option><option value="low">low activity</option>
+        <option value="inactive">inactive / frozen</option><option value="planned">planned</option>
+        <option value="unknown" selected>unknown</option></select></div>
+      <div class="fcell wide"><label>Domains</label><div class="domchips" id="s-dom"></div></div>
+      <div class="fcell wide"><label for="s-sub">One-line description <span class="req">*</span></label><input id="s-sub" type="text" placeholder="e.g. Container-based constellation emulation"></div>
+      <div class="fcell"><label for="s-lic">License</label><input id="s-lic" type="text" placeholder="MIT, GPL-3.0, proprietary&hellip;"></div>
+      <div class="fcell"><label for="s-pub">Reference publication</label><input id="s-pub" type="text" placeholder="Venue + year or DOI/arXiv"></div>
+      <div class="fcell wide"><label for="s-contact">Tool contact / organization</label><input id="s-contact" type="text"></div>
+      <div class="fcell wide"><label for="s-notes">Notes (scale, formats, access model&hellip;)</label><textarea id="s-notes"></textarea></div>
+    </div>
+    <div class="actions">
+      <button class="btn primary" id="s-copy">Copy as YAML</button>
+      <button class="btn" id="s-issue">Open a prefilled issue</button>
+      <button class="btn" id="s-cancel">Cancel</button>
+      <span id="smsg" role="status"></span>
+    </div>
+    <p class="hint">&ldquo;Copy as YAML&rdquo; puts the record on your clipboard: commit it as <span class="mono">data/tools/&lt;slug&gt;.yaml</span> in a pull request. &ldquo;Open a prefilled issue&rdquo; needs a GitHub account.</p>
+  </div>
+</section>
+
+<main>
+  <noscript><p class="sub" style="padding-bottom:14px">This page needs JavaScript to render the searchable table. The raw data is available as <a href="data/tools.json">JSON</a> and <a href="data/tools.csv">CSV</a>.</p></noscript>
+  <div class="tablewrap">
+    <table>
+      <thead>
+        <tr>
+          <th class="sortable" data-k="name">Tool <span class="arr"></span></th>
+          <th class="sortable" data-k="cls">Class <span class="arr"></span></th>
+          <th>Domains</th>
+          <th>Fidelity / subtype</th>
+          <th class="sortable" data-k="real">Real stack <span class="arr"></span></th>
+          <th class="sortable" data-k="maint">Maintenance <span class="arr"></span></th>
+          <th class="sortable" data-k="last">Last activity <span class="arr"></span></th>
+          <th>License</th>
+        </tr>
+      </thead>
+      <tbody id="tb"></tbody>
+    </table>
+  </div>
+</main>
+
+<footer>
+  Maintenance states: <span class="pill m-active">active</span> <span class="pill m-low">low activity</span>
+  <span class="pill m-inactive">inactive / frozen</span> <span class="pill m-planned">planned</span>
+  <span class="pill m-unknown">unknown</span>.
+  Entries marked <span class="srcdot">SWEEP</span> were added by the July 2026 web/academic gap sweep; the rest come from the Dagstuhl 26062 collection.
+  <br><br>
+  Maintained by the IETF/IRTF Space RG survey effort.
+  Data: <a href="data/tools.json">JSON</a> &middot; <a href="data/tools.csv">CSV</a> &middot; <a href="__REPO_URL__">source repository</a>.
+  To add or correct an entry, open a pull request adding or editing a YAML file under <span class="mono">data/tools/</span>, or use the &ldquo;Suggest a tool&rdquo; form above to compose one.
+</footer>
+
+<script>
+const DATA = /*__DATA__*/[];
+const REPO_URL = "__REPO_URL__";
+const CLASSES = ["Simulator", "Emulator", "Testbed", "In-orbit platform", "Dataset / data",
+  "Measurement", "Implementation", "Library", "Visualizer", "Research platform",
+  "Meta-resource", "Commercial / service", "Other"];
+const DOMAINS = ["LEO", "Deep space / DTN", "IoT", "NTN-5G", "GEO / DVB", "Optical",
+  "Orbital compute", "Ground segment", "Orbits / astro", "Security", "Transport", "Other"];
+
+const state = { q: "", cls: new Set(), dom: new Set(), maint: new Set(), real: new Set(), src: new Set(), sortK: "name", sortDir: 1, open: new Set() };
+const MAINT_ORDER = { active: 0, low: 1, planned: 2, unknown: 3, inactive: 4 };
+const MAINT_LABEL = { active: "active", low: "low activity", planned: "planned", inactive: "inactive", unknown: "unknown" };
+const uniq = k => [...new Set(DATA.flatMap(r => Array.isArray(r[k]) ? r[k] : [r[k]]))].sort();
+const esc = s => (s || "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+
+function chips(elId, values, setName, labelFn) {
+  const el = document.getElementById(elId);
+  values.forEach(v => {
+    const b = document.createElement("button");
+    b.className = "chip"; b.textContent = labelFn ? labelFn(v) : v; b.dataset.v = v;
+    b.addEventListener("click", () => {
+      state[setName].has(v) ? state[setName].delete(v) : state[setName].add(v);
+      b.classList.toggle("on"); render();
+    });
+    el.appendChild(b);
+  });
+}
+
+const realGroup = r => r.real === "yes" ? "yes" : r.real === "na" ? "na" : "no";
+
+function match(r) {
+  if (state.cls.size && !state.cls.has(r.cls)) return false;
+  if (state.dom.size && !r.dom.some(d => state.dom.has(d))) return false;
+  if (state.maint.size && !state.maint.has(r.maint)) return false;
+  if (state.real.size && !state.real.has(realGroup(r))) return false;
+  if (state.src.size && !state.src.has(r.src)) return false;
+  if (state.q) {
+    const h = [r.name, r.contact, r.pub, r.notes, r.sub, r.lang, r.clsRaw, r.domRaw,
+      r.url, r.lic, r.dyn, r.layers, r.inp, r.out].join(" ").toLowerCase();
+    if (!h.includes(state.q)) return false;
+  }
+  return true;
+}
+
+function sortRows(rows) {
+  const k = state.sortK, d = state.sortDir;
+  const isDate = s => /^\d{4}/.test(s || "");
+  return rows.sort((a, b) => {
+    let x, y;
+    if (k === "maint") { x = MAINT_ORDER[a.maint]; y = MAINT_ORDER[b.maint]; }
+    else if (k === "real") { x = a.real === "yes" ? 0 : 1; y = b.real === "yes" ? 0 : 1; }
+    else if (k === "last") {
+      // entries without a parseable date always sort below dated ones
+      if (isDate(a.last) !== isDate(b.last)) return isDate(a.last) ? -1 : 1;
+      x = a.last || ""; y = b.last || "";
+    }
+    else { x = (a[k] || "").toLowerCase(); y = (b[k] || "").toLowerCase(); }
+    return x < y ? -d : x > y ? d : a.name.localeCompare(b.name);
+  });
+}
+
+function detailHTML(r) {
+  const f = (l, v) => v && v !== "UNKNOWN" && v !== "N/A" ? `<div class="dcell"><div class="dl">${l}</div><div class="dv">${esc(v)}</div></div>` : "";
+  return `<div class="dgrid">
+    ${r.url ? `<div class="dcell wide"><div class="dl">URL</div><div class="dv"><a href="${esc(r.url)}" target="_blank" rel="noopener">${esc(r.url)}</a></div></div>` : ""}
+    ${f("Dynamics model", r.dyn)}${f("Layers covered", r.layers)}${f("Scale demonstrated", r.scale)}
+    ${f("Inputs", r.inp)}${f("Outputs", r.out)}${f("Language", r.lang)}
+    ${f("Publication", r.pub)}${f("Contact / org", r.contact)}${f("Maintenance detail", r.maintRaw)}
+    ${r.clsRaw !== r.cls ? f("Original class label", r.clsRaw) : ""}
+    ${r.domRaw !== r.dom.join("; ") ? f("Domain (raw)", r.domRaw) : ""}${f("Last verified", r.verified)}
+    ${r.notes ? `<div class="dcell wide"><div class="dl">Notes / gaps</div><div class="dv">${esc(r.notes)}</div></div>` : ""}
+  </div>`;
+}
+
+function render() {
+  const rows = sortRows(DATA.filter(match));
+  document.getElementById("nShown").textContent = rows.length;
+  document.getElementById("nTotal").textContent = DATA.length;
+  const tb = document.getElementById("tb");
+  tb.innerHTML = rows.map((r, i) => {
+    const id = r.name;
+    const open = state.open.has(id);
+    return `<tr class="item" tabindex="0" data-id="${esc(id)}" aria-expanded="${open}">
+      <td><div class="tname">${esc(r.name)} ${r.src === "sweep" ? '<span class="srcdot">SWEEP</span>' : ""}</div><div class="torg">${esc(r.contact)}</div></td>
+      <td><span class="cchip">${esc(r.cls)}</span></td>
+      <td><span class="dtag">${r.dom.map(esc).join(" &middot; ")}</span></td>
+      <td><span class="sm">${esc(r.sub)}</span></td>
+      <td><span class="${r.real === "yes" ? "real-yes" : "real-no"}">${r.real === "yes" ? "yes" : r.real === "na" ? "&mdash;" : "no"}</span></td>
+      <td><span class="pill m-${r.maint}">${MAINT_LABEL[r.maint]}</span></td>
+      <td><span class="last mono">${esc(r.last)}</span></td>
+      <td><span class="sm" title="${esc(r.lic)}">${esc((r.lic || "").length > 26 ? r.lic.slice(0, 24) + "…" : r.lic)}</span></td>
+    </tr>${open ? `<tr class="detail"><td colspan="8">${detailHTML(r)}</td></tr>` : ""}`;
+  }).join("");
+  tb.querySelectorAll("tr.item").forEach(tr => {
+    const toggle = () => {
+      const id = tr.dataset.id;
+      state.open.has(id) ? state.open.delete(id) : state.open.add(id);
+      render();
+    };
+    tr.addEventListener("click", e => { if (e.target.tagName !== "A") toggle(); });
+    tr.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); toggle(); } });
+  });
+  document.querySelectorAll("thead th.sortable").forEach(th => {
+    th.querySelector(".arr").textContent = th.dataset.k === state.sortK ? (state.sortDir === 1 ? "↑" : "↓") : "";
+  });
+}
+
+(function () {
+  const active = DATA.filter(r => r.maint === "active").length;
+  const classes = new Set(DATA.map(r => r.cls)).size;
+  const doms = new Set(DATA.flatMap(r => r.dom)).size;
+  document.getElementById("hstats").innerHTML =
+    `<span class="hstat"><b>${DATA.length}</b> entries</span>` +
+    `<span class="hstat"><b>${active}</b> actively maintained</span>` +
+    `<span class="hstat"><b>${classes}</b> resource classes</span>` +
+    `<span class="hstat"><b>${doms}</b> domains</span>` +
+    `<span class="hstat">updated <b class="mono">__BUILD_DATE__</b></span>`;
+})();
+
+chips("f-cls", uniq("cls"), "cls");
+chips("f-dom", uniq("dom"), "dom");
+chips("f-maint", ["active", "low", "planned", "inactive", "unknown"], "maint", v => MAINT_LABEL[v]);
+chips("f-real", ["yes", "no", "na"], "real", v => v === "yes" ? "real stack" : v === "no" ? "modeled" : "n/a");
+chips("f-src", ["dagstuhl", "sweep"], "src", v => v === "dagstuhl" ? "Dagstuhl 26062" : "Gap sweep 2026");
+
+document.getElementById("q").addEventListener("input", e => { state.q = e.target.value.trim().toLowerCase(); render(); });
+document.getElementById("clear").addEventListener("click", () => {
+  state.q = ""; document.getElementById("q").value = "";
+  ["cls", "dom", "maint", "real", "src"].forEach(k => state[k].clear());
+  document.querySelectorAll(".fgroups .chip.on").forEach(c => c.classList.remove("on"));
+  render();
+});
+document.querySelectorAll("thead th.sortable").forEach(th => th.addEventListener("click", () => {
+  const k = th.dataset.k;
+  if (state.sortK === k) state.sortDir *= -1; else { state.sortK = k; state.sortDir = 1; }
+  render();
+}));
+render();
+
+/* --- suggest-a-tool form --- */
+const panel = document.getElementById("panel");
+const suggestBtn = document.getElementById("suggest");
+suggestBtn.addEventListener("click", () => {
+  panel.hidden = !panel.hidden;
+  suggestBtn.setAttribute("aria-expanded", String(!panel.hidden));
+  if (!panel.hidden) { panel.scrollIntoView({ behavior: "smooth", block: "start" }); document.getElementById("s-name").focus(); }
+});
+document.getElementById("s-cancel").addEventListener("click", () => {
+  panel.hidden = true; suggestBtn.setAttribute("aria-expanded", "false");
+});
+
+const clsSel = document.getElementById("s-class");
+CLASSES.forEach(c => { const o = document.createElement("option"); o.value = o.textContent = c; clsSel.appendChild(o); });
+const sdom = new Set();
+DOMAINS.forEach(d => {
+  const b = document.createElement("button");
+  b.type = "button"; b.className = "chip"; b.textContent = d;
+  b.addEventListener("click", () => { sdom.has(d) ? sdom.delete(d) : sdom.add(d); b.classList.toggle("on"); });
+  document.getElementById("s-dom").appendChild(b);
+});
+
+const val = id => document.getElementById(id).value.trim();
+function checkRequired() {
+  let ok = true;
+  ["s-name", "s-url", "s-sub"].forEach(id => {
+    const el = document.getElementById(id);
+    const bad = !el.value.trim() || !el.checkValidity();
+    el.classList.toggle("err", bad);
+    if (bad) ok = false;
+  });
+  if (!ok) document.getElementById("smsg").textContent = "Please fill the starred fields (with a valid URL).";
+  return ok;
+}
+const slugify = s => s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
+const yq = s => "'" + s.replace(/'/g, "''") + "'";
+function toYaml() {
+  const lines = [
+    "name: " + yq(val("s-name")),
+    "class: " + yq(clsSel.value),
+    "subtype: " + yq(val("s-sub")),
+    "domains:", ...(sdom.size ? [...sdom] : ["Other"]).map(d => "- " + d),
+    "url: " + val("s-url"),
+  ];
+  if (val("s-lic")) lines.push("license: " + yq(val("s-lic")));
+  lines.push("maintenance: " + document.getElementById("s-maint").value);
+  if (val("s-pub")) lines.push("publication: " + yq(val("s-pub")));
+  if (val("s-contact")) lines.push("contact: " + yq(val("s-contact")));
+  if (val("s-notes")) lines.push("notes: " + yq(val("s-notes").replace(/\s+/g, " ")));
+  lines.push("source: community");
+  return lines.join("\n") + "\n";
+}
+document.getElementById("s-issue").addEventListener("click", () => {
+  if (!checkRequired()) return;
+  const title = "New tool: " + val("s-name");
+  const body = "Proposed registry entry (to be added as `data/tools/" + slugify(val("s-name")) +
+    ".yaml`):\n\n```yaml\n" + toYaml() + "```\n";
+  window.open(REPO_URL + "/issues/new?title=" + encodeURIComponent(title) + "&body=" + encodeURIComponent(body), "_blank", "noopener");
+  document.getElementById("smsg").textContent = "Issue form opened in a new tab.";
+});
+document.getElementById("s-copy").addEventListener("click", async () => {
+  if (!checkRequired()) return;
+  const text = toYaml();
+  try { await navigator.clipboard.writeText(text); }
+  catch (e) {
+    const ta = document.createElement("textarea");
+    ta.value = text; document.body.appendChild(ta); ta.select();
+    document.execCommand("copy"); ta.remove();
+  }
+  document.getElementById("smsg").textContent = "YAML copied - commit it as data/tools/" + slugify(val("s-name")) + ".yaml in a pull request.";
+});
+</script>

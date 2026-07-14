@@ -1,0 +1,25 @@
+name: STELIOS
+class: In-orbit platform
+subtype: ESA in-orbit secure telecom laboratory
+domains:
+- GEO / DVB
+domain_detail: Secure satcom
+dynamics: N/A
+layers: Secure telecom experimentation (details pre-award)
+real_stack: na
+real_stack_detail: N/A
+scale: Pre-award (tender stage)
+inputs: N/A
+outputs: N/A
+language: N/A
+license: N/A
+maintenance: planned
+maintenance_detail: Planned (ARTES 4.0 4S activity 3E.031)
+last_activity: Pre-award
+url: https://esastar-publication-ext.sso.esa.int/ESATenderActions/details/162569
+publication: ESA tender
+contact: ESA ARTES 4S
+notes: Likely the Dagstuhl row source (via Atlasis); complements OPS-SAT VOLT on security side
+source: dagstuhl
+added: 2026-07
+verified: 2026-07

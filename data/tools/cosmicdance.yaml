@@ -1,0 +1,25 @@
+name: CosmicDance
+class: Measurement
+subtype: TLE-driven orbital decay and shift analysis
+domains:
+- Orbits / astro
+- LEO
+domain_detail: Space weather impact on constellations
+dynamics: TLE time series
+layers: Orbit shift and decay measurement after solar events (Starlink case study)
+real_stack: na
+scale: Constellation-scale TLE analysis
+inputs: TLE archives
+outputs: Analysis results and dataset
+language: Python
+license: MIT
+maintenance: low
+maintenance_detail: Last push 2024-12; successor CosmicDancePro (arXiv 2026)
+last_activity: 2024-12
+url: https://github.com/suvambasak/CosmicDance
+publication: ACM IMC 2024
+contact: IIT Kanpur and MSR India (Basak)
+notes: 'Links space weather events to connectivity-infrastructure risk. Successor: CosmicDancePro (arXiv:2604.22685).'
+source: sweep
+added: 2026-07
+verified: 2026-07

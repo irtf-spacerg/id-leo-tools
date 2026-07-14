@@ -1,0 +1,26 @@
+name: CelesTrak
+class: Dataset / data
+class_detail: Data service
+subtype: Orbital element distribution
+domains:
+- Orbits / astro
+domain_detail: Orbital elements
+dynamics: N/A (source of TLE/GP data)
+layers: N/A
+real_stack: na
+real_stack_detail: N/A
+scale: Full public catalog since 1985
+inputs: N/A
+outputs: TLE/3LE; OMM; JSON; CSV; XML via gp.php API
+language: N/A
+license: Free access per usage policy (501c3)
+maintenance: active
+maintenance_detail: Yes (multiple daily updates)
+last_activity: 2026-06
+url: https://celestrak.org/
+publication: N/A (service)
+contact: T.S. Kelso
+notes: De facto standard TLE source; SupGP includes operator ephemerides
+source: dagstuhl
+added: 2026-07
+verified: 2026-07

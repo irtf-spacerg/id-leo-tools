@@ -1,0 +1,25 @@
+name: ESTNeT
+class: Simulator
+subtype: OMNeT++/INET space-terrestrial + spacecraft subsystems
+domains:
+- Other
+domain_detail: Smallsat networks
+dynamics: Orbit models (OMNeT++ framework)
+layers: Network + power and attitude subsystem models
+real_stack: 'no'
+real_stack_detail: 'No'
+scale: Smallsat constellations
+inputs: OMNeT++ configs
+outputs: OMNeT++ results
+language: C++
+license: Open source
+maintenance: inactive
+maintenance_detail: No (dormant since ~2021)
+last_activity: '2021'
+url: https://github.com/estnet-framework/estnet
+publication: CEAS Space Journal 2020
+contact: Univ. Wuerzburg
+notes: only OMNeT++ framework with spacecraft subsystem models; beside OS3/FLoRaSat
+source: sweep
+added: 2026-07
+verified: 2026-07

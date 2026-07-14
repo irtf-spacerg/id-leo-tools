@@ -1,0 +1,26 @@
+name: Roman-HitchHiking
+class: Measurement
+class_detail: Measurement methodology
+subtype: Internet scanning for LEO outage detection
+domains:
+- LEO
+domain_detail: LEO broadband (Starlink)
+dynamics: N/A
+layers: TTL-limited probing of exposed customer IPs; router dedup
+real_stack: na
+real_stack_detail: N/A
+scale: Global Starlink user coverage
+inputs: Censys-style target lists
+outputs: Scamper warts to Python dataframes
+language: Python
+license: None (UNKNOWN)
+maintenance: active
+maintenance_detail: Yes (last push 2026-05)
+last_activity: 2026-05
+url: https://github.com/UCLA-SCaN/roman_hitchhiking
+publication: ACM LEO-NET 2025
+contact: UCLA SCaN (lizhikev@ucla.edu)
+notes: Extends LEO-HitchHiking to near-real-time outage detection
+source: dagstuhl
+added: 2026-07
+verified: 2026-07

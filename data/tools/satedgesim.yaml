@@ -1,0 +1,25 @@
+name: SatEdgeSim
+class: Simulator
+subtype: Satellite edge computing task offloading DES
+domains:
+- Orbital compute
+domain_detail: Orbital edge computing
+dynamics: STK-precomputed position traces
+layers: Task generation; orchestration; bandwidth/delay; energy model
+real_stack: 'no'
+real_stack_detail: 'No'
+scale: 1000+ mist nodes; 24 edge; 18 cloud satellites
+inputs: Position traces; scenario configs
+outputs: Simulation results
+language: Java
+license: EPL-2.0
+maintenance: inactive
+maintenance_detail: No (dormant since ~2021; 62 stars)
+last_activity: '2021'
+url: https://github.com/wjy491156866/SatEdgeSim
+publication: ICCSN 2020
+contact: Jiawei Wei et al.
+notes: first widely cited OEC simulator; abandoned but baseline
+source: sweep
+added: 2026-07
+verified: 2026-07

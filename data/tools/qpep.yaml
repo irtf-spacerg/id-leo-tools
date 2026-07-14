@@ -1,0 +1,26 @@
+name: QPEP
+class: Implementation
+subtype: Encrypted QUIC-based PEP + dockerized testbed
+domains:
+- GEO / DVB
+- Transport
+domain_detail: Transport (GEO)
+dynamics: None (ships OpenSAND-based testbed)
+layers: TCP interception; QUIC tunnel over satellite hop
+real_stack: 'yes'
+real_stack_detail: 'Yes'
+scale: Point-to-point proxy pair
+inputs: Docker testbed configs
+outputs: Benchmark results vs PEPsal/VPN
+language: Go + Python
+license: Clear BSD + Commons Clause
+maintenance: low
+maintenance_detail: Fork active (Project-Faster through 2025-03; original dormant 2022)
+last_activity: 2025-03
+url: https://github.com/ssloxford/qpep
+publication: NDSS 2021
+contact: Oxford SSL (Pavur) / armasuisse
+notes: canonical open answer to PEP-vs-encryption; cited in PANRG/MASQUE discussions
+source: sweep
+added: 2026-07
+verified: 2026-07

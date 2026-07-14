@@ -1,0 +1,25 @@
+name: dtn-tvg-util
+class: Library
+subtype: Time-varying-graph / contact-plan generation
+domains:
+- Deep space / DTN
+domain_detail: Space DTN tooling
+dynamics: TLE-derived and synthetic contact generation
+layers: Contact plans / TVGs only
+real_stack: 'no'
+real_stack_detail: 'No'
+scale: N/A
+inputs: TLEs; scenario params
+outputs: Contact plans / TVGs
+language: Python
+license: MIT
+maintenance: low
+maintenance_detail: Quiet-maintained (activity 2026-06)
+last_activity: 2026-06
+url: https://gitlab.com/d3tn/dtn-tvg-util
+publication: D3TN/TU Dresden papers
+contact: Felix Walter (D3TN)
+notes: rare reusable bridge between orbit propagators and DTN simulators
+source: sweep
+added: 2026-07
+verified: 2026-07

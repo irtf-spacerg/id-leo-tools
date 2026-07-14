@@ -1,0 +1,25 @@
+name: DIPT IP store-and-forward
+class: Implementation
+subtype: IP-layer store-and-forward capability
+domains:
+- Deep space / DTN
+domain_detail: Deep space
+dynamics: Via workbench JSON (buffers + timed link events)
+layers: Network-layer queueing during disconnection
+real_stack: 'no'
+real_stack_detail: Simulated (in workbench)
+scale: As per workbench scenarios
+inputs: As per workbench
+outputs: As per workbench
+language: Rust (within workbench)
+license: Apache-2.0 / MIT
+maintenance: low
+maintenance_detail: With workbench
+last_activity: 2026-06
+url: https://github.com/deepspaceip/dipt-quic-workbench
+publication: draft-ietf-tiptop-ip-architecture
+contact: Marc Blanchet (Viagenie)
+notes: 'STANDALONE REPO 404: capability realized inside workbench; fix URL in survey'
+source: dagstuhl
+added: 2026-07
+verified: 2026-07

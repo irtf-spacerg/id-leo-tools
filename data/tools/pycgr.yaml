@@ -1,0 +1,25 @@
+name: pyCGR
+class: Library
+subtype: Didactic Python CGR/SABR reference
+domains:
+- Deep space / DTN
+domain_detail: Space DTN routing education
+dynamics: ION-style contact plans
+layers: CGR route search; SABR concepts; no BP
+real_stack: 'no'
+real_stack_detail: 'No'
+scale: Teaching scale
+inputs: Contact plans
+outputs: Route computations
+language: Python
+license: Unspecified
+maintenance: inactive
+maintenance_detail: No (last update 2023-04)
+last_activity: 2023-04
+url: https://bitbucket.org/juanfraire/pycgr
+publication: JNCA 2021 CGR tutorial
+contact: Juan A. Fraire
+notes: canonical readable CGR reference (self-citation to disclose)
+source: sweep
+added: 2026-07
+verified: 2026-07

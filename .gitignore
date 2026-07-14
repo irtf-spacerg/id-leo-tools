@@ -22,3 +22,6 @@ draft-sastry-spacerg-space-research-infra-typology.xml
 package-lock.json
 report.xml
 !requirements.txt
+# registry site: keep the source template, ignore the build output
+!/site/template.html
+/public/

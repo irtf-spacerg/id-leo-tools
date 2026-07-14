@@ -1,0 +1,25 @@
+name: DTNME
+class: Implementation
+subtype: NASA Marshall DTN2-heritage stack (ISS ops)
+domains:
+- Deep space / DTN
+domain_detail: Near-Earth DTN operations
+dynamics: Configured links/schedules
+layers: BPv6+v7; TCPCL/LTP/UDP CLAs; static/external routing (Unibo-CGR integrable)
+real_stack: 'yes'
+real_stack_detail: 'Yes'
+scale: ISS payload operations
+inputs: Config
+outputs: Bundle traffic
+language: C++
+license: NASA NOSA
+maintenance: low
+maintenance_detail: Low (last push 2024-05)
+last_activity: 2024-05
+url: https://github.com/nasa/DTNME
+publication: RFC 5050/9171
+contact: NASA MSFC
+notes: operationally deployed ISS DTN stack; surviving DTN2 lineage
+source: sweep
+added: 2026-07
+verified: 2026-07

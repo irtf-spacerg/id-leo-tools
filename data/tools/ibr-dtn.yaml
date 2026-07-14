@@ -1,0 +1,25 @@
+name: IBR-DTN
+class: Implementation
+subtype: Legacy embedded BPv6 stack
+domains:
+- Deep space / DTN
+domain_detail: Terrestrial/embedded DTN
+dynamics: IP neighbor discovery; opportunistic
+layers: BPv6 only; TCPCL/UDP/LoWPAN/Bluetooth CLAs; epidemic/PRoPHET
+real_stack: 'yes'
+real_stack_detail: 'Yes'
+scale: OpenWrt/Android-class devices
+inputs: Config
+outputs: Bundle traffic
+language: C++
+license: Apache-2.0
+maintenance: inactive
+maintenance_detail: No (last commit 2024-10; flagged outdated by IPNSIG)
+last_activity: 2024-10
+url: https://github.com/ibrdtn/ibrdtn
+publication: RFC 5050; CHANTS 2008
+contact: TU Braunschweig
+notes: historically dominant BPv6 stack; mark legacy/BPv6-only
+source: sweep
+added: 2026-07
+verified: 2026-07

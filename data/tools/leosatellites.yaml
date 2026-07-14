@@ -1,0 +1,25 @@
+name: leosatellites
+class: Simulator
+subtype: LEO constellation library for OMNeT++/INET
+domains:
+- LEO
+domain_detail: LEO broadband
+dynamics: Walker-style params + SGP4/OS3 mobility; validated vs Hypatia
+layers: Mobility; ISL topology (igraph); INET TCP variants
+real_stack: 'no'
+real_stack_detail: 'No'
+scale: Mega-constellation topologies
+inputs: OMNeT++ NED/INI
+outputs: OMNeT++ results
+language: C++
+license: GPL-3.0
+maintenance: active
+maintenance_detail: Yes (last push 2026-04; 81 stars)
+last_activity: 2026-04
+url: https://github.com/Avian688/leosatellites
+publication: OMNeT++ Summit 2021 (arXiv:2109.12046)
+contact: Valentine/Parisis (Univ. Sussex)
+notes: the maintained OMNeT++ LEO baseline; foundation of FLoRaSat
+source: sweep
+added: 2026-07
+verified: 2026-07

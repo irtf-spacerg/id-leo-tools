@@ -1,0 +1,26 @@
+name: TinyGS
+class: Testbed
+class_detail: Ground network
+subtype: 8000+ ESP32+LoRa ground stations
+domains:
+- IoT
+domain_detail: LoRa smallsat downlink
+dynamics: N/A
+layers: LoRa/FSK reception from small satellites; central MQTT scheduling
+real_stack: 'yes'
+real_stack_detail: Yes (real RF)
+scale: 8000+ stations global
+inputs: ~$20 ESP32 boards; browser flashing
+outputs: Web dashboards; packets per satellite
+language: C++ (firmware)
+license: Open source
+maintenance: active
+maintenance_detail: 'Yes'
+last_activity: '2026'
+url: https://tinygs.com
+publication: None formal
+contact: TinyGS non-profit
+notes: extreme-low-cost community ground segment for IoT constellations
+source: sweep
+added: 2026-07
+verified: 2026-07

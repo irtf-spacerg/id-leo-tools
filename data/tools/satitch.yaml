@@ -1,0 +1,24 @@
+name: Satitch
+class: Simulator
+subtype: Cross-operator LEO core-network collaboration
+domains:
+- LEO
+domain_detail: Multi-operator constellation interoperability
+dynamics: Consumes StarPerf HDF5 topology outputs
+layers: Inter-operator handoff scenarios (e.g. Starlink+Kuiper, Telesat+OneWeb+Qianfan)
+real_stack: 'no'
+scale: Multi-constellation scenarios
+inputs: StarPerf HDF5 outputs; configs
+outputs: Simulation results
+language: Mixed
+license: MIT
+maintenance: active
+maintenance_detail: Pushed 2026-01
+last_activity: 2026-01
+url: https://github.com/SpaceNetLab/Satitch
+publication: IEEE INFOCOM 2026
+contact: SpaceNetLab, Tsinghua University
+notes: Public tool for multi-operator core interoperability studies; relevant to inter-constellation federation work.
+source: sweep
+added: 2026-07
+verified: 2026-07

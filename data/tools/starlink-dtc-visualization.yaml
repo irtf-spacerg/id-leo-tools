@@ -1,0 +1,25 @@
+name: Starlink DTC visualization
+class: Visualizer
+subtype: Live CesiumJS globe of DTC satellites
+domains:
+- LEO
+domain_detail: Direct-to-cell
+dynamics: Client-side satellite.js propagation from ephemeris feed
+layers: Orbital positions only
+real_stack: na
+real_stack_detail: N/A
+scale: Starlink DTC subset
+inputs: Ephemeris CSV feed (auto-fetched)
+outputs: Interactive WebGL (no export)
+language: JavaScript
+license: UNKNOWN
+maintenance: active
+maintenance_detail: Yes (live site)
+last_activity: 2026-01
+url: https://constellation.jinwei.me/
+publication: None
+contact: Jinwei Zhao (UVic)
+notes: Illustrative only; not a data source
+source: dagstuhl
+added: 2026-07
+verified: 2026-07

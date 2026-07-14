@@ -1,0 +1,25 @@
+name: Hypatia
+class: Simulator
+subtype: Packet-level discrete-event (ns-3)
+domains:
+- LEO
+domain_detail: LEO broadband
+dynamics: Parametric shells (Starlink/Kuiper/Telesat presets) + SGP4
+layers: ISL topology; GSL; precomputed routing; ns-3 transport/app models
+real_stack: 'no'
+real_stack_detail: No (ns-3 abstract stacks)
+scale: ~1,584+ sats (Starlink shell-1); 5-shell generation
+inputs: Parametric constellation configs; ground station lists
+outputs: Routing state files; RTT/throughput traces; CesiumJS 3D viz
+language: Python + C++
+license: 'Mixed: satgenpy MIT; ns3-sat-sim GPLv2; satviz MIT'
+maintenance: inactive
+maintenance_detail: No (last push 2024-05; 505 stars; de facto baseline)
+last_activity: 2024-05
+url: https://github.com/snkas/hypatia
+publication: ACM IMC 2020
+contact: ETH Zurich (Kassing; Bhattacherjee; Singla)
+notes: Widely forked baseline (159 forks); routing precomputed offline not reactive
+source: dagstuhl
+added: 2026-07
+verified: 2026-07

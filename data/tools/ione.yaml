@@ -1,0 +1,25 @@
+name: IONE
+class: Implementation
+subtype: Community ION fork with experimental features
+domains:
+- Deep space / DTN
+domain_detail: Deep space DTN
+dynamics: Contact plans
+layers: BPv6/v7; ION CLAs; CGR + inter-regional forwarding
+real_stack: 'yes'
+real_stack_detail: 'Yes'
+scale: Research deployments
+inputs: Contact plans
+outputs: Bundle traffic
+language: C
+license: ION-derived
+maintenance: low
+maintenance_detail: Moderate (v1.1.0 2025-06)
+last_activity: 2025-06
+url: https://sourceforge.net/projects/ione/
+publication: RFC 9171; inter-regional drafts
+contact: Scott Burleigh / SolarNetOne
+notes: where post-JPL Burleigh-lineage features (inter-regional routing) land first
+source: sweep
+added: 2026-07
+verified: 2026-07

@@ -1,0 +1,25 @@
+name: CCC-LEO Testbed
+class: Testbed
+subtype: Pan-Canadian + global Starlink testbed
+domains:
+- LEO
+domain_detail: LEO broadband
+dynamics: N/A (real satellites)
+layers: Real Starlink links; latency focus
+real_stack: 'yes'
+real_stack_detail: 'Yes'
+scale: All Canadian provinces/territories + 30 dishes on 6 continents
+inputs: Sign-up form for participation
+outputs: Monthly public data releases; coverage map
+language: N/A
+license: UNKNOWN (data CC BY-SA)
+maintenance: active
+maintenance_detail: Yes (renamed for Dave Taht 2025)
+last_activity: 2026-06
+url: https://onlineacademiccommunity.uvic.ca/cccleo
+publication: No flagship paper yet
+contact: Jianping Pan (pan@uvic.ca)
+notes: NSERC RTI funded; public access platform under development
+source: dagstuhl
+added: 2026-07
+verified: 2026-07

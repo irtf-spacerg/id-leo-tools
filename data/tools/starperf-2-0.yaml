@@ -1,0 +1,25 @@
+name: StarPerf 2.0
+class: Simulator
+subtype: Graph/snapshot network performance
+domains:
+- LEO
+domain_detail: LEO broadband
+dynamics: TLE (tle.json) + skyfield/sgp4; parametric Walker
+layers: ISL grid topology; path computation; latency/coverage/attack models
+real_stack: 'no'
+real_stack_detail: 'No'
+scale: Starlink/OneWeb/Kuiper scale (thousands)
+inputs: TLE data; config files
+outputs: HDF5; CSV; pyecharts; Cesium 3D viz
+language: Python
+license: BSD-2-Clause
+maintenance: active
+maintenance_detail: Yes (last push 2025-12; 201 stars)
+last_activity: 2025-12
+url: https://github.com/SpaceNetLab/StarPerf_Simulator
+publication: IWQoS 2020 lineage; NDSS 2025 repro
+contact: SpaceNetLab, Tsinghua
+notes: v2.0 pure Python (dropped STK/MATLAB); use release/v2.0 branch
+source: dagstuhl
+added: 2026-07
+verified: 2026-07

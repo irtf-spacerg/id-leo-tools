@@ -1,0 +1,29 @@
+# Copy this file to data/tools/<slug>.yaml and fill it in.
+# <slug> is the lowercase tool name with non-alphanumerics replaced by "-".
+# Required: name, class, subtype, domains, url. Delete lines you cannot fill.
+# Field reference and allowed values: data/README.md
+
+name: Tool Name
+class: Simulator            # one of the classes listed in data/README.md
+subtype: One-line description of what it is
+domains:                    # one or more, from the list in data/README.md
+- LEO
+domain_detail: Optional free-text refinement
+dynamics: How orbits/topology/contacts are defined (TLE+SGP4, Walker generator, contact plans, traces, n/a)
+layers: Which layers it covers (PHY, topology, routing, transport, application)
+real_stack: 'no'            # yes | no | partial | na
+scale: Largest scale demonstrated in a publication
+inputs: Input formats
+outputs: Output formats
+language: Implementation language(s)
+license: SPDX id or short description
+maintenance: unknown        # active | low | inactive | planned | unknown
+maintenance_detail: Optional evidence (release, last push)
+last_activity: YYYY-MM
+url: https://example.org/repo
+publication: Venue + year, DOI or arXiv id
+contact: Name (affiliation) or org
+notes: Anything else a researcher should know (access model, caveats, related tools)
+source: community           # dagstuhl | sweep | community
+added: YYYY-MM
+verified: YYYY-MM           # when someone last checked url/maintenance by hand

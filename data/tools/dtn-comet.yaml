@@ -1,0 +1,26 @@
+name: DTN-COMET
+class: Measurement
+class_detail: Benchmark framework
+subtype: Automated benchmarking of DTN implementations
+domains:
+- Deep space / DTN
+domain_detail: Deep space DTN
+dynamics: N/A (node-to-node scenarios)
+layers: Bundle layer of real DTN stacks (uD3TN; ION); goodput/RTT/CPU/RAM
+real_stack: 'yes'
+real_stack_detail: Yes (real DTN implementations)
+scale: Two-node evaluations demonstrated
+inputs: Evaluation configs via API
+outputs: Metrics via API
+language: Python
+license: BSD-2-Clause
+maintenance: low
+maintenance_detail: Low (last activity 2026-02; 0 stars)
+last_activity: 2026-02
+url: https://gitlab.com/noethlich/dtn-comet
+publication: IEEE WiSEE 2024 (arXiv:2501.10006)
+contact: T. Noethlich / F. Walter (D3TN)
+notes: Benchmarks DTN stacks; does not emulate satellite channels itself
+source: dagstuhl
+added: 2026-07
+verified: 2026-07

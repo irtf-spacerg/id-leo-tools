@@ -1,0 +1,26 @@
+name: Contact Plan Designer (CPD)
+class: Implementation
+subtype: Contact plan computation and design tool
+domains:
+- Deep space / DTN
+- LEO
+domain_detail: DTN-based space-terrestrial networks, LEO to interplanetary
+dynamics: Keplerian two-body propagation; TLE/SGP4 and SPICE import; occlusion, elevation and boresight access conditions
+layers: Access computation; conflict-free contact plan design (fair contact plan solver); timeline editing; 2D/3D/timeline visualization; CLI, local web app and Python API
+real_stack: 'no'
+real_stack_detail: Planning tool; exports feed real stacks
+scale: Solar-system scale; Walker LEO constellations to interplanetary scenarios
+inputs: YAML scenario files; TLE; SPICE kernels
+outputs: ION and HDTN contact plans; IETF TVR; IPN-V scenario format; STK-style access CSV; JSON
+language: Python + JavaScript
+license: MIT
+maintenance: active
+maintenance_detail: Created 2026-06, active development, live site at contact-plan-designer.space
+last_activity: 2026-07
+url: https://gitlab.inria.fr/jfraire/contact-plan-designer
+publication: IEEE SMC-IT 2017 (original concept); 2026 rewrite
+contact: Juan A. Fraire (Inria), Pablo Madoery (Carleton)
+notes: Generates the contact plans consumed by ION, HDTN and DtnSim; exports to the IPN-V visualizer and IETF TVR YANG schedules. Open alternative to STK-based access computation.
+source: community
+added: 2026-07
+verified: 2026-07

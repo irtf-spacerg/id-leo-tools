@@ -1,0 +1,26 @@
+name: LENS Dataset
+class: Dataset / data
+class_detail: Dataset
+subtype: Longitudinal latency/loss measurements
+domains:
+- LEO
+domain_detail: LEO broadband (Starlink + some OneWeb)
+dynamics: N/A
+layers: IRTT/ping latency; loss; jitter; dish gRPC diagnostics
+real_stack: na
+real_stack_detail: N/A
+scale: 18+ sites; ~20 TB since Nov 2023
+inputs: N/A
+outputs: JSON (IRTT); ping logs; processed CSV
+language: Python tooling
+license: Code GPL-3.0; data CC BY-SA 4.0
+maintenance: active
+maintenance_detail: Yes (monthly Zenodo + weekly portal snapshots)
+last_activity: 2026-06
+url: https://github.com/clarkzjw/LENS
+publication: ACM MMSys 2024
+contact: Jinwei Zhao / Jianping Pan (UVic PanLab)
+notes: Canonical dataset of CCC-LEO testbed; 6000+ Zenodo downloads
+source: dagstuhl
+added: 2026-07
+verified: 2026-07
