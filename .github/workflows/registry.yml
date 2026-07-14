@@ -34,6 +34,9 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+    concurrency:
+      group: registry-gh-pages
+      cancel-in-progress: false
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -42,12 +45,35 @@ jobs:
       - run: pip install pyyaml
       - run: python scripts/build_site.py
       # The registry is published under /registry/ on the gh-pages branch,
-      # next to the draft artifacts that the i-d-template workflows manage.
-      - uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_branch: gh-pages
-          publish_dir: ./public
-          destination_dir: registry
-          keep_files: false
-          commit_message: "Rebuild registry site"
+      # next to the draft artifacts that the i-d-template "Update Editor's
+      # Copy" workflow pushes to the same branch on every push to main.
+      # Both workflows race on gh-pages, so this deploy refetches the branch
+      # and retries instead of failing on a non-fast-forward push.
+      - name: Deploy to gh-pages under /registry
+        run: |
+          set -e
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          for attempt in 1 2 3 4 5; do
+            git fetch origin gh-pages
+            git worktree add --force --detach /tmp/gh origin/gh-pages
+            rm -rf /tmp/gh/registry
+            mkdir /tmp/gh/registry
+            cp -R public/. /tmp/gh/registry/
+            git -C /tmp/gh add -A registry
+            if git -C /tmp/gh diff --cached --quiet; then
+              echo "registry unchanged, nothing to deploy"
+              git worktree remove --force /tmp/gh
+              exit 0
+            fi
+            git -C /tmp/gh commit -m "Rebuild registry site"
+            if git -C /tmp/gh push origin HEAD:gh-pages; then
+              git worktree remove --force /tmp/gh
+              exit 0
+            fi
+            echo "gh-pages moved under us, retrying (attempt $attempt)"
+            git worktree remove --force /tmp/gh
+            sleep $(( attempt * 5 ))
+          done
+          echo "could not push gh-pages after 5 attempts" >&2
+          exit 1
