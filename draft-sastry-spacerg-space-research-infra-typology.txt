@@ -5,8 +5,8 @@
 Network Working Group                                          N. Sastry
 Internet-Draft                                      University of Surrey
 Intended status: Informational                              J. A. Fraire
-Expires: 15 January 2027                                           Inria
-                                                            14 July 2026
+Expires: 21 January 2027                                           Inria
+                                                            20 July 2026
 
 
               A typology of Space Research Infrastructures
@@ -64,7 +64,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 15 January 2027.
+   This Internet-Draft will expire on 21 January 2027.
 
 Copyright Notice
 
