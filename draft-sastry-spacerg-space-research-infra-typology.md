@@ -10,7 +10,7 @@ date:
 consensus: true
 v: 3
 # area: AREA
-# workgroup: WG Working Group
+# workgroup: Systems and Protocol Aspects for Circumstellar Environments RG
 keyword:
  - simulators
  - emulators
