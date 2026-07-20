@@ -1,3 +1,5 @@
+export UPLOAD_EMAIL ?= n.sastry@surrey.ac.uk
+
 LIBDIR := lib
 -include $(LIBDIR)/main.mk
 
