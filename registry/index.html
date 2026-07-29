@@ -6,7 +6,8 @@
 <title>SPACERG Space Networking Tools Registry</title>
 <meta name="description" content="A living registry of 110 tools, simulators, emulators, testbeds, in-orbit platforms, datasets, and protocol implementations for space networking research, maintained by the IRTF Space Research Group.">
 <link rel="canonical" href="https://irtf-spacerg.github.io/id-leo-tools/registry/">
-<link rel="icon" type="image/svg+xml" href="static/favicon.svg">
+<link rel="icon" type="image/png" href="static/favicon.png">
+<link rel="apple-touch-icon" href="static/favicon.png">
 <meta name="theme-color" content="#F6F7F9" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0F131B" media="(prefers-color-scheme: dark)">
 <meta property="og:type" content="website">
@@ -221,6 +222,13 @@
   .btn:hover { border-color: var(--accent); }
   #smsg { font-size: 12.5px; color: var(--ok); }
   .hint { color: var(--muted); font-size: 12px; margin-top: 10px; }
+
+  /* --- shared SPACE RG brand strip (mirrored in both registries) --- */
+  .brand { display: flex; align-items: center; gap: 10px; margin-bottom: 6px; position: relative; }
+  .brand img { width: 34px; height: 34px; border-radius: 7px; flex: none; }
+  .brand .eyebrow { margin: 0; }
+  .sibling { margin-top: 10px; font-size: 12.5px; color: var(--muted); position: relative; }
+  .sibling a { white-space: nowrap; }
   @media (prefers-reduced-motion: no-preference) {
     tr.item td { transition: background .12s ease; }
   }
@@ -237,10 +245,14 @@
     <circle cx="330" cy="205" r="3.5" fill="var(--muted)" opacity=".6"/>
     <circle cx="86" cy="58" r="2.5" fill="var(--muted)" opacity=".6"/>
   </svg>
-  <div class="eyebrow"><a href="https://datatracker.ietf.org/rg/space/about/" target="_blank" rel="noopener">IETF / IRTF Space RG</a> &middot; Dagstuhl 26062 follow-up</div>
+  <div class="brand">
+    <img src="static/logo.png" alt="" aria-hidden="true">
+    <div class="eyebrow"><a href="https://datatracker.ietf.org/rg/space/about/" target="_blank" rel="noopener">IETF / IRTF Space RG</a> &middot; Dagstuhl 26062 follow-up</div>
+  </div>
   <h1>Space Networking <span class="haccent">Tools Registry</span></h1>
   <p class="sub">A living registry of tools, simulators, emulators, testbeds, in-orbit platforms, datasets, and protocol implementations for space networking research. Click a row for the full record: dynamics model, layers, formats, license, contact. Data source: one YAML file per tool in the <a href="https://github.com/irtf-spacerg/id-leo-tools">GitHub repository</a>.</p>
   <div class="hstats" id="hstats"></div>
+  <div class="sibling">Companion registry: <a href="https://irtf-spacerg.github.io/id-leo-constellations/registry/">announced, filed and deployed satellite constellations &rarr;</a></div>
 </header>
 
 <div class="controls">
@@ -436,7 +448,7 @@ function render() {
     `<span class="hstat"><b>${active}</b> actively maintained</span>` +
     `<span class="hstat"><b>${classes}</b> resource classes</span>` +
     `<span class="hstat"><b>${doms}</b> domains</span>` +
-    `<span class="hstat">updated <b class="mono">2026-07-14</b></span>`;
+    `<span class="hstat">updated <b class="mono">2026-07-29</b></span>`;
 })();
 
 chips("f-cls", uniq("cls"), "cls");
