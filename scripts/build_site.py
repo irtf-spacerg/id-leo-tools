@@ -129,7 +129,8 @@ def head_html(cfg, n_tools):
 <title>{title}</title>
 <meta name="description" content="{desc}">
 <link rel="canonical" href="{pages}">
-<link rel="icon" type="image/svg+xml" href="static/favicon.svg">
+<link rel="icon" type="image/png" href="static/favicon.png">
+<link rel="apple-touch-icon" href="static/favicon.png">
 <meta name="theme-color" content="#F6F7F9" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0F131B" media="(prefers-color-scheme: dark)">
 <meta property="og:type" content="website">
