@@ -12,7 +12,7 @@
 These resources have historically been developed independently by different research groups, agencies, and projects, making discovery, comparison, interoperability, and reuse difficult.
 Existing registries typically catalogue tools individually but provide limited guidance on their functional role within the research lifecycle. 
        This document proposes a typology for research infrastructures relevant to the Space Research Group (SPACERG).
-Rather than classifying resources according to implementation technology or project origin, the proposed taxonomy groups resources according to their research function.
+The proposed taxonomy groups resources by the research function they serve, independently of their implementation technology or project origin.
 The typology provides a common vocabulary for describing software and non-software research assets, supports the organization of community registries, and facilitates interoperability, reproducibility, and long-term maintenance of research infrastructures.
 The classification is intended to evolve as new classes of research resources emerge.
 The typology is implemented by a machine-readable registry of research resources maintained by the research group. 
@@ -1070,7 +1070,7 @@ svg {
 <div id="internal-metadata" class="document-information">
 <dl id="identifiers">
 <dt class="label-workgroup">Workgroup:</dt>
-<dd class="workgroup">Network Working Group</dd>
+<dd class="workgroup">Systems and Protocol Aspects for Circumstellar Environments</dd>
 <dt class="label-internet-draft">Internet-Draft:</dt>
 <dd class="internet-draft">draft-sastry-spacerg-space-research-infra-typology-latest</dd>
 <dt class="label-published">Published:</dt>
@@ -1101,7 +1101,7 @@ svg {
 These resources have historically been developed independently by different research groups, agencies, and projects, making discovery, comparison, interoperability, and reuse difficult.
 Existing registries typically catalogue tools individually but provide limited guidance on their functional role within the research lifecycle.<a href="#section-abstract-1" class="pilcrow">¶</a></p>
 <p id="section-abstract-2">This document proposes a typology for research infrastructures relevant to the Space Research Group (SPACERG).
-Rather than classifying resources according to implementation technology or project origin, the proposed taxonomy groups resources according to their research function.
+The proposed taxonomy groups resources by the research function they serve, independently of their implementation technology or project origin.
 The typology provides a common vocabulary for describing software and non-software research assets, supports the organization of community registries, and facilitates interoperability, reproducibility, and long-term maintenance of research infrastructures.
 The classification is intended to evolve as new classes of research resources emerge.
 The typology is implemented by a machine-readable registry of research resources maintained by the research group.<a href="#section-abstract-2" class="pilcrow">¶</a></p>
@@ -1114,8 +1114,13 @@ The typology is implemented by a machine-readable registry of research resources
 <p id="section-note.1-2">
         The latest revision of this draft can be found at <span><a href="https://irtf-spacerg.github.io/id-leo-tools/draft-sastry-spacerg-space-research-infra-typology.html">https://irtf-spacerg.github.io/id-leo-tools/draft-sastry-spacerg-space-research-infra-typology.html</a></span>.
         Status information for this document may be found at <span><a href="https://datatracker.ietf.org/doc/draft-sastry-spacerg-space-research-infra-typology/">https://datatracker.ietf.org/doc/draft-sastry-spacerg-space-research-infra-typology/</a></span>.<a href="#section-note.1-2" class="pilcrow">¶</a></p>
-<p id="section-note.1-3">Source for this draft and an issue tracker can be found at
-        <span><a href="https://github.com/irtf-spacerg/id-leo-tools">https://github.com/irtf-spacerg/id-leo-tools</a></span>.<a href="#section-note.1-3" class="pilcrow">¶</a></p>
+<p id="section-note.1-3">
+        Discussion of this document takes place on the
+        Systems and Protocol Aspects for Circumstellar Environments Research Group mailing list (<span><a href="mailto:space@irtf.org">mailto:space@irtf.org</a></span>),
+        which is archived at <span><a href="https://mailarchive.ietf.org/arch/browse/space/">https://mailarchive.ietf.org/arch/browse/space/</a></span>.
+        Subscribe at <span><a href="https://www.ietf.org/mailman/listinfo/space/">https://www.ietf.org/mailman/listinfo/space/</a></span>.<a href="#section-note.1-3" class="pilcrow">¶</a></p>
+<p id="section-note.1-4">Source for this draft and an issue tracker can be found at
+        <span><a href="https://github.com/irtf-spacerg/id-leo-tools">https://github.com/irtf-spacerg/id-leo-tools</a></span>.<a href="#section-note.1-4" class="pilcrow">¶</a></p>
 </section>
 <div id="status-of-memo">
 <section id="section-boilerplate.1">
@@ -1153,10 +1158,7 @@ The typology is implemented by a machine-readable registry of research resources
             (<span><a href="https://trustee.ietf.org/license-info">https://trustee.ietf.org/license-info</a></span>) in effect on the date of
             publication of this document. Please review these documents
             carefully, as they describe your rights and restrictions with
-            respect to this document. Code Components extracted from this
-            document must include Revised BSD License text as described in
-            Section 4.e of the Trust Legal Provisions and are provided without
-            warranty as described in the Revised BSD License.<a href="#section-boilerplate.2-2" class="pilcrow">¶</a></p>
+            respect to this document.<a href="#section-boilerplate.2-2" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="toc">
@@ -1169,33 +1171,44 @@ The typology is implemented by a machine-readable registry of research resources
             <p id="section-toc.1-1.1.1" class="keepWithNext"><a href="#section-1" class="auto internal xref">1</a>.  <a href="#name-introduction" class="internal xref">Introduction</a></p>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.2">
-            <p id="section-toc.1-1.2.1" class="keepWithNext"><a href="#section-2" class="auto internal xref">2</a>.  <a href="#name-the-spacerg-registry" class="internal xref">The SPACERG Registry</a></p>
-</li>
-          <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.3">
-            <p id="section-toc.1-1.3.1" class="keepWithNext"><a href="#section-3" class="auto internal xref">3</a>.  <a href="#name-conventions-and-definitions" class="internal xref">Conventions and Definitions</a></p>
-</li>
-          <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.4">
-            <p id="section-toc.1-1.4.1"><a href="#section-4" class="auto internal xref">4</a>.  <a href="#name-security-considerations" class="internal xref">Security Considerations</a></p>
-</li>
-          <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.5">
-            <p id="section-toc.1-1.5.1"><a href="#section-5" class="auto internal xref">5</a>.  <a href="#name-iana-considerations" class="internal xref">IANA Considerations</a></p>
-</li>
-          <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6">
-            <p id="section-toc.1-1.6.1"><a href="#section-6" class="auto internal xref">6</a>.  <a href="#name-references" class="internal xref">References</a></p>
+            <p id="section-toc.1-1.2.1" class="keepWithNext"><a href="#section-2" class="auto internal xref">2</a>.  <a href="#name-the-typology" class="internal xref">The typology</a></p>
 <ul class="compact toc ulBare ulEmpty">
-<li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.1">
-                <p id="section-toc.1-1.6.2.1.1"><a href="#section-6.1" class="auto internal xref">6.1</a>.  <a href="#name-normative-references" class="internal xref">Normative References</a></p>
-</li>
-              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.2">
-                <p id="section-toc.1-1.6.2.2.1"><a href="#section-6.2" class="auto internal xref">6.2</a>.  <a href="#name-informative-references" class="internal xref">Informative References</a></p>
+<li class="compact toc ulBare ulEmpty" id="section-toc.1-1.2.2.1">
+                <p id="section-toc.1-1.2.2.1.1" class="keepWithNext"><a href="#section-2.1" class="auto internal xref">2.1</a>.  <a href="#name-what-resisted-classificatio" class="internal xref">What resisted classification</a></p>
 </li>
             </ul>
 </li>
+          <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.3">
+            <p id="section-toc.1-1.3.1"><a href="#section-3" class="auto internal xref">3</a>.  <a href="#name-the-spacerg-registry" class="internal xref">The SPACERG Registry</a></p>
+</li>
+          <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.4">
+            <p id="section-toc.1-1.4.1"><a href="#section-4" class="auto internal xref">4</a>.  <a href="#name-relationship-to-other-space" class="internal xref">Relationship to other SPACERG work</a></p>
+</li>
+          <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.5">
+            <p id="section-toc.1-1.5.1"><a href="#section-5" class="auto internal xref">5</a>.  <a href="#name-conventions-and-definitions" class="internal xref">Conventions and Definitions</a></p>
+</li>
+          <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6">
+            <p id="section-toc.1-1.6.1"><a href="#section-6" class="auto internal xref">6</a>.  <a href="#name-security-considerations" class="internal xref">Security Considerations</a></p>
+</li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.7">
-            <p id="section-toc.1-1.7.1"><a href="#appendix-A" class="auto internal xref"></a><a href="#name-acknowledgments" class="internal xref">Acknowledgments</a></p>
+            <p id="section-toc.1-1.7.1"><a href="#section-7" class="auto internal xref">7</a>.  <a href="#name-iana-considerations" class="internal xref">IANA Considerations</a></p>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.8">
-            <p id="section-toc.1-1.8.1"><a href="#appendix-B" class="auto internal xref"></a><a href="#name-authors-addresses" class="internal xref">Authors' Addresses</a></p>
+            <p id="section-toc.1-1.8.1"><a href="#section-8" class="auto internal xref">8</a>.  <a href="#name-references" class="internal xref">References</a></p>
+<ul class="compact toc ulBare ulEmpty">
+<li class="compact toc ulBare ulEmpty" id="section-toc.1-1.8.2.1">
+                <p id="section-toc.1-1.8.2.1.1"><a href="#section-8.1" class="auto internal xref">8.1</a>.  <a href="#name-normative-references" class="internal xref">Normative References</a></p>
+</li>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.8.2.2">
+                <p id="section-toc.1-1.8.2.2.1"><a href="#section-8.2" class="auto internal xref">8.2</a>.  <a href="#name-informative-references" class="internal xref">Informative References</a></p>
+</li>
+            </ul>
+</li>
+          <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.9">
+            <p id="section-toc.1-1.9.1"><a href="#appendix-A" class="auto internal xref"></a><a href="#name-acknowledgments" class="internal xref">Acknowledgments</a></p>
+</li>
+          <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.10">
+            <p id="section-toc.1-1.10.1"><a href="#appendix-B" class="auto internal xref"></a><a href="#name-authors-addresses" class="internal xref">Authors' Addresses</a></p>
 </li>
         </ul>
 </nav>
@@ -1212,99 +1225,146 @@ While many of these resources have become widely adopted within individual resea
 <p id="section-1-2">As the Space Research Group (SPACERG) develops a shared registry of research infrastructures, it has become apparent that simply maintaining a list of available tools is insufficient.
 Users require a consistent method of understanding <em>what role</em> a resource plays within the research ecosystem, how it complements other resources, and where it fits within an experimental workflow.
 A common typology also improves discoverability, assists researchers in selecting appropriate infrastructures, and enables more consistent metadata across independently maintained registries.<a href="#section-1-2" class="pilcrow">¶</a></p>
-<p id="section-1-3">The typology described in this document was developed through an analysis of the more than 110 verified research resources collected from the community and curated in the SPACERG registry.
-Rather than deriving categories from software architecture or implementation language, the classification emerged from the primary research purpose served by each resource.
-This functional approach accommodates both software and non-software research assets and remains applicable as new technologies are introduced.<a href="#section-1-3" class="pilcrow">¶</a></p>
-<p id="section-1-4">The initial categories identified include, under the names used by the registry:<a href="#section-1-4" class="pilcrow">¶</a></p>
+<p id="section-1-3">The purpose of this document is to establish a common vocabulary that lets researchers classify and discover research infrastructures relevant to space networking consistently.
+It does not prescribe a fixed ontology.
+The taxonomy is intended to support the SPACERG registry, facilitate interoperability with other research infrastructure catalogues, and provide a foundation for future standardization efforts within the IRTF and IETF research communities.<a href="#section-1-3" class="pilcrow">¶</a></p>
+</section>
+</div>
+<div id="the-typology">
+<section id="section-2">
+      <h2 id="name-the-typology">
+<a href="#section-2" class="section-number selfRef">2. </a><a href="#name-the-typology" class="section-name selfRef">The typology</a>
+      </h2>
+<p id="section-2-1">The typology described in this document was developed by analysing the verified research resources collected from the community and curated in the SPACERG registry.
+The categories emerged from the primary research purpose each resource serves.
+Software architecture and implementation language proved to be poor discriminators: two resources built on the same framework and written in the same language may occupy entirely different positions in an experimental workflow.
+This functional approach accommodates both software and non-software research assets and remains applicable as new technologies are introduced.<a href="#section-2-1" class="pilcrow">¶</a></p>
+<p id="section-2-2">The initial categories identified include, under the names used by the registry:<a href="#section-2-2" class="pilcrow">¶</a></p>
 <ul class="normal">
-<li class="normal" id="section-1-5.1">
-          <p id="section-1-5.1.1"><strong>Simulator</strong>, modelling network behaviour using abstract representations (flow-level, packet-level, or discrete-event) to support scalable experimentation without executing real protocol stacks.<a href="#section-1-5.1.1" class="pilcrow">¶</a></p>
+<li class="normal" id="section-2-3.1">
+          <p id="section-2-3.1.1"><strong>Simulator</strong>, modelling network behaviour using abstract representations (flow-level, packet-level, or discrete-event) to support scalable experimentation without executing real protocol stacks.<a href="#section-2-3.1.1" class="pilcrow">¶</a></p>
 </li>
-        <li class="normal" id="section-1-5.2">
-          <p id="section-1-5.2.1"><strong>Emulator</strong>, reproducing the timing and topology of target systems while executing real protocol implementations and operating-system network stacks.<a href="#section-1-5.2.1" class="pilcrow">¶</a></p>
+        <li class="normal" id="section-2-3.2">
+          <p id="section-2-3.2.1"><strong>Emulator</strong>, reproducing the timing and topology of target systems while executing real protocol implementations and operating-system network stacks.<a href="#section-2-3.2.1" class="pilcrow">¶</a></p>
 </li>
-        <li class="normal" id="section-1-5.3">
-          <p id="section-1-5.3.1"><strong>Testbed</strong>, offering physical, virtual, or hybrid environments with real links, such as terminal deployments and ground stations, for integrated experimental evaluation.<a href="#section-1-5.3.1" class="pilcrow">¶</a></p>
+        <li class="normal" id="section-2-3.3">
+          <p id="section-2-3.3.1"><strong>Testbed</strong>, offering physical, virtual, or hybrid environments with real links, such as terminal deployments and ground stations, for integrated experimental evaluation.<a href="#section-2-3.3.1" class="pilcrow">¶</a></p>
 </li>
-        <li class="normal" id="section-1-5.4">
-          <p id="section-1-5.4.1"><strong>In-orbit platform</strong>, representing operational or experimental space assets (research satellites, constellations, and hosted payloads) that provide real-world experimentation opportunities.<a href="#section-1-5.4.1" class="pilcrow">¶</a></p>
+        <li class="normal" id="section-2-3.4">
+          <p id="section-2-3.4.1"><strong>In-orbit platform</strong>, representing operational or experimental space assets (research satellites, constellations, and hosted payloads) that provide real-world experimentation opportunities.<a href="#section-2-3.4.1" class="pilcrow">¶</a></p>
 </li>
-        <li class="normal" id="section-1-5.5">
-          <p id="section-1-5.5.1"><strong>Dataset / data</strong>, including curated measurement datasets and live data services such as orbital-element feeds.<a href="#section-1-5.5.1" class="pilcrow">¶</a></p>
+        <li class="normal" id="section-2-3.5">
+          <p id="section-2-3.5.1"><strong>Dataset / data</strong>, including curated measurement datasets and live data services such as orbital-element feeds.<a href="#section-2-3.5.1" class="pilcrow">¶</a></p>
 </li>
-        <li class="normal" id="section-1-5.6">
-          <p id="section-1-5.6.1"><strong>Measurement</strong>, providing tools and methodologies that produce new measurements, including browser-integrated extensions, terminal-telemetry collectors, Internet-scanning methodologies, and benchmarking frameworks.<a href="#section-1-5.6.1" class="pilcrow">¶</a></p>
+        <li class="normal" id="section-2-3.6">
+          <p id="section-2-3.6.1"><strong>Measurement</strong>, providing tools and methodologies that produce new measurements, including browser-integrated extensions, terminal-telemetry collectors, Internet-scanning methodologies, and benchmarking frameworks.<a href="#section-2-3.6.1" class="pilcrow">¶</a></p>
 </li>
-        <li class="normal" id="section-1-5.7">
-          <p id="section-1-5.7.1"><strong>Implementation</strong>, providing runnable protocol stacks, proxies, and flight software deployed in experiments, such as Bundle Protocol implementations, non-terrestrial-network radio access stacks, and performance-enhancing proxies.<a href="#section-1-5.7.1" class="pilcrow">¶</a></p>
+        <li class="normal" id="section-2-3.7">
+          <p id="section-2-3.7.1"><strong>Implementation</strong>, providing runnable protocol stacks, proxies, and flight software deployed in experiments, such as Bundle Protocol implementations, non-terrestrial-network radio access stacks, and performance-enhancing proxies.<a href="#section-2-3.7.1" class="pilcrow">¶</a></p>
 </li>
-        <li class="normal" id="section-1-5.8">
-          <p id="section-1-5.8.1"><strong>Library</strong>, providing reusable building blocks embedded by other resources, such as orbit propagators, contact-plan generators, and routing libraries.<a href="#section-1-5.8.1" class="pilcrow">¶</a></p>
+        <li class="normal" id="section-2-3.8">
+          <p id="section-2-3.8.1"><strong>Library</strong>, providing reusable building blocks embedded by other resources, such as orbit propagators, contact-plan generators, and routing libraries.<a href="#section-2-3.8.1" class="pilcrow">¶</a></p>
 </li>
-        <li class="normal" id="section-1-5.9">
-          <p id="section-1-5.9.1"><strong>Visualizer</strong>, supporting analysis, interpretation, and presentation of orbital and network state.<a href="#section-1-5.9.1" class="pilcrow">¶</a></p>
+        <li class="normal" id="section-2-3.9">
+          <p id="section-2-3.9.1"><strong>Visualizer</strong>, supporting analysis, interpretation, and presentation of orbital and network state.<a href="#section-2-3.9.1" class="pilcrow">¶</a></p>
 </li>
-        <li class="normal" id="section-1-5.10">
-          <p id="section-1-5.10.1"><strong>Research platform</strong>, offering orchestration and service environments for experimentation, such as satellite edge-computing and serverless frameworks.<a href="#section-1-5.10.1" class="pilcrow">¶</a></p>
+        <li class="normal" id="section-2-3.10">
+          <p id="section-2-3.10.1"><strong>Research platform</strong>, offering orchestration and service environments for experimentation, such as satellite edge-computing and serverless frameworks.<a href="#section-2-3.10.1" class="pilcrow">¶</a></p>
 </li>
       </ul>
-<p id="section-1-6">The registry vocabulary additionally reserves a small set of auxiliary labels (Meta-resource, Commercial / service, Unresolved, Other) for resources that fall outside these research categories or that await classification.<a href="#section-1-6" class="pilcrow">¶</a></p>
-<p id="section-1-7">Although these categories provide broad coverage of the current SPACERG registry, they are not intended to be exhaustive.
-New categories may emerge as the community develops additional research infrastructures, including digital twins, AI-assisted experimentation platforms, workflow management systems, and cloud-based experimentation environments.<a href="#section-1-7" class="pilcrow">¶</a></p>
-<p id="section-1-8">The purpose of this document is therefore not to prescribe a fixed ontology, but rather to establish a common vocabulary that enables researchers to consistently classify and discover research infrastructures relevant to space networking.
-The taxonomy is intended to support the SPACERG registry, facilitate interoperability with other research infrastructure catalogues, and provide a foundation for future standardization efforts within the IRTF and IETF research communities.<a href="#section-1-8" class="pilcrow">¶</a></p>
+<p id="section-2-4">The registry vocabulary additionally reserves a small set of auxiliary labels (Meta-resource, Commercial / service, Unresolved, Other) for resources that fall outside these research categories or that await classification.<a href="#section-2-4" class="pilcrow">¶</a></p>
+<p id="section-2-5">Although these categories provide broad coverage of the current SPACERG registry, they are not intended to be exhaustive.
+New categories may emerge as the community develops additional research infrastructures, including digital twins, AI-assisted experimentation platforms, workflow management systems, and cloud-based experimentation environments.<a href="#section-2-5" class="pilcrow">¶</a></p>
+<div id="what-resisted-classification">
+<section id="section-2.1">
+        <h3 id="name-what-resisted-classificatio">
+<a href="#section-2.1" class="section-number selfRef">2.1. </a><a href="#name-what-resisted-classificatio" class="section-name selfRef">What resisted classification</a>
+        </h3>
+<p id="section-2.1-1">Applying the typology to the collected resources exposed four boundaries that a single class label cannot carry on its own.
+They are recorded here because they shape the registry schema, and because they are the places where two curators are most likely to disagree.<a href="#section-2.1-1" class="pilcrow">¶</a></p>
+<p id="section-2.1-2">The first is the boundary between simulation and emulation.
+Whether a resource executes real protocol stacks is the property researchers most often want to know, and it does not align cleanly with either class.
+Some emulators run unmodified containers over shaped links, some simulators embed a real transport implementation, and some resources do either depending on how they are configured.
+The registry therefore carries execution fidelity on its own axis, and the class label alone does not imply it.<a href="#section-2.1-2" class="pilcrow">¶</a></p>
+<p id="section-2.1-3">The second is that a project and a resource are different units.
+A testbed and the measurement traces it publishes have different licences, contacts, maintenance states and lifecycles, so they are described by separate records under different classes even when one produces the other.
+Several projects in the registry appear this way, spanning three or four classes between them.<a href="#section-2.1-3" class="pilcrow">¶</a></p>
+<p id="section-2.1-4">The third is that the distinction between a library and an implementation depends on how a resource is used.
+The same codebase can be a standalone protocol stack in one deployment and an embedded component in another, and the class records the role in which it is most commonly encountered.<a href="#section-2.1-4" class="pilcrow">¶</a></p>
+<p id="section-2.1-5">The fourth is that in-orbit platforms and testbeds share an access model.
+Both are typically reached through an experimenter programme rather than a download, and the class records where the asset is while the access model is described separately.<a href="#section-2.1-5" class="pilcrow">¶</a></p>
+<p id="section-2.1-6">None of the collected resources have so far required the Unresolved or Other labels.
+That the categories held is a weak result: the collection comes from a community with shared assumptions about what counts as a research resource, and a sweep across adjacent fields would likely surface cases that do not fit.<a href="#section-2.1-6" class="pilcrow">¶</a></p>
+</section>
+</div>
 </section>
 </div>
 <div id="the-spacerg-registry">
-<section id="section-2">
+<section id="section-3">
       <h2 id="name-the-spacerg-registry">
-<a href="#section-2" class="section-number selfRef">2. </a><a href="#name-the-spacerg-registry" class="section-name selfRef">The SPACERG Registry</a>
+<a href="#section-3" class="section-number selfRef">3. </a><a href="#name-the-spacerg-registry" class="section-name selfRef">The SPACERG Registry</a>
       </h2>
-<p id="section-2-1">The typology in this document is implemented by a community registry maintained by SPACERG in the repository that also hosts this document, and published as a searchable page with JSON and CSV exports <span>[<a href="#REGISTRY" class="cite xref">REGISTRY</a>]</span>.
-Each resource is described by one machine-readable record carrying its class under this typology, functional metadata (how orbital dynamics are defined, which layers are covered, whether real protocol stacks are exercised, the largest scale demonstrated in a publication, and input and output formats), and provenance metadata (license, a named contact, how the entry was collected, and when it was last verified).<a href="#section-2-1" class="pilcrow">¶</a></p>
-<p id="section-2-2">Additions and corrections are made by pull request, one file per resource, and are validated automatically against the registry schema.
-To be included, a resource should be specific to space or satellite networking, usable by others through a public artifact or a documented access program, and verifiable through a working URL and, where claims matter, a publication.<a href="#section-2-2" class="pilcrow">¶</a></p>
-<p id="section-2-3">Registry entries are point-in-time observations: tools are abandoned, URLs move, and maintenance states go stale.
+<p id="section-3-1">The typology in this document is implemented by a community registry maintained by SPACERG in the repository that also hosts this document, and published as a searchable page with JSON and CSV exports <span>[<a href="#REGISTRY" class="cite xref">REGISTRY</a>]</span>.
+Each resource is described by one machine-readable record carrying its class under this typology, functional metadata (how orbital dynamics are defined, which layers are covered, whether real protocol stacks are exercised, the largest scale demonstrated in a publication, and input and output formats), and provenance metadata (license, a named contact, how the entry was collected, and when it was last verified).<a href="#section-3-1" class="pilcrow">¶</a></p>
+<p id="section-3-2">Additions and corrections are made by pull request, one file per resource, and are validated automatically against the registry schema.
+To be included, a resource should be specific to space or satellite networking, usable by others through a public artifact or a documented access program, and verifiable through a working URL and, where claims matter, a publication.<a href="#section-3-2" class="pilcrow">¶</a></p>
+<p id="section-3-3">Registry entries are point-in-time observations: tools are abandoned, URLs move, and maintenance states go stale.
 Each record therefore carries a last-verified date and entries are re-verified periodically.
-Entries that fail verification are marked as historic rather than deleted, because unmaintained resources remain relevant as baselines against which published results were obtained.<a href="#section-2-3" class="pilcrow">¶</a></p>
+Entries that fail verification are marked as historic rather than deleted, because unmaintained resources remain relevant as baselines against which published results were obtained.<a href="#section-3-3" class="pilcrow">¶</a></p>
+</section>
+</div>
+<div id="relationship-to-other-spacerg-work">
+<section id="section-4">
+      <h2 id="name-relationship-to-other-space">
+<a href="#section-4" class="section-number selfRef">4. </a><a href="#name-relationship-to-other-space" class="section-name selfRef">Relationship to other SPACERG work</a>
+      </h2>
+<p id="section-4-1">This typology and the registry that implements it are complementary to the registry of announced, filed and deployed satellite constellations maintained by the research group <span>[<a href="#CONSTELLATIONS" class="cite xref">CONSTELLATIONS</a>]</span>.
+This work catalogues what researchers can experiment with; that one catalogues what is being built and what has been claimed.
+The two use the same contribution model, the same validation approach and the same publication mechanics, and are intended to be usable together.<a href="#section-4-1" class="pilcrow">¶</a></p>
+<p id="section-4-2">One design choice is shared between them.
+A record describes a single resource, under this typology, or a single authorisation, in the constellation registry, and a project-level or operator-level view is composed from the records by whoever needs one.
+Both registries also treat their entries as observations at a date and carry the date with the claim.<a href="#section-4-2" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="conventions-and-definitions">
-<section id="section-3">
+<section id="section-5">
       <h2 id="name-conventions-and-definitions">
-<a href="#section-3" class="section-number selfRef">3. </a><a href="#name-conventions-and-definitions" class="section-name selfRef">Conventions and Definitions</a>
+<a href="#section-5" class="section-number selfRef">5. </a><a href="#name-conventions-and-definitions" class="section-name selfRef">Conventions and Definitions</a>
       </h2>
-<p id="section-3-1">The key words "<span class="bcp14">MUST</span>", "<span class="bcp14">MUST NOT</span>", "<span class="bcp14">REQUIRED</span>", "<span class="bcp14">SHALL</span>", "<span class="bcp14">SHALL NOT</span>", "<span class="bcp14">SHOULD</span>", "<span class="bcp14">SHOULD NOT</span>", "<span class="bcp14">RECOMMENDED</span>", "<span class="bcp14">NOT RECOMMENDED</span>",
+<p id="section-5-1">The key words "<span class="bcp14">MUST</span>", "<span class="bcp14">MUST NOT</span>", "<span class="bcp14">REQUIRED</span>", "<span class="bcp14">SHALL</span>", "<span class="bcp14">SHALL NOT</span>", "<span class="bcp14">SHOULD</span>", "<span class="bcp14">SHOULD NOT</span>", "<span class="bcp14">RECOMMENDED</span>", "<span class="bcp14">NOT RECOMMENDED</span>",
 "<span class="bcp14">MAY</span>", and "<span class="bcp14">OPTIONAL</span>" in this document are to be interpreted as
 described in BCP 14 <span>[<a href="#RFC2119" class="cite xref">RFC2119</a>]</span> <span>[<a href="#RFC8174" class="cite xref">RFC8174</a>]</span> when, and only when, they
-appear in all capitals, as shown here.<a href="#section-3-1" class="pilcrow">¶</a></p>
+appear in all capitals, as shown here.<a href="#section-5-1" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="security-considerations">
-<section id="section-4">
+<section id="section-6">
       <h2 id="name-security-considerations">
-<a href="#section-4" class="section-number selfRef">4. </a><a href="#name-security-considerations" class="section-name selfRef">Security Considerations</a>
+<a href="#section-6" class="section-number selfRef">6. </a><a href="#name-security-considerations" class="section-name selfRef">Security Considerations</a>
       </h2>
-<p id="section-4-1">TODO Security<a href="#section-4-1" class="pilcrow">¶</a></p>
+<p id="section-6-1">This document defines a vocabulary for describing research infrastructures and introduces no protocol mechanisms.
+The registry that implements it records public information about publicly available resources.<a href="#section-6-1" class="pilcrow">¶</a></p>
+<p id="section-6-2">Entries link to third-party code, data and services.
+Inclusion in the registry carries no security assessment of what a link points to, and readers running registry-listed software should evaluate it as they would any other third-party dependency.<a href="#section-6-2" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="iana-considerations">
-<section id="section-5">
+<section id="section-7">
       <h2 id="name-iana-considerations">
-<a href="#section-5" class="section-number selfRef">5. </a><a href="#name-iana-considerations" class="section-name selfRef">IANA Considerations</a>
+<a href="#section-7" class="section-number selfRef">7. </a><a href="#name-iana-considerations" class="section-name selfRef">IANA Considerations</a>
       </h2>
-<p id="section-5-1">This document has no IANA actions.<a href="#section-5-1" class="pilcrow">¶</a></p>
+<p id="section-7-1">This document has no IANA actions.<a href="#section-7-1" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="sec-combined-references">
-<section id="section-6">
+<section id="section-8">
       <h2 id="name-references">
-<a href="#section-6" class="section-number selfRef">6. </a><a href="#name-references" class="section-name selfRef">References</a>
+<a href="#section-8" class="section-number selfRef">8. </a><a href="#name-references" class="section-name selfRef">References</a>
       </h2>
 <div id="sec-normative-references">
-<section id="section-6.1">
+<section id="section-8.1">
         <h3 id="name-normative-references">
-<a href="#section-6.1" class="section-number selfRef">6.1. </a><a href="#name-normative-references" class="section-name selfRef">Normative References</a>
+<a href="#section-8.1" class="section-number selfRef">8.1. </a><a href="#name-normative-references" class="section-name selfRef">Normative References</a>
         </h3>
 <dl class="references">
 <dt id="RFC2119">[RFC2119]</dt>
@@ -1319,11 +1379,15 @@ appear in all capitals, as shown here.<a href="#section-3-1" class="pilcrow">¶<
 </section>
 </div>
 <div id="sec-informative-references">
-<section id="section-6.2">
+<section id="section-8.2">
         <h3 id="name-informative-references">
-<a href="#section-6.2" class="section-number selfRef">6.2. </a><a href="#name-informative-references" class="section-name selfRef">Informative References</a>
+<a href="#section-8.2" class="section-number selfRef">8.2. </a><a href="#name-informative-references" class="section-name selfRef">Informative References</a>
         </h3>
 <dl class="references">
+<dt id="CONSTELLATIONS">[CONSTELLATIONS]</dt>
+        <dd>
+<span class="refAuthor">IRTF Space Research Group</span>, <span class="refTitle">"SPACERG Satellite Constellation Registry"</span>, <span>&lt;<a href="https://irtf-spacerg.github.io/id-leo-constellations/registry/">https://irtf-spacerg.github.io/id-leo-constellations/registry/</a>&gt;</span>. </dd>
+<dd class="break"></dd>
 <dt id="REGISTRY">[REGISTRY]</dt>
       <dd>
 <span class="refAuthor">IRTF Space Research Group</span>, <span class="refTitle">"SPACERG Space Networking Tools Registry"</span>, <span>&lt;<a href="https://irtf-spacerg.github.io/id-leo-tools/registry/">https://irtf-spacerg.github.io/id-leo-tools/registry/</a>&gt;</span>. </dd>
@@ -1338,7 +1402,10 @@ appear in all capitals, as shown here.<a href="#section-3-1" class="pilcrow">¶<
       <h2 id="name-acknowledgments">
 <a href="#name-acknowledgments" class="section-name selfRef">Acknowledgments</a>
       </h2>
-<p id="appendix-A-1">TODO acknowledge.<a href="#appendix-A-1" class="pilcrow">¶</a></p>
+<p id="appendix-A-1">The initial collection of research resources was assembled by the participants of Dagstuhl Seminar 26062 in February 2026, and extended by a systematic literature and web sweep in July 2026.
+The typology described in this document was derived from that collection.<a href="#appendix-A-1" class="pilcrow">¶</a></p>
+<p id="appendix-A-2">TODO: acknowledge the Dagstuhl participants and the registry contributors by name.<a href="#appendix-A-2" class="pilcrow">¶</a></p>
+<p id="appendix-A-3">TODO: decide whether the AI-assistance disclosure carried by the companion constellation registry applies here, and to which parts of this work.<a href="#appendix-A-3" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="authors-addresses">
