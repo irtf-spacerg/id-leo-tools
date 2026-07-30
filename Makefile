@@ -15,3 +15,17 @@ else
 	    https://github.com/martinthomson/i-d-template $(LIBDIR)
 endif
 endif
+
+# ------------------------------------------------------------------- prose --
+# Lay the draft out one sentence per line (mirrors id-leo-constellations).
+# Idempotent. One sentence per line keeps review diffs to what changed.
+FILES ?=
+.PHONY: fmt fmt-wrap fmt-check
+fmt:
+	python3 scripts/reflow.py --sentences $(FILES)
+
+fmt-wrap:
+	python3 scripts/reflow.py $(FILES)
+
+fmt-check:
+	python3 scripts/reflow.py --sentences --check $(FILES)
