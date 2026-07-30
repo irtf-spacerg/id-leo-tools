@@ -12,6 +12,14 @@ on:
         default: false
         type: boolean
 
+# Every workflow that writes the gh-pages branch shares this group, so GitHub
+# never runs two of them at once. Without it, i-d-template's `make gh-pages`
+# and `make gh-archive` clone the branch and later `git push -f` it, which
+# silently rewinds any registry deploy that landed in between.
+concurrency:
+  group: gh-pages
+  cancel-in-progress: false
+
 jobs:
   build:
     name: "Archive Issues and Pull Requests"

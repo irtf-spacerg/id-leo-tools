@@ -1,5 +1,10 @@
 export UPLOAD_EMAIL ?= n.sastry@surrey.ac.uk
 
+# lib/ghpages.mk deletes any top-level directory on gh-pages that is not
+# also a branch name once it is GHPAGES_BRANCH_TTL days old, and registry/
+# qualifies. Opt out rather than relying on the site being rebuilt often.
+export GHPAGES_BRANCH_TTL := 36500
+
 LIBDIR := lib
 -include $(LIBDIR)/main.mk
 

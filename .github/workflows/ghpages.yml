@@ -14,6 +14,13 @@ on:
     - LICENSE.md
     - .gitignore
 
+# Shares the gh-pages group with registry.yml, archive.yml and publish.yml so
+# the branch has only one writer at a time (see the note in registry.yml).
+# Pull-request runs do not push, so they get a per-ref group of their own.
+concurrency:
+  group: ${{ github.event_name == 'push' && 'gh-pages' || format('ghpages-pr-{0}', github.ref) }}
+  cancel-in-progress: false
+
 jobs:
   build:
     name: "Update Editor's Copy"

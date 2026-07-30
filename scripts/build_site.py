@@ -51,6 +51,34 @@ JS_KEYS = {
 CSV_COLUMNS = [k for k in JS_KEYS if k != "domains"]
 
 
+def _json_for_script(obj):
+    """Serialise for embedding inside an inline <script> element.
+
+    Escaping only "</" is not enough. An unbalanced "<!--" followed anywhere
+    later by "<script" drives the HTML tokeniser into script-data-double-escaped
+    state, in which the closing </script> no longer terminates the element and
+    the rest of the document is swallowed into the script; the page then renders
+    with no data and no console error. Escaping <, > and & removes every way out
+    of the script context, and the two Unicode line terminators are escaped for
+    parsers older than ES2019. All four are legal inside a JSON string.
+    """
+    out = json.dumps(obj, ensure_ascii=False)
+    for ch, esc in (("<", "\\u003c"), (">", "\\u003e"), ("&", "\\u0026"),
+                    ("\u2028", "\\u2028"), ("\u2029", "\\u2029")):
+        out = out.replace(ch, esc)
+    return out
+
+
+def _csv_safe(v):
+    """Neutralise spreadsheet formula injection on export."""
+    if v is None:
+        return ""
+    if isinstance(v, (int, float)) and not isinstance(v, bool):
+        return v
+    s = str(v)
+    return "'" + s if s[:1] in ("=", "+", "-", "@") else s
+
+
 def load_tools():
     errors, tools = [], []
     files = sorted(TOOLS_DIR.glob("*.yaml"))
@@ -71,6 +99,11 @@ def load_tools():
                 errors.append(f"{f.name}: missing required field '{k}'")
         if rec.get("class") and rec["class"] not in CLASSES:
             errors.append(f"{f.name}: unknown class '{rec['class']}'")
+        # The url is rendered as a live href, so the scheme is not cosmetic:
+        # 'javascript:' here becomes a clickable script on the published page.
+        url = str(rec.get("url") or "")
+        if url and not url.lower().startswith(("http://", "https://")):
+            errors.append(f"{f.name}: url must be absolute http(s), got '{url}'")
         doms = rec.get("domains") or []
         if not isinstance(doms, list):
             errors.append(f"{f.name}: 'domains' must be a list")
@@ -150,9 +183,15 @@ def head_html(cfg, n_tools):
 
 def build(tools, cfg, artifact_out=None):
     rows = [to_js(r) for r in sorted(tools, key=lambda r: r["name"].lower())]
-    data_js = json.dumps(rows, ensure_ascii=False).replace("</", "<\\/")
+    data_js = _json_for_script(rows)
     body = fill_placeholders(TEMPLATE.read_text(), cfg, len(rows))
-    body = body.replace("const DATA = /*__DATA__*/[];", f"const DATA = {data_js};")
+    PLACEHOLDER = "const DATA = /*__DATA__*/[];"
+    # Assert on the substitution: without this a renamed placeholder publishes
+    # a page with an empty dataset and no error anywhere.
+    if PLACEHOLDER not in body:
+        raise SystemExit("site/template.html: the data placeholder line was not "
+                         f"found; it must match exactly {PLACEHOLDER!r}")
+    body = body.replace(PLACEHOLDER, f"const DATA = {data_js};")
 
     PUBLIC.mkdir(exist_ok=True)
     (PUBLIC / "data").mkdir(exist_ok=True)
@@ -169,8 +208,8 @@ def build(tools, cfg, artifact_out=None):
         w = csv.writer(fh)
         w.writerow(CSV_COLUMNS + ["domains"])
         for r in sorted(tools, key=lambda r: r["name"].lower()):
-            w.writerow([r.get(c, "") for c in CSV_COLUMNS] +
-                       ["; ".join(r.get("domains") or [])])
+            w.writerow([_csv_safe(r.get(c, "")) for c in CSV_COLUMNS] +
+                       [_csv_safe("; ".join(r.get("domains") or []))])
 
     if artifact_out:
         Path(artifact_out).write_text(

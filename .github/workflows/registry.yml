@@ -8,6 +8,9 @@ on:
       - "scripts/**"
       - "config.yaml"
       - ".github/workflows/registry.yml"
+  schedule:
+    - cron: '17 4 * * 1'
+  workflow_dispatch:
   push:
     branches: [main]
     paths:
@@ -29,13 +32,18 @@ jobs:
       - run: python scripts/build_site.py --check
 
   deploy:
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    # push to main, the weekly rebuild, or a manual run on main.
+    # Never a dispatch from a feature branch.
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
     needs: validate
     runs-on: ubuntu-latest
     permissions:
       contents: write
+    # Shared with the i-d-template workflows that also write gh-pages
+    # (ghpages / archive / publish), so the branch has one writer at a time.
+    # They force-push, so an overlapping run silently rewinds this deploy.
     concurrency:
-      group: registry-gh-pages
+      group: gh-pages
       cancel-in-progress: false
     steps:
       - uses: actions/checkout@v4

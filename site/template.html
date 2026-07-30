@@ -393,7 +393,7 @@ function render() {
       <td><span class="cchip">${esc(r.cls)}</span></td>
       <td><span class="dtag">${r.dom.map(esc).join(" &middot; ")}</span></td>
       <td><span class="sm">${esc(r.sub)}</span></td>
-      <td><span class="${r.real === "yes" ? "real-yes" : "real-no"}">${r.real === "yes" ? "yes" : r.real === "na" ? "&mdash;" : "no"}</span></td>
+      <td><span class="${r.real === "yes" ? "real-yes" : "real-no"}">${r.real === "yes" ? "yes" : r.real === "na" ? "&mdash;" : r.real === "partial" ? "partial" : "no"}</span></td>
       <td><span class="pill m-${r.maint}">${MAINT_LABEL[r.maint]}</span></td>
       <td><span class="last mono">${esc(r.last)}</span></td>
       <td><span class="sm" title="${esc(r.lic)}">${esc((r.lic || "").length > 26 ? r.lic.slice(0, 24) + "…" : r.lic)}</span></td>
@@ -476,10 +476,27 @@ function checkRequired() {
     el.classList.toggle("err", bad);
     if (bad) ok = false;
   });
-  if (!ok) document.getElementById("smsg").textContent = "Please fill the starred fields (with a valid URL).";
-  return ok;
+  const msg = document.getElementById("smsg");
+  if (!ok) { msg.textContent = "Please fill the starred fields (with a valid URL)."; return false; }
+  const u = document.getElementById("s-url");
+  if (!/^https?:\/\//i.test(u.value.trim())) {
+    u.classList.add("err");
+    msg.textContent = "The URL must start with http:// or https://.";
+    return false;
+  }
+  // A name in a non-Latin script folds to an empty slug, so the suggested
+  // filename would be just ".yaml".
+  if (!slugify(val("s-name"))) {
+    document.getElementById("s-name").classList.add("err");
+    msg.textContent = "The name has no Latin letters or digits, so it yields no " +
+      "file name. Add a romanised form, e.g. \"StarryNet (星网)\".";
+    return false;
+  }
+  return true;
 }
-const slugify = s => s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
+// Fold accents first, so "Ñandú" yields "nandu" rather than "and".
+const slugify = s => s.normalize("NFKD").replace(/[̀-ͯ]/g, "")
+  .toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
 const yq = s => "'" + s.replace(/'/g, "''") + "'";
 function toYaml() {
   const lines = [
@@ -487,7 +504,7 @@ function toYaml() {
     "class: " + yq(clsSel.value),
     "subtype: " + yq(val("s-sub")),
     "domains:", ...(sdom.size ? [...sdom] : ["Other"]).map(d => "- " + d),
-    "url: " + val("s-url"),
+    "url: " + yq(val("s-url")),
   ];
   if (val("s-lic")) lines.push("license: " + yq(val("s-lic")));
   lines.push("maintenance: " + document.getElementById("s-maint").value);
