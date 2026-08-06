@@ -5,8 +5,8 @@
 Systems and Protocol Aspects for Circumstellar Environments    N. Sastry
 Internet-Draft                                      University of Surrey
 Intended status: Informational                              J. A. Fraire
-Expires: 31 January 2027                                           Inria
-                                                            30 July 2026
+Expires: 7 February 2027                                           Inria
+                                                           6 August 2026
 
 
               A typology of Space Research Infrastructures
@@ -69,7 +69,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 31 January 2027.
+   This Internet-Draft will expire on 7 February 2027.
 
 Copyright Notice
 
