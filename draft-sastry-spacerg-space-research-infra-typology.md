@@ -54,6 +54,12 @@ informative:
     author:
       org: IRTF Space Research Group
     date: false
+  DAGSTUHL:
+    title: "Dagstuhl Seminar 26062: Connected Space: Challenges and Opportunities in Satellite Computing and Networking"
+    target: https://www.dagstuhl.de/seminars/seminar-calendar/seminar-details/26062
+    author:
+      org: Schloss Dagstuhl, Leibniz Center for Informatics
+    date: 2026-02
 
 ...
 
@@ -176,9 +182,6 @@ This document has no IANA actions.
 # Acknowledgments
 {:numbered="false"}
 
-The initial collection of research resources was assembled by the participants of Dagstuhl Seminar 26062 in February 2026, and extended by a systematic literature and web sweep in July 2026.
-The typology described in this document was derived from that collection.
-
-TODO: acknowledge the Dagstuhl participants and the registry contributors by name.
-
-TODO: decide whether the AI-assistance disclosure carried by the companion constellation registry applies here, and to which parts of this work.
+The initial collection of research resources was assembled by the participants of Dagstuhl Seminar 26062, "Connected Space: Challenges and Opportunities in Satellite Computing and Networking", held from 1 to 4 February 2026.
+The seminar page lists its organizers and participants {{DAGSTUHL}}, and the authors thank all of them.
+The collection was extended by a systematic literature and web sweep in July 2026, and the typology described in this document was derived from it.
