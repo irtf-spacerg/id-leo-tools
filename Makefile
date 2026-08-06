@@ -8,6 +8,13 @@ export GHPAGES_BRANCH_TTL := 36500
 LIBDIR := lib
 -include $(LIBDIR)/main.mk
 
+# lib/deps.mk points BUNDLE_PATH at lib/.gems relative to the repo root, and
+# warns that it does so. Bundler resolves a relative BUNDLE_PATH against the
+# Gemfile's own directory, which is lib/, so it looks in lib/lib/.gems, finds
+# nothing, and every kramdown-rfc run dies on a missing gem. An absolute path
+# is unambiguous wherever it is read from.
+BUNDLE_PATH := $(CURDIR)/$(LIBDIR)/.gems
+
 $(LIBDIR)/main.mk:
 ifneq (,$(shell grep "path *= *$(LIBDIR)" .gitmodules 2>/dev/null))
 	git submodule sync
