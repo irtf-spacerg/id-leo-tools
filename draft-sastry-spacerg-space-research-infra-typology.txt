@@ -326,6 +326,12 @@ Table of Contents
               Constellation Registry", <https://irtf-spacerg.github.io/
               id-leo-constellations/registry/>.
 
+   [DAGSTUHL] Schloss Dagstuhl, Leibniz Center for Informatics,
+              "Dagstuhl Seminar 26062: Connected Space: Challenges and
+              Opportunities in Satellite Computing and Networking",
+              February 2026, <https://www.dagstuhl.de/seminars/seminar-
+              calendar/seminar-details/26062>.
+
    [REGISTRY] IRTF Space Research Group, "SPACERG Space Networking Tools
               Registry",
               <https://irtf-spacerg.github.io/id-leo-tools/registry/>.
@@ -333,16 +339,13 @@ Table of Contents
 Acknowledgments
 
    The initial collection of research resources was assembled by the
-   participants of Dagstuhl Seminar 26062 in February 2026, and extended
-   by a systematic literature and web sweep in July 2026.  The typology
-   described in this document was derived from that collection.
-
-   TODO: acknowledge the Dagstuhl participants and the registry
-   contributors by name.
-
-   TODO: decide whether the AI-assistance disclosure carried by the
-   companion constellation registry applies here, and to which parts of
-   this work.
+   participants of Dagstuhl Seminar 26062, "Connected Space: Challenges
+   and Opportunities in Satellite Computing and Networking", held from 1
+   to 4 February 2026.  The seminar page lists its organizers and
+   participants [DAGSTUHL], and the authors thank all of them.  The
+   collection was extended by a systematic literature and web sweep in
+   July 2026, and the typology described in this document was derived
+   from it.
 
 Authors' Addresses
 
