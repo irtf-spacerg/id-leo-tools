@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-09-13T02:21:10.370666+00:00",
+  "timestamp": "2026-09-15T02:41:37.493454+00:00",
   "repo": "irtf-spacerg/id-leo-tools",
   "labels": [
     {
@@ -63,6 +63,22 @@
       "body": "Proposed registry entry (to be added as `data/tools/starlink-geoip-data.yaml`):\n\n```yaml\nname: 'starlink-geoip-data'\nclass: 'Measurement'\nsubtype: 'Starlink GeoIP dataset, containing GeoFeed and PoP assignment snapshots, DNS PTR records, etc.'\ndomains:\n- LEO\n- Ground segment\nurl: https://github.com/clarkzjw/starlink-geoip-data\nlicense: 'CC-BY-SA 4.0'\nmaintenance: active\npublication: 'IETF IAB ip-geo workshop 2026'\ncontact: 'Jinwei Zhao (UVic PanLab)'\nnotes: 'GeoFeed snapshot archive since 2024-01; DNS PTR records since 2024-08; PoP assignment (pops.csv) archive since 2025-10; Starlink connected RIPE atlas probes and PeeringDB archive; GitHub stars (52)'\nsource: community\n```\n",
       "createdAt": "2026-07-21T18:33:36Z",
       "updatedAt": "2026-07-21T18:33:36Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 2,
+      "id": "I_kwDOTXmKOs8AAAABRLK_Ow",
+      "title": "New tool: vsnes",
+      "url": "https://github.com/irtf-spacerg/id-leo-tools/issues/2",
+      "state": "OPEN",
+      "author": "joseavilai2cat",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "Proposed registry entry (to be added as `data/tools/vsnes.yaml`):\n\n```yaml\nname: 'vsnes'\nclass: 'Simulator'\nsubtype: 'conatainer and VM based satellite and orbit simulator'\ndomains:\n- LEO\n- Deep space / DTN\n- NTN-5G\n- GEO / DVB\n- Orbital compute\n- Orbits / astro\n- Ground segment\n- Security\nurl: 'https://github.com/Fundacio-i2CAT/vsnes'\nlicense: 'AGPL-3.0 license'\nmaintenance: active\nsource: community\n```\n",
+      "createdAt": "2026-09-14T09:20:21Z",
+      "updatedAt": "2026-09-14T09:20:21Z",
       "closedAt": null,
       "comments": []
     }
