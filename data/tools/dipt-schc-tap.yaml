@@ -12,14 +12,14 @@ scale: Single link pair
 inputs: Ethernet/IP frames via TAP
 outputs: SCHC-compressed frames
 language: Rust
-license: None yet (UNLICENSED)
-maintenance: low
-maintenance_detail: Early prototype (created 2025-11; no README)
+license: Apache
+maintenance: active
+maintenance_detail: fully functional
 last_activity: 2025-11
 url: https://github.com/deepspaceip/dipt-schc-tap
-publication: None yet
+publication: draft-ietf-schc-over-networks-prone-to-disruptions
 contact: Marc Blanchet (Viagenie)
-notes: Newest and least mature DIPT piece; no README/license/releases
+notes: 
 source: dagstuhl
 added: 2026-07
 verified: 2026-07

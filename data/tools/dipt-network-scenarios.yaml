@@ -1,4 +1,4 @@
-name: DIPT Network scenarios
+name: DIPT Network scenarios simulations
 class: Dataset / data
 class_detail: Dataset
 subtype: JSON deep-space scenario definitions
@@ -6,21 +6,21 @@ domains:
 - Deep space / DTN
 domain_detail: Deep space
 dynamics: Hand-authored JSON (topology; timed link events; no propagator)
-layers: Scenario description only
+layers: reproducable simulations with scripts, input and output data
 real_stack: na
 real_stack_detail: N/A
 scale: Few-node scenarios
 inputs: JSON
-outputs: Drives the QUIC workbench
+outputs: Drives the QUIC workbench; pcaps, qlogs and logs
 language: JSON
 license: Apache-2.0 / MIT (in workbench)
 maintenance: active
 maintenance_detail: Yes (with workbench)
 last_activity: 2026-06
-url: https://github.com/deepspaceip/dipt-quic-workbench (test-data/)
-publication: Mirrors draft-ietf-tiptop-usecase
+url: https://github.com/deepspaceip/deepspace-ip-simulations
+publication: draft-ietf-tiptop-quic-profile
 contact: Marc Blanchet (Viagenie)
-notes: 'STANDALONE REPO 404: lives inside workbench test-data/; fix URL in survey'
+notes: uses DIPT QUIC workbench
 source: dagstuhl
 added: 2026-07
 verified: 2026-07

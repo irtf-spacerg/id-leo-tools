@@ -19,7 +19,7 @@ last_activity: 2025-10
 url: https://github.com/deepspaceip/dipt-http
 publication: Supports TIPTOP drafts
 contact: Marc Blanchet (Viagenie)
-notes: Likely uses deepspace-quiche (Cloudflare quiche fork with no-op CC)
+notes: uses Quinn QUIC stack
 source: dagstuhl
 added: 2026-07
 verified: 2026-07
