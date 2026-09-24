@@ -13,11 +13,11 @@ inputs: NETCONF XML sessions
 outputs: NETCONF sessions
 language: Rust
 license: Apache-2.0 / MIT
-maintenance: inactive
+maintenance: active
 maintenance_detail: Dormant PoC (last push 2024-11)
 last_activity: 2024-11
 url: https://github.com/deepspaceip/dipt-netconf-over-quic-proxy
-publication: Complements TIPTOP drafts
+publication: draft-ietf-netconf-over-quic
 contact: Marc Blanchet (Viagenie)
 notes: Unauthenticated by design (testing only)
 source: dagstuhl
