@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-09-24T02:27:38.714996+00:00",
+  "timestamp": "2026-09-27T02:47:44.896370+00:00",
   "repo": "irtf-spacerg/id-leo-tools",
   "labels": [
     {
@@ -83,5 +83,42 @@
       "comments": []
     }
   ],
-  "pulls": []
+  "pulls": [
+    {
+      "number": 3,
+      "id": "PR_kwDOTXmKOs8AAAABE_tBCg",
+      "title": "updating dipt tools info",
+      "url": "https://github.com/irtf-spacerg/id-leo-tools/pull/3",
+      "state": "MERGED",
+      "author": "marcblanchet",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2026-09-24T19:33:37Z",
+      "updatedAt": "2026-09-24T22:58:35Z",
+      "baseRepository": "irtf-spacerg/id-leo-tools",
+      "baseRefName": "main",
+      "baseRefOid": "0aa0de9b371b6ff70ef23a66032a1b22b15a5f79",
+      "headRepository": "marcblanchet/id-leo-tools",
+      "headRefName": "main",
+      "headRefOid": "aec9c18c81532026e271d0822c455039f8d45ebd",
+      "closedAt": "2026-09-24T22:58:35Z",
+      "mergedAt": "2026-09-24T22:58:35Z",
+      "mergedBy": "nishrs",
+      "mergeCommit": {
+        "oid": "3698668bba173e9f6fdc32ac7cd0f4754b337519"
+      },
+      "comments": [
+        {
+          "author": "nishrs",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "verified changes from the tool author",
+          "createdAt": "2026-09-24T22:57:55Z",
+          "updatedAt": "2026-09-24T22:57:55Z"
+        }
+      ],
+      "reviews": []
+    }
+  ]
 }
