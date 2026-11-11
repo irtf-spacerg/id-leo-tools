@@ -1,0 +1,27 @@
+name: NodalArc
+class: Emulator
+subtype: Container-based network emulation with orbital dynamics, latencies, handovers, hysteresis, and real routers and protocols
+domains:
+- LEO
+- Deep space / DTN
+- Orbits / astro
+- Ground segment
+- Transport
+domain_detail: LEO, MEO, HEO and GEO constellations, cislunar relays and Earth-Mars relay chains, in one session; ground-station handover
+dynamics: Two-body, J2 and SGP4 (TLE) propagation; JPL/NAIF ephemerides for Earth, Moon and Mars; constellations, sites and links declared in a YAML session grammar; links follow line of sight, range and terminal field of regard
+layers: Kernel links (veth, VXLAN between servers) carrying light-time delay and terminal data rates from the geometry; routing (FRR IS-IS, OSPF, static; IPv4 and IPv6; MPLS and segment routing); DTN (HDTN, ION, uD3TN) and QUIC (picoquic) as node workloads; applications
+real_stack: 'yes'
+scale: Over 200 nodes; scales with the size of the Kubernetes cluster
+inputs: User-configurable YAML for nodes, terminals, constellations, protocols and more, with a catalog of bodies, orbits, terminals, nodes and sites; TLEs
+outputs: Live globe and topology views in the browser; REST and WebSocket APIs; link history; terminals into every node; results from the real stacks
+language: Python, TypeScript
+license: AGPL-3.0-only (catalog and example sessions also CC0-1.0)
+maintenance: active
+maintenance_detail: Release 0.8.1 (2026-11), published as container images and a Helm chart
+last_activity: 2026-11
+url: https://github.com/dotchance/nodalarc
+contact: Chance Whaley (.chance / dotchance)
+notes: NodalArc is an emulator for space networks. It runs real routers and real protocol software inside a moving model of Earth, Luna and Mars orbits, and you drive all of it from a web browser or from YAML. Everything is configurable - make up your own orbits and satellites, put any terminals on any bus, and place them in any orbit. Orbital mechanics decide when links come up and go down, their delay and their rate. Nodes run FRR or any other container, and their interfaces experience the real delays and link mechanics.
+source: community
+added: 2026-11
+verified: 2026-11
