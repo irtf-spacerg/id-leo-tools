@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-09-27T02:47:44.896370+00:00",
+  "timestamp": "2026-11-12T05:05:39.153586+00:00",
   "repo": "irtf-spacerg/id-leo-tools",
   "labels": [
     {
@@ -81,6 +81,70 @@
       "updatedAt": "2026-09-14T09:20:21Z",
       "closedAt": null,
       "comments": []
+    },
+    {
+      "number": 4,
+      "id": "I_kwDOTXmKOs8AAAABeAtH1A",
+      "title": "New tool: PONS-dtn",
+      "url": "https://github.com/irtf-spacerg/id-leo-tools/issues/4",
+      "state": "OPEN",
+      "author": "gh0st42",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "Proposed registry entry (to be added as `data/tools/pons-dtn.yaml`):\n\n```yaml\nname: 'PONS-dtn'\nclass: 'Simulator'\nsubtype: 'The Python Opportunistic Network Simulator. Run DTN simulations using SimPy.'\ndomains:\n- Deep space / DTN\n- LEO\nurl: 'https://github.com/gh0st42/PONS'\nlicense: 'MIT'\nmaintenance: active\nsource: community\n```\n",
+      "createdAt": "2026-11-10T14:33:30Z",
+      "updatedAt": "2026-11-10T14:33:30Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 5,
+      "id": "I_kwDOTXmKOs8AAAABeAv3xQ",
+      "title": "New tool: nse2",
+      "url": "https://github.com/irtf-spacerg/id-leo-tools/issues/5",
+      "state": "OPEN",
+      "author": "gh0st42",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "Proposed registry entry (to be added as `data/tools/nse2.yaml`):\n\n```yaml\nname: 'nse2'\nclass: 'Testbed'\nsubtype: 'A containerized network simulation & emulation environment (nse2) with support for fluctuating connectivity.'\ndomains:\n- Deep space / DTN\n- LEO\n- Ground segment\nurl: 'https://github.com/esa/nse2'\nlicense: 'ESA Public License (ESA-PL) Permissive'\nmaintenance: active\ncontact: 'ESA'\nsource: community\n```\n",
+      "createdAt": "2026-11-10T14:35:50Z",
+      "updatedAt": "2026-11-10T14:35:50Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 6,
+      "id": "I_kwDOTXmKOs8AAAABeAwFuQ",
+      "title": "New tool: OpenSAND Measurement Testbed",
+      "url": "https://github.com/irtf-spacerg/id-leo-tools/issues/6",
+      "state": "OPEN",
+      "author": "kosekmi",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "Proposed registry entry (to be added as `data/tools/opensand-measurement-testbed.yaml`):\n\n```yaml\nname: 'OpenSAND Measurement Testbed'\nclass: 'Testbed'\nsubtype: 'A satellite link Testbed using OpenSAND to measure QUIC''s performance.'\ndomains:\n- LEO\n- GEO / DVB\n- Transport\n- Ground segment\nurl: 'https://github.com/kosekmi/quic-opensand-emulation'\nlicense: 'Apache 2.0'\nmaintenance: inactive\npublication: 'https://doi.org/10.23919/IFIPNetworking55013.2022.9829773'\nsource: community\n```\n",
+      "createdAt": "2026-11-10T14:36:00Z",
+      "updatedAt": "2026-11-10T14:36:00Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 7,
+      "id": "I_kwDOTXmKOs8AAAABeBFBbA",
+      "title": "New tool: Secure Middlebox-Assisted QUIC",
+      "url": "https://github.com/irtf-spacerg/id-leo-tools/issues/7",
+      "state": "OPEN",
+      "author": "kosekmi",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "Proposed registry entry (to be added as `data/tools/secure-middlebox-assisted-quic.yaml`):\n\n```yaml\nname: 'Secure Middlebox-Assisted QUIC'\nclass: 'Implementation'\nsubtype: 'QUIC PEP Implementation'\ndomains:\n- LEO\n- GEO / DVB\n- Transport\n- Ground segment\nurl: 'https://github.com/kosekmi/2023-ifip-nw-smaq'\nlicense: 'Multiple (MIT, not stated)'\nmaintenance: inactive\npublication: 'https://doi.org/10.23919/IFIPNetworking57963.2023.10186363'\nsource: community\n```\n",
+      "createdAt": "2026-11-10T14:54:14Z",
+      "updatedAt": "2026-11-10T14:54:14Z",
+      "closedAt": null,
+      "comments": []
     }
   ],
   "pulls": [
@@ -118,6 +182,32 @@
           "updatedAt": "2026-09-24T22:57:55Z"
         }
       ],
+      "reviews": []
+    },
+    {
+      "number": 8,
+      "id": "PR_kwDOTXmKOs8AAAABOdcHAw",
+      "title": "Add NodalArc",
+      "url": "https://github.com/irtf-spacerg/id-leo-tools/pull/8",
+      "state": "OPEN",
+      "author": "dotchance",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "Adds data/tools/nodalarc.yaml.\n\nNodalArc is an emulator for space networks: real routers and protocol software (FRR, HDTN, ION, uD3TN, picoquic) run in containers whose links follow orbital geometry around Earth, Luna and Mars. Source: https://github.com/dotchance/nodalarc. `python scripts/build_site.py --check` passes with the new file.",
+      "createdAt": "2026-11-11T19:12:52Z",
+      "updatedAt": "2026-11-11T19:12:52Z",
+      "baseRepository": "irtf-spacerg/id-leo-tools",
+      "baseRefName": "main",
+      "baseRefOid": "3698668bba173e9f6fdc32ac7cd0f4754b337519",
+      "headRepository": "dotchance/id-leo-tools",
+      "headRefName": "add-nodalarc",
+      "headRefOid": "b23c5fe19c2ef086b71d8362528db2f602c593e0",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
       "reviews": []
     }
   ]
